@@ -5,7 +5,7 @@
 <div></div>
 
 <div style = "background-color: #fdf4bf;">
-<h1>Iniciar seción</h1>
+<h1>Iniciar sesión</h1>
 <form id = 'caja' action="tienda.php" method="post">
 
 
