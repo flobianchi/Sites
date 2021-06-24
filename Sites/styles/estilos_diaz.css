@@ -1,0 +1,91 @@
+
+
+
+
+
+html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}
+
+html {  font-family: Helvetica; 
+        display: inline-block; 
+        margin: 0px auto; 
+        text-align: center;}
+
+#botonB {
+  background-color: #f3c733; 
+  color: black; 
+  height:40px; 
+  width:110px;
+  text-decoration: none; 
+  border-radius: 12px; 
+  font-size: 20px; 
+  margin: 3px; 
+  cursor: pointer;
+}
+
+#caja{
+  font-size: 20px;
+}
+
+#lista-drop{
+  font-size: 18px;
+}
+
+
+#botonB:hover {
+    border: none;
+    background:#c29f29;
+    color: #444444; 
+    box-shadow: 0px 0px 1px #777;
+}
+
+.button {   background-color: #195B6A; 
+            border: none; 
+            color: white; 
+            padding: 16px 40px; 
+            height:100px; 
+            width:150px;
+            text-decoration: none; 
+            border-radius: 20px; 
+            font-size: 40px; 
+            margin: 2px; 
+            cursor: pointer;}
+    
+.button2 {  background-color: #77878A; 
+            height:100px; 
+            width:100px; }
+
+.button3 {  background-color: #195B6A; 
+            height:100px; 
+            width:450px; }
+
+  .grid-titulo {
+    display: grid;
+    grid-template-columns: auto 250px 450px 250px auto;
+    grid-template-rows: 80px 230px;
+    grid-gap: 1px;
+    padding: 1px;
+    font-size: 30px;
+  }
+
+  .grid-consultas {
+    display: grid;
+    grid-template-columns: auto 340px 40px 340px auto;
+    grid-template-rows: 120px 30px 140px 30px 160px;
+    grid-gap: 1px;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .grid-consultas > div {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 30px;
+  }
+
+  .grid-box {
+    grid-template-columns: auto auto;
+    grid-template-rows: 160px;
+    text-align: center;
+    font-size: 10px;
+    background-color: #77878A; 
+  }
