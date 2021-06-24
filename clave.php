@@ -1,18 +1,5 @@
 <?php include('templates/header.html');   ?>
-
-<div class="grid-titulo">
-  <div></div>
-  <div><img src="styles/banana.gif" width="170" height="170"></div>
-  <div> <h1> Bases de datos </h1> </div>
-  <div><img src="styles/banana.gif" width="170" height="170"></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div> <h3> Grupo 53 y 56 Entrega 3 </h3> 
-        <h2> Sebastián Díaz, Martín Alarcón</h2> </div>
-  <div></div>
-  <div></div> 
-</div>
+<?php include('templates/header_botones.html');   ?>
 
 Ejecutar funcion que cambia clave aqui
 <br>

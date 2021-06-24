@@ -1,7 +1,7 @@
 html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}
 @import url(//fonts.googleapis.com/css?family=Ubuntu);
 
-html {  font-family: Ubuntu; 
+html {  font-family: Helvetica; 
         display: inline-block; 
         margin: 0px auto; 
         text-align: center;}
@@ -57,10 +57,10 @@ html {  font-family: Ubuntu;
   .grid-titulo {
     display: grid;
     grid-template-columns: auto 250px 450px 250px auto;
-    grid-template-rows: 80px 230px;
+    grid-template-rows: 80px 160px;
     grid-gap: 1px;
     padding: 1px;
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .grid-consultas {
@@ -70,6 +70,23 @@ html {  font-family: Ubuntu;
     grid-gap: 1px;
     text-align: center;
     font-size: 10px;
+  }
+
+  .grid-botones {
+    display: grid;
+    grid-template-columns: auto 150px 150px auto;
+    grid-template-rows: 60px;
+    grid-gap: 1px;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .grid-ingresar {
+    display: grid;
+    grid-template-columns: auto 350px auto;
+    grid-template-rows: 240px;
+    grid-gap: 1px;
+    text-align: center;
   }
 
   .grid-consultas > div {
