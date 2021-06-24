@@ -83,7 +83,7 @@ html {  font-family: Helvetica;
 
   .grid-ingresar {
     display: grid;
-    grid-template-columns: auto 350px auto;
+    grid-template-columns: auto 320px auto;
     grid-template-rows: 240px;
     grid-gap: 1px;
     text-align: center;
