@@ -9,10 +9,10 @@
 <form id = 'caja' action="tienda.php" method="post">
 
 
-<input type="text" class="form-control" placeholder="Usuario" style="font-size:25px;" size = 15 name = 'usuario'>
-<br>
-<input type="text" class="form-control" placeholder="Clave" style="font-size:25px;" size = 15 name = 'clave'>
+<input type="text" class="form-control" placeholder="Usuario" style="font-size:24px;" size = 15 name = 'usuario'>
 <p style="font-size:6px;"></p>
+<input type="text" class="form-control" placeholder="Clave" style="font-size:24px;" size = 15 name = 'clave'>
+<p style="font-size:15px;"></p>
 <input type="submit" value="Ingresar" id = "botonB">
 </form></div>
 
