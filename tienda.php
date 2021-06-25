@@ -58,9 +58,6 @@ tr:hover {
 
 $var1 = $_SESSION['rut_user']
 
-echo("
-session dice: $var1
-");
 
 echo "Favorite color is " . $_SESSION['rut_user'] . ".<br>";
 ?>
