@@ -8,7 +8,7 @@ RETURNS BOOLEAN AS $$
 -- definimos nuestra función
 BEGIN
 
-    UPDATE usuarios SET clave = nueva_clave WHERE id = id_usuario
+    UPDATE usuarios SET clave = nueva_clave WHERE id = id_usuario;
 
 END
 $$ language plpgsql
