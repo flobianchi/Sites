@@ -1,10 +1,7 @@
+<?php session_start(); ?>
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
 
-<?php session_start();
-echo $_SESSION["rut_user"];
-/*session was getting*/
-?>
 
 Esta es la pagina perfil
 <br>
@@ -14,27 +11,28 @@ Atributos del user aqui
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
-$query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u 
-WHERE u.rut = $rut_user
+  $rut_user = $_SESSION['rut_user'];
+      $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u 
+      WHERE u.rut = $rut_user;";
 
-$result = $db -> prepare($query);
-$result -> execute();
-$dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
+      $result = $db -> prepare($query);
+      $result -> execute();
+      $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
-echo("
-<form action='../index.php' method='get'>
-<p style='font-size:10px;'></p>
-</form>
+      echo("
+      <form action='../index.php' method='get'>
+      <p style='font-size:10px;'></p>
+      </form>
 
-<p style='font-size:50px;'></p>
-<table class='center'>
-<tr>
-<th>ID Usuario</th>
-<th>Nombre</th>
-<th>RUT</th>
-<th>Edad</th>
-<th>Sexo</th>
-</tr>");
+      <p style='font-size:50px;'></p>
+      <table class='center'>
+      <tr>
+      <th>ID Usuario</th>
+      <th>Nombre</th>
+      <th>RUT</th>
+      <th>Edad</th>
+      <th>Sexo</th>
+      </tr>");
 
 
 foreach ($dataCollected as $p) {
