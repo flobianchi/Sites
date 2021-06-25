@@ -12,8 +12,8 @@ Atributos del user aqui
   require("config/conexion.php");
 
       $rut_user = $_SESSION['rut_user'];
-      echo("el usuario es $rut_user");
-      $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u WHERE u.rut = $rut_user;";
+      echo("<br> el usuario es $rut_user <br>");
+      $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u WHERE u.rut = '$rut_user';";
 
       $result = $db -> prepare($query);
       $result -> execute();
