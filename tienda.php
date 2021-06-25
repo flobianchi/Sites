@@ -56,7 +56,7 @@ tr:hover {
 
 <?php
 
-$var1 = $_SESSION['rut_user']
+$var1 = $_SESSION['rut_user'];
 
 echo($var1);
 
