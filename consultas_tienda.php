@@ -4,6 +4,11 @@
 Esta es la pagina con cunsultas de la tienda elegida
 <br>
 Nombre de la tienda elegida aqui
+<?php 
+echo("Click en id tienda ");
+echo($_POST['t']);
+
+?>
 <br>
 
 <form id = 'caja' action="funcionalidad_1.php" method="post">

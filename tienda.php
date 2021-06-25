@@ -41,7 +41,7 @@ Muestra todas las tiendas y tiene ID clickeable
 foreach ($dataCollected as $p) {
 echo "<tr> <td> 
 
-<form id = 'caja' action='resultado.php' method='post'>
+<form id = 'caja' action='consultas_tienda.php' method='post'>
 <input name = 't' type='submit' value='$p[0]' id = 'botonID'>
 </form>
 
