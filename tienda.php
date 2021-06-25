@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+<?php session_start(); ?>
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
 
