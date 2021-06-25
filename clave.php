@@ -1,12 +1,13 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
-<?php include('templates/header_botones.html');   ?>
+<?php include('templates/header_botones.html');   
+ require("../config/conexion.php");?>
 
 <?php
 
 $clave_final = $_POST["nueva_clave"];
 $id_current_user = $_SESSION['id_user'];
-echo($clave_final);
+
 $query = "SELECT cambiar_clave($id_current_user, '$clave_final');";
 
 $result = $db -> prepare($query);
