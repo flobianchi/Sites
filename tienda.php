@@ -58,8 +58,8 @@ tr:hover {
 
 $var1 = $_SESSION['rut_user']
 
+echo($var1)
 
-echo "Favorite color is " . $_SESSION['rut_user'] . ".<br>";
 ?>
 
 <h2>Porfavor elija una tienda haciendo click en su id</h2>
