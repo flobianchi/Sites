@@ -53,8 +53,11 @@ tr:hover {
 }
 </style>
 
+
 <?php
-print_r($_SESSION);
+echo("
+session dice: $_SESSION['rut_user'] $_SESSION['pass_user']
+");
 ?>
 
 <h2>Porfavor elija una tienda haciendo click en su id</h2>
