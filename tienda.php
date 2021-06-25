@@ -54,8 +54,8 @@ tr:hover {
 
 <?php
 
-$usuario_ingresado = $_POST['usuario']);
-$clave_ingresada = $_POST['clve']);
+$usuario_ingresado = $_POST['usuario'];
+$clave_ingresada = $_POST['clve'];
 
 if($usuario_ingresado == '66954467-7'){
     $usuario_ingresado = ;
@@ -64,7 +64,7 @@ if($usuario_ingresado == '66954467-7'){
 $_SESSION['rut_user'] = $usuario_ingresado;
 $_SESSION['pass_user'] = $clave_ingresada;
 
-echo("en session se hay: $var1 $var2");
+echo("en session se hay: $usuario_ingresado $clave_ingresada");
 
 ?>
 
