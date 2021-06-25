@@ -1,4 +1,3 @@
-
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
 
@@ -54,7 +53,7 @@ tr:hover {
 <?php
 echo("
 session dice: $_SESSION['rut_user'] $_SESSION['pass_user']
-")
+");
 ?>
 
 <h2>Porfavor elija una tienda haciendo click en su id</h2>
