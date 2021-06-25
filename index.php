@@ -3,8 +3,8 @@
 
 <?php
 
-$usuario = 1;
-$clave = 2;
+$usuario = 'sebastian';
+$clave = 'viki';
 
 $_SESSION["rut_user"]=$usuario;
 $_SESSION["pass_user"]=$clave;
