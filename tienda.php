@@ -57,8 +57,9 @@ tr:hover {
 <?php
 
 $var1 = $_SESSION['rut_user'];
+$var2 = $_SESSION['pass_user'];
 
-echo($var1);
+echo("en session se hay: $var1 $var2");
 
 ?>
 
