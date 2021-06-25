@@ -81,7 +81,7 @@ Si es admin mostrar mas info aqui
 <br>
 
 <form id = 'caja' action="clave.php" method="post">
-<input type="text" class="form-control" placeholder="nueva clave" style="font-size:19px;" size = 15 name = 'nueva_clase'>
+<input type="text" class="form-control" placeholder="nueva clave" style="font-size:19px;" size = 15 name = 'nueva_clave'>
       <input type="submit" value="Cambiar clave" id = "botonB">
 </form>
 <br>

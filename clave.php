@@ -8,10 +8,11 @@ Clave cambiada con exito
 Ejecutar funcion que cambia clave aqui
 
 <?php
+$clave_final = $_POST["nueva_clave"]
 $id_current_user = $_SESSION['id_user'];
-$nombre = $_SESSION['name_user']
-cambiar_clave($id_current_user, $nueva_clave)
-echo("Hola $nombre, tu nueva clave es: $nueva_clave")
+$nombre = $_SESSION['name_user'];
+cambiar_clave($id_current_user, $clave_final);
+echo("Hola $nombre, tu nueva clave es: $clave_final");
 ?>
 
 
