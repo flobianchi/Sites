@@ -54,8 +54,8 @@ tr:hover {
 
 <?php
 
-$usuario_ingresado = $_POST['usuario']);
-$clave_ingresada = $_POST['clve']);
+$usuario_ingresado = $_POST['usuario'];
+$clave_ingresada = $_POST['clve'];
 
 if($usuario_ingresado == '66954467-7'){
     $usuario_ingresado = ;
