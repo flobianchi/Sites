@@ -27,13 +27,13 @@
 
     foreach ($respuesta as $p) {
         $clave = generateRandomString(8);
+        echo("<br> $clave");
         $query2 = "SELECT cambiar_clave($p[0],$clave);";
         $result2 = $db -> prepare($query2);
         $result2 -> execute();
       }
     
     echo("
-    <br>
     <h2>Claves creadas con exito</h2>
     <br>");
     
