@@ -55,9 +55,14 @@ tr:hover {
 
 
 <?php
+
+$var1 = $_SESSION['rut_user']
+
 echo("
-session dice: $_SESSION['rut_user'] $_SESSION['pass_user']
+session dice: $var1
 ");
+
+echo "Favorite color is " . $_SESSION['rut_user'] . ".<br>";
 ?>
 
 <h2>Porfavor elija una tienda haciendo click en su id</h2>
