@@ -99,6 +99,10 @@ echo("<table>");
 ?>
 <br>
 
+<?php
+$_SESSION["tienda_id"]= "$p[0]"
+?>
+
 <br>
 DD de MM del 2021
 

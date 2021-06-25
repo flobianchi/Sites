@@ -22,7 +22,7 @@ consultar top 3 de la tienda aqui!!!
 
   
  	$query = "SELECT TOP 3 pd.id_producto, pd.nombre, pd.precio 
-   FROM productos NATURAL JOIN disponibilidad_tienda AS pd WHERE pd.id = pd.id_producto, pd.id_tienda = VARIABLE, pd.fecha_de_caducidad IS NULL ORDER BY pd.precio;";
+   FROM productos NATURAL JOIN disponibilidad_tienda AS pd WHERE pd.id = pd.id_producto, pd.id_tienda = $_SESSION["tienda_id"], pd.fecha_de_caducidad IS NULL ORDER BY pd.precio;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$unidades = $result -> fetchAll();
