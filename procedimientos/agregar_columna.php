@@ -6,14 +6,13 @@
 
     echo("<br>Ejecutando procedimiento agregar_columna_clave()<br>");
 
-    $query = "SELECT agregar_columna_clave();";
+    $query = "SELECT agregar_columna_clave(1);";
 
     $result = $db -> prepare($query);
     $result -> execute();
-    $result -> fetchAll();
+    $respuesta = $result -> fetchAll();
 
-
-    print_r($result);
+    print_r($respuesta);
 
 ?>
 
