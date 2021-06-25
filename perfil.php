@@ -30,24 +30,21 @@ tr:hover {
 }
 </style>
 
-Esta es la pagina perfil
-<br>
-Atributos del user aqui
+
+
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
       $rut_user = $_SESSION['rut_user'];
-      echo("<br> el usuario es $rut_user <br>");
       $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u WHERE u.rut = '$rut_user';";
 
       $result = $db -> prepare($query);
       $result -> execute();
       $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
-      print_r($dataCollected);
-
+      echo("<h2>Hola $dataCollected[0]['nombre'] este es tu perfil</h2>");
 
       echo("
       
@@ -61,16 +58,13 @@ Atributos del user aqui
       <th>Sexo</th>
       </tr>");
       
-      
       foreach ($dataCollected as $p) {
       echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> </tr>";
       }
       
       echo("<table>");
         
-        ?>
-      
-  ?>
+      ?>
 
 
 <br>
