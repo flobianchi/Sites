@@ -58,7 +58,7 @@ tr:hover {
 
 $var1 = $_SESSION['rut_user']
 
-echo($var1)
+echo($var1);
 
 ?>
 
