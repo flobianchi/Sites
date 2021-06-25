@@ -1,8 +1,10 @@
 <?php include('templates/header.html');?>
 
 <?php
-$usuario = 1
-$clave = 2
+
+$usuario = 1;
+$clave = 2;
+
 session_start();
 $_SESSION["rut_user"]=$usuario;
 $_SESSION["pass_user"]=$clave;
