@@ -6,7 +6,7 @@
 
 $clave_final = $_POST["nueva_clave"];
 $id_current_user = $_SESSION['id_user'];
-echo($id_current_user);
+echo($clave_final);
 $query = "SELECT cambiar_clave($id_current_user, '$clave_final');";
 
 $result = $db -> prepare($query);
