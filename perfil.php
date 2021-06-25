@@ -13,14 +13,13 @@ Atributos del user aqui
 
       $rut_user = $_SESSION['rut_user'];
       echo("el usuario es $rut_user");
-      $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u 
-      WHERE u.rut = $rut_user;";
+      $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u WHERE u.rut = $rut_user;";
 
       $result = $db -> prepare($query);
       $result -> execute();
       $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
-      print_r($result);
+      print_r($dataCollected);
   
   ?>
 
