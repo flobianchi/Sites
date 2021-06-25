@@ -5,9 +5,9 @@
 $usuario = 1;
 $clave = 2;
 
-session_start();
 $_SESSION["rut_user"]=$usuario;
 $_SESSION["pass_user"]=$clave;
+session_start();
 
 ?>
 
