@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   
- require("../config/conexion.php");?>
+ require("config/conexion.php");?>
 
 <?php
 
