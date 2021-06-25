@@ -10,6 +10,10 @@
 Mostrar aqui tabla con botones que mande al wp
 <br>
 
+<?php
+$_SESSION["tienda_id"]= "$p[0]"
+?>
+
 <br>
 DD de MM del 2021
 
