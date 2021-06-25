@@ -2,7 +2,7 @@
 
     // Nos conectamos a las bdds
     require("../config/conexion.php");
-    include('../templates/header.html');
+    include('../templates/header_procedimientos.html');
 
     echo("<br>Ejecutando procedimiento agregar_columna_clave()<br>");
 
