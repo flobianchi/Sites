@@ -51,7 +51,7 @@ tr:hover {
 }
 </style>
 
-<h2>Porfavor elija su tienda haciendo click en su id</h2>
+<h2>Porfavor elija una tienda haciendo click en su id</h2>
 
 <?php
 #Llama a conexión, crea el objeto PDO y obtiene la variable $db
