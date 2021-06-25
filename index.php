@@ -1,4 +1,7 @@
-<?php include('templates/header.html') session_start();
+<?php include('templates/header.html'), session_start();
+$_SESSION["rut_user"]=$usuario;
+$_SESSION["pass_user"]=$clave;
+?>
 
 <br>
 <div class = "grid-ingresar">
@@ -20,11 +23,8 @@
 </div>
 <br>
 
-$_SESSION["rut_user"]=$usuario;
-$_SESSION["pass_user"]=$clave;
-?>
 
 5 de Julio del 2021
-
+VIKI ESTUVO ACA
 </body>
 </html>
