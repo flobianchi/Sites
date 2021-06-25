@@ -1,15 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');?>
 
-<?php
-
-$usuario = '66954467-7';
-$clave = 'viki';
-
-$_SESSION["rut_user"]=$usuario;
-$_SESSION["pass_user"]=$clave;
-?>
-
 <br>
 <div class = "grid-ingresar">
 <div></div>
