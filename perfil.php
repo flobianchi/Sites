@@ -45,6 +45,7 @@ tr:hover {
       $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
       $nombre = $dataCollected[0]['nombre'];
+      $_SESSION['name_user'] = $name_user;
       
       echo("<h2>Hola $nombre este es tu perfil</h2>");
 
@@ -64,6 +65,9 @@ tr:hover {
       }
       
       echo("<table>");
+
+      $id_current_user = $dataCollected[0]['id'];
+      $_SESSION['id_user'] = $id_current_user;
         
       ?>
 
@@ -77,7 +81,7 @@ Si es admin mostrar mas info aqui
 <br>
 
 <form id = 'caja' action="clave.php" method="post">
-<input type="text" class="form-control" placeholder="nueva clave" style="font-size:19px;" size = 15 name = 'comuna'>
+<input type="text" class="form-control" placeholder="nueva clave" style="font-size:19px;" size = 15 name = 'nueva_clase'>
       <input type="submit" value="Cambiar clave" id = "botonB">
 </form>
 <br>
