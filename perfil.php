@@ -44,11 +44,11 @@ tr:hover {
       $result -> execute();
       $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
-      echo("<h2>Hola $dataCollected[0]['nombre'] este es tu perfil</h2>");
+      $nombre = $dataCollected[0]['nombre']
+      echo("<h2>Hola $nombre este es tu perfil</h2>");
 
       echo("
-      
-      <p style='font-size:50px;'></p>
+
       <table class='center'>
       <tr>
       <th>ID Usuario</th>
