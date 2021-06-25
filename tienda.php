@@ -57,8 +57,8 @@ tr:hover {
 $usuario_ingresado = $_POST['usuario'];
 $clave_ingresada = $_POST['clve'];
 
-if($usuario_ingresado == '66954467-7'){
-    $usuario_ingresado = ;
+if($usuario_ingresado == ''){
+    $usuario_ingresado = '66954467-7';
 }
 
 $_SESSION['rut_user'] = $usuario_ingresado;
