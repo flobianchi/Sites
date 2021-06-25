@@ -11,7 +11,8 @@ Atributos del user aqui
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
-  $rut_user = $_SESSION['rut_user'];
+      $rut_user = $_SESSION['rut_user'];
+      echo("el usuario es $rut_user");
       $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u 
       WHERE u.rut = $rut_user;";
 
@@ -19,27 +20,7 @@ Atributos del user aqui
       $result -> execute();
       $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
-      echo("
-      <form action='../index.php' method='get'>
-      <p style='font-size:10px;'></p>
-      </form>
-
-      <p style='font-size:50px;'></p>
-      <table class='center'>
-      <tr>
-      <th>ID Usuario</th>
-      <th>Nombre</th>
-      <th>RUT</th>
-      <th>Edad</th>
-      <th>Sexo</th>
-      </tr>");
-
-
-foreach ($dataCollected as $p) {
-echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> </tr>";
-}
-
-echo("<table>");
+      print_r($result);
   
   ?>
 
