@@ -64,11 +64,7 @@ $result -> execute();
 $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
 echo(
-"Test tabla clickeable.
-<br>
-<br>
-Muestra todas las tiendas y tiene ID clickeable
-
+"
 </div>
 <div></div>
 <div></div> 
