@@ -3,7 +3,7 @@
 
 <?php
 
-$usuario = 'sebastian';
+$usuario = '66954467-7';
 $clave = 'viki';
 
 $_SESSION["rut_user"]=$usuario;
