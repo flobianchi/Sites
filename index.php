@@ -1,6 +1,7 @@
-<?php include('templates/header.html'), session_start();
-$_SESSION["rut_user"]=$usuario;
-$_SESSION["pass_user"]=$clave;
+<?php include('templates/header.html');
+    session_start();
+    $_SESSION["rut_user"]=$usuario;
+    $_SESSION["pass_user"]=$clave;
 ?>
 
 <br>
