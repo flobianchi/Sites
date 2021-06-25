@@ -2,12 +2,7 @@
 <?php include('templates/header_botones.html');   ?>
 
 
-<h2>Porfavor elija su tienda</h2>
-
-<form id = 'caja' action="consultas_tienda.php" method="post">
-      <input type="submit" value="Elegir tienda" id = "botonB">
-      </form>
-
+<h2>Porfavor elija su tienda haciendo click en su id</h2>
 
 <?php
 #Llama a conexión, crea el objeto PDO y obtiene la variable $db
