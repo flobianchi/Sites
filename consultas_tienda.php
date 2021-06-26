@@ -7,7 +7,6 @@ Nombre de la tienda elegida aqui
 <?php 
 echo("Click en id tienda ");
 echo($_POST['t']);
-
 ?>
 <br>
 
