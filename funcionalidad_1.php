@@ -1,6 +1,7 @@
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
 
+
 TOP 3 aqui
 
 <br>
@@ -18,11 +19,11 @@ consultar top 3 de la tienda aqui!!!
 
   <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
-  require("../config/conexion.php");
+  require("config/conexion.php");
 
-  
- 	$query = "SELECT TOP 3 pd.id_producto, pd.nombre, pd.precio 
-   FROM productos NATURAL JOIN disponibilidad_tienda AS pd WHERE pd.id = pd.id_producto, pd.id_tienda = $_SESSION["tienda_id"], pd.fecha_de_caducidad IS NULL ORDER BY pd.precio;";
+  #$query = "SELECT TOP 3 pd.id_producto, pd.nombre, pd.precio FROM productos NATURAL JOIN disponibilidad_tienda AS pd WHERE pd.id = pd.id_producto, pd.id_tienda = 0, pd.fecha_de_caducidad IS NULL ORDER BY pd.precio;";
+  $query = "SELECT productos.id, productos.nombre, productos.precio FROM productos JOIN disponibilidad_tienda ON productos.id = disponibilidad_tienda.id_producto WHERE disponibilidad_tienda.id_tienda = 0 AND productos.fecha_de_caducidad IS NULL ORDER BY productos.precio;";
+  #$query = "SELECT p.id, p.nombre, p.precio FROM (productos AS p NATURAL JOIN disponibilidad_tienda AS dp ON p.id = dp.id_producto) WHERE dp.id_tienda = 0 AND p.fecha_de_caducidad IS NULL ORDER BY p.precio;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$unidades = $result -> fetchAll();
@@ -42,7 +43,7 @@ consultar top 3 de la tienda aqui!!!
   ?>
 	</table>
 
-<?php include('../templates/footer.html'); ?>
+<?php include('templates/footer.html'); ?>
 
 
 <br>
