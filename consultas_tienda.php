@@ -6,8 +6,8 @@ Esta es la pagina con cunsultas de la tienda elegida
 <br>
 Nombre de la tienda elegida aqui
 <?php 
-echo("Click en id tienda ");
-echo($_POST['t']);
+#echo("Click en id tienda ");
+#echo($_POST['t']);
 
 $id = $_POST['t'];
 if($id != ''){
@@ -16,7 +16,7 @@ if($id != ''){
 
 ?>
 <br>
-
+<br>
 <form id = 'caja' action="funcionalidad_1.php" method="post">
       <input type="submit" value="Top 3" id = "botonB">
       </form>
