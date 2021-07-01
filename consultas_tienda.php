@@ -20,7 +20,7 @@ $_SESSION['id_tienda'] = $id;
   <br>
 
 <form id = 'caja' action="funcionalidad_2.php" method="post">
-<input type="text" class="form-control" placeholder="texto" style="font-size:19px;" size = 15 name = 'comuna'>
+<input type="text" class="form-control" placeholder="texto" style="font-size:19px;" size = 15 name = 'f2'>
       <input type="submit" value="Buscar" id = "botonB">
 </form>
 
@@ -28,8 +28,8 @@ $_SESSION['id_tienda'] = $id;
 <br>
 
 <form id = 'caja' action="funcionalidad_3.php" method="post">
-<input type="text" class="form-control" placeholder="id item" style="font-size:19px;" size = 15 name = 'comuna'>
-<input type="text" class="form-control" placeholder="cantidad" style="font-size:19px;" size = 15 name = 'comuna'>
+<input type="text" class="form-control" placeholder="id item" style="font-size:19px;" size = 15 name = 'f3_id'>
+<input type="text" class="form-control" placeholder="cantidad" style="font-size:19px;" size = 15 name = 'f3_cant'>
       <input type="submit" value="Comprar" id = "botonB">
 </form>
 

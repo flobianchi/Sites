@@ -9,14 +9,10 @@ TOP 3 aqui
 consultar top 3 de la tienda aqui!!!
 <br>
 NO COMESTIBLES
+
 <form id = 'caja' action="show_producto.php" method="post">
       <input type="submit" value="Click ID producto" id = "botonB">
       </form>
-
-  <br>
-  <form id = 'caja' action="consultas_tienda.php" method="post">
-  <input type="submit" value="Volver" id = "botonB">
-  </form>
 
   <?php
 
@@ -48,14 +44,6 @@ NO COMESTIBLES
 	</table>
 
 COMESTIBLES
-<form id = 'caja' action="show_producto.php" method="post">
-      <input type="submit" value="Click ID producto" id = "botonB">
-      </form>
-
-  <br>
-  <form id = 'caja' action="consultas_tienda.php" method="post">
-  <input type="submit" value="Volver" id = "botonB">
-  </form>
 
   <?php
 
@@ -85,6 +73,11 @@ COMESTIBLES
 	}
   ?>
 	</table>
+
+  <br>
+  <form id = 'caja' action="consultas_tienda.php" method="post">
+  <input type="submit" value="Volver" id = "botonB">
+  </form>
 
 <?php include('templates/footer.html'); ?>
 
