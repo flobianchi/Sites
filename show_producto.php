@@ -11,8 +11,8 @@ Mostrar aqui atributos del producto
 
   <?php
 
-  $id_producto = $_SESSION['id_producto'];
-
+  $id_producto = $_POST['t'];
+echo($id_producto);
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
