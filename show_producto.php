@@ -11,14 +11,14 @@ Mostrar aqui atributos del producto
 
   <?php
 
-$id = $_SESSION['id_tienda'];
+  $id_producto = $_SESSION['id_producto'];
 
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
   
-  $query = "SELECT * FROM productos WHERE id = id;";
-  #asignar var 
+  $query = "SELECT * FROM productos WHERE id = $id_producto;";
+  #FALTA CREAR EL DICCIONARIO
 
 	$result = $db -> prepare($query);
 	$result -> execute();
