@@ -20,7 +20,7 @@ Consultar productos aqui
 
   $id = $_SESSION['id_tienda'];
 
-  $f2 = $_POST["f2"]
+  #$f2 = $_POST["f2"]
 
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
