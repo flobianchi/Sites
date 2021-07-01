@@ -11,10 +11,6 @@ consultar top 3 de la tienda aqui!!!
 <br>
 NO COMESTIBLES
 
-<form id = 'caja' action="show_producto.php" method="post">
-      <input type="submit" value="Click ID producto" id = "botonB">
-      </form>
-
   <?php
 
   $id = $_SESSION['id_tienda'];

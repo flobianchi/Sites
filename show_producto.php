@@ -4,9 +4,6 @@
 
 Mostrar aqui atributos del producto
 
-<form id = 'caja' action="consultas_tienda.php" method="post">
-      <input type="submit" value="Volver" id = "botonB">
-      </form>
   <br>
 
   <?php
@@ -37,6 +34,10 @@ Mostrar aqui atributos del producto
 	}
   ?>
 	</table>
+
+  <form id = 'caja' action="consultas_tienda.php" method="post">
+      <input type="submit" value="Volver a las consultas" id = "botonB">
+      </form>
 
 <br>
 DD de MM del 2021
