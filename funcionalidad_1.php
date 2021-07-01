@@ -78,7 +78,7 @@ COMESTIBLES
   <form id = 'caja' action="consultas_tienda.php" method="post">
   <input type="submit" value="Volver" id = "botonB">
   </form>
-
+#SACAR ESTE BOTON
 <?php include('templates/footer.html'); ?>
 
 
