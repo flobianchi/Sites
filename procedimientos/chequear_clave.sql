@@ -1,6 +1,6 @@
 CREATE OR REPLACE FUNCTION
 
-chequear_clave (rut_usuario INT, clave_usuario VARCHAR)
+chequear_clave (rut_usuario VARCHAR, clave_usuario VARCHAR)
 
 -- declaramos lo que retorna, en este caso un booleano
 RETURNS BOOLEAN AS $$
