@@ -12,13 +12,12 @@ Mostrar aqui atributos del producto
   <?php
 
   $id_producto = $_POST['t'];
-echo($id_producto);
+#echo($id_producto);
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
   
   $query = "SELECT * FROM productos WHERE id = $id_producto;";
-  #FALTA CREAR EL DICCIONARIO
 
 	$result = $db -> prepare($query);
 	$result -> execute();
@@ -38,8 +37,6 @@ echo($id_producto);
 	}
   ?>
 	</table>
-
-<?php include('templates/footer.html'); ?>
 
 <br>
 DD de MM del 2021

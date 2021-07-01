@@ -74,7 +74,9 @@ COMESTIBLES
     </tr>
   <?php
 	foreach ($unidades as $unidad) {
-  		echo "<tr><td>$unidad[0]</td><td>$unidad[1]</td> <td>$unidad[2]</td></tr>";
+  		echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
+      <input name = 't' type='submit' value='$unidad[0]' id = 'botonID'>
+      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td></tr>";
 	}
   ?>
 	</table>
