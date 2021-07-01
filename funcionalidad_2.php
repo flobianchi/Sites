@@ -47,8 +47,6 @@ Consultar productos aqui
   ?>
 	</table>
 
-<?php include('templates/footer.html'); ?>
-
 <br>
 DD de MM del 2021
 

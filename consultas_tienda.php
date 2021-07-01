@@ -8,8 +8,12 @@ Nombre de la tienda elegida aqui
 <?php 
 echo("Click en id tienda ");
 echo($_POST['t']);
+
 $id = $_POST['t'];
-$_SESSION['id_tienda'] = $id;
+if($id != ''){
+      $_SESSION['id_tienda'] = $id;
+}
+
 ?>
 <br>
 
