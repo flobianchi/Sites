@@ -7,7 +7,7 @@ RETURNS BOOLEAN AS $$
 
 -- definimos nuestra función
 BEGIN
-    IF clave_usuario IN SELECT clave FROM usuarios WHERE rut = rut_usuario THEN
+    IF clave_usuario = (SELECT clave FROM usuarios WHERE rut = rut_usuario) THEN
         RETURN TRUE;
     ELSE
     RETURN FALSE;
