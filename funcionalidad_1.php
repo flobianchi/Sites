@@ -40,7 +40,7 @@ NO COMESTIBLES
   <?php
 	foreach ($unidades as $unidad) {
   		echo "<tr><td>
-      <form id = 'caja' action='show_productos.php' method='post'>
+      <form id = 'caja' action='show_producto.php' method='post'>
 <input name = 't' type='submit' value='$unidad[0]' id = 'botonID'>
 </form>
       </td><td>$unidad[1]</td> <td>$unidad[2]</td></tr>";
