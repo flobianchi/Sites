@@ -10,11 +10,11 @@ Consultar productos aqui
       <input type="submit" value="Click ID producto" id = "botonB">
       </form>
 
+      #BORRAR ESTE BOTON DESPUES
+
   <br>
   <?php session_start(); ?>
-  <form id = 'caja' action="consultas_tienda.php" method="post">
-  <input type="submit" value="Volver" id = "botonB">
-  </form>
+
 
   <?php
 
@@ -46,6 +46,10 @@ Consultar productos aqui
 	}
   ?>
 	</table>
+
+  <form id = 'caja' action="consultas_tienda.php" method="post">
+  <input type="submit" value="Volver" id = "botonB">
+  </form>
 
 <br>
 DD de MM del 2021

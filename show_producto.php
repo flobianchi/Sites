@@ -27,10 +27,11 @@ Mostrar aqui atributos del producto
       <th>ID</th>
       <th>Nombre</th>
       <th>Precio</th>
+      <th>Descripcion</th>
     </tr>
   <?php
 	foreach ($unidades as $unidad) {
-  		echo "<tr><td>$unidad[0]</td><td>$unidad[1]</td> <td>$unidad[2]</td></tr>";
+  		echo "<tr><td>$unidad[0]</td><td>$unidad[1]</td> <td>$unidad[2]</td><td>$unidad[3]</td></tr>";
 	}
   ?>
 	</table>
