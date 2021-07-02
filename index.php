@@ -1,5 +1,7 @@
 <?php session_start(); ?>
-<?php include('templates/header.html');?>
+<?php include('templates/header.html');
+$_SESSION['ingresado'] = 0;
+?>
 
 <br>
 <div class = "grid-ingresar">

@@ -73,14 +73,18 @@ $result -> execute();
 $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 $resultado = $dataCollected[0]['chequear_clave'];
 
+$ingresado = $_SESSION['ingresado'];
+
 #si el resultado es correcto implimimospagina de siempre ok, sino no
-if(1 - $resultado){
+if(!$resultado or !$ingresado){
     echo("<p>clave incorrecta</p>");}
 else{
 
 #-------------------caso clave correcta------------------------
 $_SESSION['rut_user'] = $usuario_ingresado;
 $_SESSION['pass_user'] = $clave_ingresada;
+
+$_SESSION['ingresado'] = 1;
 
 include('templates/header_botones.html');
 
