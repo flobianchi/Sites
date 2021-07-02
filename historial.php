@@ -29,9 +29,9 @@ Mostar historial de compras aqui (carrito)
         // Ejecutamos las querys 
         $result = $db -> prepare($query);
         $result -> execute();
-        $result -> fetchAll();
+        $historial = $result -> fetchAll();
         echo("<br>$fecha_compra[0]");
-        print_r($result);
+        print_r($historial);
         echo("<\br>");
     }
 
