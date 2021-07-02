@@ -74,6 +74,7 @@ $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la cons
 $resultado = $dataCollected[0]['chequear_clave'];
 
 $ingresado = $_SESSION['ingresado'];
+echo($ingresado);
 
 #si el resultado es correcto implimimospagina de siempre ok, sino no
 if($resultado or $ingresado){
