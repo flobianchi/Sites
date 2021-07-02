@@ -74,9 +74,12 @@ tr:hover {
     <tr>
     <th>fecha</th>
     <th>id_compra</th>
-    <th>cantidad</th>
     <th>id_tienda</th>
+    <th>nombre tienda</th>
     <th>id_producto</th>
+    <th>nombre producto</th>
+    <th>cantidad</th>
+    <th>precio</th>
     </tr>");
 
     foreach ($fechas as $fecha_compra){
@@ -91,7 +94,8 @@ tr:hover {
         $historial = $result -> fetchAll();
 
         foreach ($historial as $historia){
-            echo("<tr> <td> $fecha_compra[0] </td> <td> $historia[0] </td> <td> $historia[2] </td> <td> $historia[3] </td> <td> $historia[1] </td></tr>");
+            echo("<tr> <td> $fecha_compra[0] </td> <td> $historia[0] </td> <td> $historia[3] </td> <td> viki </td> <td> $historia[1] </td>
+            <td> viki </td> <td> $historia[2] </td> <td> viki </td> </tr>");
         }
     }
 
