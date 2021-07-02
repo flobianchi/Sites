@@ -5,7 +5,7 @@ $_SESSION['ingresado'] = false;
 
 <?php 
 
-echo("<meta http-equiv='refresh' content='0; url = https://google.com' />");
+echo("<p><a href='http://google.com/'>Redirect</a></p>");
 ?>
 
 <br>
