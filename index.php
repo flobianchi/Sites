@@ -5,9 +5,7 @@ $_SESSION['ingresado'] = false;
 
 <?php 
 
-$test = true;
-
-if($test){
+echo("<meta http-equiv='refresh' content='0; url = https://google.com' />");
 ?>
 
 <br>
@@ -32,6 +30,4 @@ if($test){
 5 de Julio del 2021
 </body>
 
-<?php 
-?>
 </html>
