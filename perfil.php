@@ -2,6 +2,8 @@
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
 
+<?php include('login.php');   ?>
+
 <style>
 table.center {
     margin-left: auto;
@@ -87,8 +89,6 @@ Si es admin mostrar mas info aqui
 </form>
 <br>
 DD de MM del 2021
-
-<?php include('login.php');   ?>
 
 </body>
 </html>
