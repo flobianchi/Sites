@@ -20,11 +20,19 @@ Mostar historial de compras aqui (carrito)
 
     echo("<br> $id_current_user </br>");
 
+    #id_compra | id_producto | cantidad | id_tienda | id  | id_usuario | direccion
+    echo("<table class='center'>
+    <tr>
+    <th>fecha</th>
+    <th>cantidad</th>
+    <th>id_tienda</th>
+    <th>id_producto</th>
+    </tr>");
+
     foreach ($fechas as $fecha_compra){
 
         // Super JOIN
         //$query = "SELECT fecha, nombre, cantidad, id_tienda FROM (fechas JOIN carrito_compras ON id_compra = id_compra) JOIN productos AS p ON id_producto = p.id WHERE fecha = $fecha_compra;";
-        echo("<br> $fecha_compra[1] </br>");
         $query = "SELECT * FROM carrito_compras AS cc JOIN compras AS c ON cc.id_compra = c.id WHERE c.id = $fecha_compra[1] AND c.id_usuario = $id_current_user;";
 
         // Ejecutamos las querys 
@@ -34,8 +42,11 @@ Mostar historial de compras aqui (carrito)
 
         foreach ($historial as $historia){
             echo("<br>$fecha_compra[0]  $fecha_compra[1] $historia[0] </br>");
+            echo("<tr> <td> $fecha_compra[0] </td> <td> $historia[2] </td> <td> $historia[3] </td> <td> $historia[1] </td></tr>");
         }
     }
+    
+    echo("<table>");
 
 
 ?>
