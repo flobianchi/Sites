@@ -131,10 +131,4 @@ echo("<p>clave incorrecta</p>");
 }
 ?>
 
-<br>
-
-<br>
-DD de MM del 2021
-
-</body>
-</html>
+<?php include('templates/footer.html');
