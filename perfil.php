@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include('login.php');   ?>
+<?php include('config/login.php');   ?>
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
 
