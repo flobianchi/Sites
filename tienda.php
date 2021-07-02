@@ -75,22 +75,16 @@ $resultado = $dataCollected[0]['chequear_clave'];
 
 #si el resultado es correcto implimimospagina de siempre ok, sino no
 if(1 - $resultado){
-    echo("<p>clave correcta</p>");}
+    echo("<p>clave incorrecta</p>");}
 else{
-    echo("<p>clave incorrecta</p>");
-}
 
+#-------------------caso clave correcta------------------------
 $_SESSION['rut_user'] = $usuario_ingresado;
 $_SESSION['pass_user'] = $clave_ingresada;
 
+include('templates/header_botones.html');
 
-?>
-
-<?php include('templates/header_botones.html');   ?>
-
-<h2>Porfavor elija una tienda haciendo click en su id</h2>
-
-<?php
+echo("<h2>Porfavor elija una tienda haciendo click en su id</h2>");
 
 $query = "SELECT t.id, t.nombre FROM tiendas AS t ORDER BY t.id;";
 
@@ -98,36 +92,38 @@ $result = $db -> prepare($query);
 $result -> execute();
 $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
-
-
 echo(
-"
-</div>
-<div></div>
-<div></div> 
-</div>
+    "
+    </div>
+    <div></div>
+    <div></div> 
+    </div>
+    
+    <p style='font-size:50px;'></p>
+    <table class='center'>
+    <tr>
+    <th>id tienda</th>
+    <th>Tienda</th>
+    </tr>");
+    
+    
+    foreach ($dataCollected as $p) {
+    echo "<tr> <td> 
+    
+    <form id = 'caja' action='consultas_tienda.php' method='post'>
+    <input name = 't' type='submit' value='$p[0]' id = 'botonID'>
+    </form>
+    
+    
+    </td> <td>$p[1]</td> </tr>";
+    }
+    
+    echo("<table>");
 
-<p style='font-size:50px;'></p>
-<table class='center'>
-<tr>
-<th>id tienda</th>
-<th>Tienda</th>
-</tr>");
-
-
-foreach ($dataCollected as $p) {
-echo "<tr> <td> 
-
-<form id = 'caja' action='consultas_tienda.php' method='post'>
-<input name = 't' type='submit' value='$p[0]' id = 'botonID'>
-</form>
-
-
-</td> <td>$p[1]</td> </tr>";
 }
 
-echo("<table>");
 ?>
+
 <br>
 
 <br>
