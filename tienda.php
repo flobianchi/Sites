@@ -76,15 +76,13 @@ $resultado = $dataCollected[0]['chequear_clave'];
 $ingresado = $_SESSION['ingresado'];
 
 #si el resultado es correcto implimimospagina de siempre ok, sino no
-if(!$resultado or !$ingresado){
-    echo("<p>clave incorrecta</p>");}
-else{
+if{$resultado or $ingresado
 
 #-------------------caso clave correcta------------------------
 $_SESSION['rut_user'] = $usuario_ingresado;
 $_SESSION['pass_user'] = $clave_ingresada;
 
-$_SESSION['ingresado'] = 1;
+$_SESSION['ingresado'] = true;
 
 include('templates/header_botones.html');
 
@@ -125,7 +123,10 @@ echo(
     echo("<table>");
 
 }
-
+else{
+#---------caso clave incorrecta--------------
+echo("<p>clave incorrecta</p>");
+}
 ?>
 
 <br>

@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');
-$_SESSION['ingresado'] = 0;
+$_SESSION['ingresado'] = false;
 ?>
 
 <br>
