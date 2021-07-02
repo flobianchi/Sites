@@ -30,9 +30,6 @@ tr:hover {
 }
 </style>
 
-
-<?php include('login.php');   ?>
-
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
@@ -90,6 +87,8 @@ Si es admin mostrar mas info aqui
 </form>
 <br>
 DD de MM del 2021
+
+<?php include('login.php');   ?>
 
 </body>
 </html>
