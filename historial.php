@@ -50,10 +50,11 @@ tr:hover {
 }
 </style>
 
-<body>  
-Mostar historial de compras aqui (carrito)
+<body> 
 
 <?php
+
+    echo("<h1>Hola nombre usuario, este es tu historial de compras</h1>");
 
     $id_current_user = $_SESSION['id_user'];
 
@@ -65,8 +66,6 @@ Mostar historial de compras aqui (carrito)
     $result = $db2 -> prepare($query);
     $result -> execute();
     $fechas = $result -> fetchAll();
-
-    echo("<br> $id_current_user </br>");
 
     #id_compra | id_producto | cantidad | id_tienda | id  | id_usuario | direccion
     echo("<table class='center'>
