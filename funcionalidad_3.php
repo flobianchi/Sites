@@ -1,4 +1,5 @@
 <?php include('templates/header.html');   ?>
+<?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   ?>
 
 Esta es la pagina que intenta realizar la compra
@@ -16,8 +17,6 @@ En caso de ser exitoso mostramos las ultimas 10 compras
   <input type="submit" value="Volver" id = "botonB">
   </form>
 
-<br>
-DD de MM del 2021
 
-</body>
-</html>
+
+<?php include('templates/footer.html');

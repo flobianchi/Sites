@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
+<?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   ?>
 
 Esta es la pagina con cunsultas de la tienda elegida
@@ -38,11 +39,10 @@ if($id != ''){
 </form>
 
 <br>
-DD de MM del 2021
+<br>
 
 <form id = 'caja' action="tienda.php" method="post">
       <input type="submit" value="Volver" id = "botonB">
 </form>
 
-</body>
-</html>
+<?php include('templates/footer.html');
