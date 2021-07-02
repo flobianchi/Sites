@@ -61,24 +61,38 @@ if($usuario_ingresado == ''){
     $usuario_ingresado = '66954467-7';
 }
 
+echo("Usuario_ingresado: $usuario_ingresado $clave_ingresada");
+
+echo("chequeamos clave aqui");
+
+#Llama a conexión, crea el objeto PDO y obtiene la variable $db
+require("config/conexion.php");
+
+$query = "SELECT chequear_clave('$usuario_ingresado','$clave_ingresada')";
+
+$result = $db -> prepare($query);
+$result -> execute();
+$dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
+
+print_r($dataCollected);
+
 $_SESSION['rut_user'] = $usuario_ingresado;
 $_SESSION['pass_user'] = $clave_ingresada;
 
-echo("en session se hay: $usuario_ingresado $clave_ingresada");
 
 ?>
 
 <h2>Porfavor elija una tienda haciendo click en su id</h2>
 
 <?php
-#Llama a conexión, crea el objeto PDO y obtiene la variable $db
-require("config/conexion.php");
 
 $query = "SELECT t.id, t.nombre FROM tiendas AS t ORDER BY t.id;";
 
 $result = $db -> prepare($query);
 $result -> execute();
 $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
+
+
 
 echo(
 "
