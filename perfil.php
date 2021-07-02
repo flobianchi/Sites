@@ -86,8 +86,5 @@ Si es admin mostrar mas info aqui
 <form id = 'caja' action="tienda.php" method="post">
       <input type="submit" value="Volver" id = "botonB">
 </form>
-<br>
-DD de MM del 2021
 
-</body>
-</html>
+<?php include('templates/footer.html');

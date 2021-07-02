@@ -19,10 +19,6 @@ $_SESSION['ingresado'] = false;
 
 <div></div>
 </div>
-<br>
 
 
-5 de Julio del 2021
-</body>
-
-</html>
+<?php include('templates/footer.html');
