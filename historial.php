@@ -52,9 +52,11 @@ tr:hover {
 
 <body> 
 
-<?php
+<?php   
 
-    echo("<h1>Hola nombre usuario, este es tu historial de compras</h1>");
+    $nombre = $_SESSION['name_user'];
+
+    echo("<h2>Hola $nombre, este es tu historial de compras</h2>");
 
     $id_current_user = $_SESSION['id_user'];
 
@@ -97,8 +99,8 @@ tr:hover {
 
 
 ?>
-
-
+<br>
+<br>
 <form id = 'caja' action="perfil.php" method="post">
       <input type="submit" value="Volver" id = "botonB">
       </form>
