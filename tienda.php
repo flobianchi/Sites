@@ -74,7 +74,12 @@ $result = $db -> prepare($query);
 $result -> execute();
 $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 $resultado = $dataCollected[0]['chequear_clave'];
-echo("<p>$resultado</p>");
+
+if($resultado){
+    echo("<p>clave correcta</p>");}
+else{
+    echo("<p>clave incorrecta</p>");
+}
 
 $_SESSION['rut_user'] = $usuario_ingresado;
 $_SESSION['pass_user'] = $clave_ingresada;
