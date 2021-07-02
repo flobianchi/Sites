@@ -1,7 +1,7 @@
 <?php session_start(); ?>
-<?php include('config/login.php');   ?>
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
+<?php include('config/login.php');   ?>
 
 <style>
 table.center {
