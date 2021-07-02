@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
-<?php include('login.php');   ?>
 
 <style>
 table.center {
@@ -32,7 +31,7 @@ tr:hover {
 </style>
 
 
-
+<?php include('login.php');   ?>
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
