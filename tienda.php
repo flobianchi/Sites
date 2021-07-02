@@ -68,7 +68,7 @@ echo("chequeamos clave aqui");
 #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 require("config/conexion.php");
 
-$query = "SELECT chequear_clave('$usuario_ingresado','$clave_ingresada')";
+$query = "SELECT chequear_clave('$usuario_ingresado','$clave_ingresada');";
 
 $result = $db -> prepare($query);
 $result -> execute();
