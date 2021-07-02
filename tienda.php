@@ -56,17 +56,16 @@ tr:hover {
 $usuario_ingresado = $_POST['usuario'];
 $clave_ingresada = $_POST['clave'];
 
+#usuario defaul por ahora
 if($usuario_ingresado == ''){
     $usuario_ingresado = '66954467-7';
+    $clave_ingresada = 'viki';
 }
 
-echo("Usuario_ingresado: $usuario_ingresado $clave_ingresada");
-
-echo("chequeamos clave aqui");
-
-#Llama a conexión, crea el objeto PDO y obtiene la variable $db
+#Llama a conexión de la bdd
 require("config/conexion.php");
 
+#chequeamos clave
 $query = "SELECT chequear_clave('$usuario_ingresado','$clave_ingresada');";
 
 $result = $db -> prepare($query);
@@ -74,7 +73,8 @@ $result -> execute();
 $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 $resultado = $dataCollected[0]['chequear_clave'];
 
-if($resultado){
+#si el resultado es correcto implimimospagina de siempre ok, sino no
+if(1 - $resultado){
     echo("<p>clave correcta</p>");}
 else{
     echo("<p>clave incorrecta</p>");
