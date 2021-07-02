@@ -3,13 +3,6 @@
 $_SESSION['ingresado'] = false;
 ?>
 
-<?php 
-
-header("Location: http://www.google.com/");
-exit;
-
-?>
-
 <br>
 <div class = "grid-ingresar">
 <div></div>
