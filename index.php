@@ -5,7 +5,8 @@ $_SESSION['ingresado'] = false;
 
 <?php 
 
-echo("<p><a href='http://google.com/'>Redirect</a></p>");
+header("Location: http://www.google.com/");
+
 ?>
 
 <br>
