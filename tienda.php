@@ -55,7 +55,7 @@ tr:hover {
 <?php
 
 $usuario_ingresado = $_POST['usuario'];
-$clave_ingresada = $_POST['clve'];
+$clave_ingresada = $_POST['clave'];
 
 if($usuario_ingresado == ''){
     $usuario_ingresado = '66954467-7';
@@ -74,7 +74,7 @@ $result = $db -> prepare($query);
 $result -> execute();
 $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
 
-print_r($dataCollected);
+echo("<p>"$dataCollected[0]['chequear_clave']"</p>");
 
 $_SESSION['rut_user'] = $usuario_ingresado;
 $_SESSION['pass_user'] = $clave_ingresada;
