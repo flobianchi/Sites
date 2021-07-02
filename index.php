@@ -3,6 +3,13 @@
 $_SESSION['ingresado'] = false;
 ?>
 
+<?php 
+
+$test = true;
+
+if($test){
+?>
+
 <br>
 <div class = "grid-ingresar">
 <div></div>
@@ -24,4 +31,7 @@ $_SESSION['ingresado'] = false;
 
 5 de Julio del 2021
 </body>
+
+<?php 
+?>
 </html>
