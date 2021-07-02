@@ -2,7 +2,7 @@
   $ingresado = $_SESSION['ingresado'];
 
   if(!$ingresado){
-    echo("<meta http-equiv='refresh' content='0; url = error.php />");
-    exit;
+    header("Location: http://codd.ing.puc.cl/~grupo53/error.php/>");
+    exit();
   }
 ?>
