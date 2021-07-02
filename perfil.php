@@ -2,6 +2,8 @@
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
 
+<?php include('login.php');   ?>
+
 <style>
 table.center {
     margin-left: auto;
@@ -29,9 +31,6 @@ tr:hover {
     padding: 8px;
 }
 </style>
-
-
-<?php include('login.php');   ?>
 
 <?php
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
