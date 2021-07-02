@@ -1,4 +1,5 @@
 <?php include('templates/header.html');   ?>
+<?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   ?>
 
 Esta es la pagina de seleccion de tiendas
@@ -14,8 +15,6 @@ Consultar tiendas aqui
   <input type="submit" value="Ir a perfil" id = "botonB">
   </form>
 
-<br>
-DD de MM del 2021
 
-</body>
-</html>
+
+<?php include('templates/footer.html');

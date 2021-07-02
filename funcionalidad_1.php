@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
+<?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   ?>
 
 
@@ -83,8 +84,4 @@ COMESTIBLES
   </form>
 
 
-<br>
-DD de MM del 2021
-
-</body>
-</html>
+<?php include('templates/footer.html');

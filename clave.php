@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
+<?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   
  require("config/conexion.php");?>
 
@@ -26,5 +27,4 @@ echo("Hola $nombre, tu nueva clave es: $clave_final");
 <input type="submit" value="Volver" id = "botonB">
 </form>
 
-</body>
-</html>
+<?php include('templates/footer.html');

@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
+<?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   ?>
 
 Esta es la pagina de buscar productos con nombre texto ( o que contengan texto)
@@ -51,8 +52,5 @@ Consultar productos aqui
   <input type="submit" value="Volver" id = "botonB">
   </form>
 
-<br>
-DD de MM del 2021
 
-</body>
-</html>
+<?php include('templates/footer.html');

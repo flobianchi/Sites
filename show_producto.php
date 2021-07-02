@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
+<?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   ?>
 
 Mostrar aqui atributos del producto
@@ -40,8 +41,5 @@ Mostrar aqui atributos del producto
       <input type="submit" value="Volver a las consultas" id = "botonB">
       </form>
 
-<br>
-DD de MM del 2021
 
-</body>
-</html>
+<?php include('templates/footer.html');
