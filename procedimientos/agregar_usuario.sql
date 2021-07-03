@@ -22,7 +22,7 @@ BEGIN
         SELECT INTO idmax MAX(id) FROM usuarios;
 
         -- agregamos usuario y su direccion
-        INSERT INTO usuarios values(idmax + 1, nombre, rut, edad, sexo, 'cambiar_clave', calificacion_input);
+        INSERT INTO usuarios values(idmax + 1, nombre, rut_input, edad, sexo, 'cambiar_clave', calificacion_input);
         INSERT INTO direcciones_usuarios values(idmax + 1, id_direccion);
 
         -- retornamos true si se agregó el valor
