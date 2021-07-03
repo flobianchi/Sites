@@ -67,17 +67,23 @@ Mostrar aqui atributos del producto
 	$unidades = $result -> fetchAll();
 
   ?>
-
 	<table>
     <tr>
       <th>ID</th>
       <th>Nombre</th>
       <th>Precio</th>
       <th>Descripcion</th>
+      <th>Largo</th>
+      <th>Alto</th>
+      <th>Ancho</th>
+      <th>Peso</th>
+      <th>Fecha de caducidad</th>
+      <th>Duracion sin refrigerar</th>
+      <th>Tipo de conserva</th>
     </tr>
   <?php
 	foreach ($unidades as $unidad) {
-  		echo "<tr><td>$unidad[0]</td><td>$unidad[1]</td> <td>$unidad[2]</td><td>$unidad[3]</td></tr>";
+  		echo "<tr><td>$unidad[0]</td><td>$unidad[1]</td> <td>$unidad[2]</td><td>$unidad[3]</td><td>$unidad[4]</td><td>$unidad[5]</td><td>$unidad[6]</td><td>$unidad[7]</td><td>$unidad[8]</td><td>$unidad[9]</td><td>$unidad[10]</td></tr>";
 	}
   ?>
 	</table>
