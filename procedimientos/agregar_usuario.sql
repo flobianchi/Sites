@@ -29,7 +29,7 @@ BEGIN
         RETURN 'agregado como usuario nuevo';
 
     -- si es que el rut esta, hacemos update en calificacion
-    ELSIF calificacion IS NOT 'usuario' THEN
+    ELSIF calificacion <> 'usuario' THEN
 
         -- buscamos su id
         SELECT INTO id_usuario id FROM usuarios WHERE rut = rut_input;
