@@ -28,6 +28,7 @@ BEGIN
         -- retornamos true si se agregó el valor
         RETURN 1;
 
+    /*
     -- si es que el rut esta, hacemos update en calificacion
     ELSIF calificacion <> 'usuario' THEN
 
@@ -38,7 +39,7 @@ BEGIN
         UPDATE usuarios SET calificacion = calificacion_input WHERE id = id_usuario;
 
         RETURN 2;
-
+    */
     ELSE
         RETURN 0;
         -- y false si no se agregó
