@@ -86,7 +86,7 @@ Consultar productos aqui
   <?php
 	foreach ($unidades as $unidad) {
     tipo = 'Comestible'
-    if (unidad[4] is NULL){
+    if ($unidad[4] is NULL){
       tipo = 'No comestible';
     }
   	
