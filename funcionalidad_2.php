@@ -48,7 +48,7 @@ tr:hover {
 }
 </style>
 
-Esta es la pagina de buscar productos con nombre texto ( o que contengan texto)
+Esta es la pagina de buscar productos con nombre texto (o que contengan texto)
 <br>
 Consultar productos aqui
 
@@ -66,7 +66,7 @@ Consultar productos aqui
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
- $query = "SELECT productos.id, productos.nombre, productos.precio FROM productos JOIN disponibilidad_tienda ON productos.id = disponibilidad_tienda.id_producto WHERE disponibilidad_tienda.id_tienda = $id AND productos.nombre LIKE ('%$f2%');";
+ $query = "SELECT productos.id, productos.nombre, productos.precio FROM productos JOIN disponibilidad_tienda ON productos.id = disponibilidad_tienda.id_producto WHERE disponibilidad_tienda.id_tienda = $id AND LOWER(productos.nombre) LIKE LOWER ('%$f2%');";
  $result = $db -> prepare($query);
 	$result -> execute();
 	$unidades = $result -> fetchAll();
