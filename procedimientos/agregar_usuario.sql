@@ -40,9 +40,8 @@ BEGIN
         RETURN 'uasuario ya existe, update en califiacion';
 
     ELSE
+        RETURN 'uasuario ya existe';
         -- y false si no se agregó
-        RETURN 'uasuario ya existe';;
-
         
 
     END IF;
