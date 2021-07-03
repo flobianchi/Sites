@@ -43,7 +43,6 @@ BEGIN
         RETURN 0;
         -- y false si no se agregó
         
-        
 
     END IF;
 
