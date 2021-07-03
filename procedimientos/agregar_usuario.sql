@@ -3,10 +3,10 @@ CREATE OR REPLACE FUNCTION
 -- declaramos la función y sus argumentos
 -- nombre, rut,, edad, sexo, calificación, id_direccion
 
-agregar_usuario (nombre varchar, rut_input varchar, edad int, sexo varchar, calificacion_input varchar, id_direccion int)
+agreagar_usuario (nombre varchar, rut_input varchar, edad int, sexo varchar, calificacion_input varchar, id_direccion int)
 
 -- declaramos lo que retorna, en este caso un booleano
-RETURNS INT AS $$
+RETURNS VARCHAR AS $$
 
 DECLARE 
 idmax VARCHAR;
@@ -26,9 +26,8 @@ BEGIN
         INSERT INTO direcciones_usuarios values(idmax + 1, id_direccion);
 
         -- retornamos true si se agregó el valor
-        RETURN 1;
+        RETURN 'agregado como usuario nuevo';
 
-    /*
     -- si es que el rut esta, hacemos update en calificacion
     ELSIF calificacion <> 'usuario' THEN
 
@@ -38,12 +37,11 @@ BEGIN
         -- update en su calificacion (por si estaba)
         UPDATE usuarios SET calificacion = calificacion_input WHERE id = id_usuario;
 
-        RETURN 2;
-    */
+        RETURN 'uasuario ya existe, update en califiacion';
+
     ELSE
-        RETURN 0;
-        -- y false si no se agregó
-        
+        RETURN 'uasuario ya existe';
+        -- y false si no se agrego
 
     END IF;
 
