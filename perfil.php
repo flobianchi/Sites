@@ -72,26 +72,31 @@ tr:hover {
 
       $calificacion = $dataCollected[0]['calificacion'];
       if($calificacion == 'administracion'){
-        echo("El usuario es del tipo administracion, mostrar datos aqui");
-      }else{
-        echo("El usuario no es del tipo administracion, no es necesario mostrar datos aqui");
-      }
 
+        #----------------------------caso administracion-----------------------------------------------
+
+
+        echo("El usuario es del tipo administracion, mostrar datos aqui");
+
+
+      }
       ?>
 
 
 <br>
-
+<h3>Puedes ver tu historial de compras aquí</h3>
 <form id = 'caja' action="historial.php" method="post">
       <input type="submit" value="Historial" id = "botonB">
 </form>
 <br>
-
+<br>
+<h3>Para cambiar tu clave debes ingrear una nueva clave</h3>
 <form id = 'caja' action="clave.php" method="post">
 <input type="text" class="form-control" placeholder="nueva clave" style="font-size:19px;" size = 15 name = 'nueva_clave'>
-      <input type="submit" value="Cambiar clave" id = "botonB">
+      <input type="submit" value="Cambiar" id = "botonB">
 </form>
 <br>
+<h3>Para volver al menú de elección de tienda debes hacer click en volver</h3>
 <form id = 'caja' action="tienda.php" method="post">
       <input type="submit" value="Volver" id = "botonB">
 </form>
