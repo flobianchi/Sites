@@ -66,21 +66,39 @@ Mostrar aqui atributos del producto
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$unidades = $result -> fetchAll();
+echo('<table>
+<tr>');
+$fila = '<tr>'
 
+$id = $unidades[0]['id'];
+if($id != ''){
+  echo( '<th>ID</th>');
+ $fila = $fila + '<td>' + $id + '</td>';
+}
+
+$Precio = $unidades[0]['precio'];
+if($Precio != ''){
+  echo( '<th>Precio</th>');
+ $fila = $fila + '<td>' + $Precio + '</td>';
+}
+
+$Descripcion = $unidades[0]['descripcion'];
+if($Descripcion != ''){
+  echo( '<th>Descripcion</th>');
+ $fila = $fila + '<td>' + $Descripcion + '</td>';
+}
+
+$Largo = $unidades[0]['largo'];
+if($Largo != ''){
+  echo( '<th>Largo</th>');
+ $fila = $fila + '<td>' + $Largo + '</td>';
+}
+
+echo('</tr>');
+$fila = $fila + '</tr>';
+echo($fila);
   ?>
 
-	<table>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Precio</th>
-      <th>Descripcion</th>
-    </tr>
-  <?php
-	foreach ($unidades as $unidad) {
-  		echo "<tr><td>$unidad[0]</td><td>$unidad[1]</td> <td>$unidad[2]</td><td>$unidad[3]</td></tr>";
-	}
-  ?>
 	</table>
 
   <form id = 'caja' action="consultas_tienda.php" method="post">

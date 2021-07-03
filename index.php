@@ -20,5 +20,16 @@ $_SESSION['ingresado'] = false;
 <div></div>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<h2>¿No tienes cuenta?</h2>
+<h3>Crea una cuenta</h3>
+<form id = 'caja' action="nueva_cuenta.php" method="post">
+    <input type="submit" value="Crear" id = "botonB">
+</form>
+<br>
+
 
 <?php include('templates/footer.html');

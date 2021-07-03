@@ -49,7 +49,7 @@ tr:hover {
 }
 </style>
 
-Esta es la pagina de buscar productos con nombre texto ( o que contengan texto)
+Esta es la pagina de buscar productos con nombre texto (o que contengan texto)
 <br>
 Consultar productos aqui
 
@@ -67,7 +67,7 @@ Consultar productos aqui
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
- $query = "SELECT productos.id, productos.nombre, productos.precio FROM productos JOIN disponibilidad_tienda ON productos.id = disponibilidad_tienda.id_producto WHERE disponibilidad_tienda.id_tienda = $id AND productos.nombre LIKE ('%$f2%');";
+ $query = "SELECT productos.id, productos.nombre, productos.precio, productos.descripcion, productos.fecha_de_caducidad FROM productos JOIN disponibilidad_tienda ON productos.id = disponibilidad_tienda.id_producto WHERE disponibilidad_tienda.id_tienda = $id AND LOWER(productos.nombre) LIKE LOWER ('%$f2%');";
  $result = $db -> prepare($query);
 	$result -> execute();
 	$unidades = $result -> fetchAll();
@@ -81,12 +81,19 @@ Consultar productos aqui
       <th>ID</th>
       <th>Nombre</th>
       <th>Precio</th>
+      <th>Descripcion</th>
+      <th>Tipo</th>
     </tr>
   <?php
 	foreach ($unidades as $unidad) {
-  		echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
+    #tipo = 'Comestible'
+    #if ($unidad[4] == ''){
+      #tipo = 'No comestible';
+    #}
+  	
+      echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
       <input name = 't' type='submit' value='$unidad[0]' id = 'botonID'>
-      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td></tr>";
+      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td><td>$unidad[3]</td><td> tipo </td></tr>";
 	}
   ?>
 	</table>
