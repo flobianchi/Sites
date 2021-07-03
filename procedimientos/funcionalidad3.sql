@@ -1,30 +1,30 @@
 CREATE OR REPLACE FUNCTION
 
-insertar_carrito_compra(id_compra int, id_producto int, cantidad int, id_tienda int)
+insertar_carrito_compra (id_compra int, id_producto int, cantidad int, id_tienda int)
 
 RETURNS void AS $$
 
 BEGIN 
 
-insert into carrito_compras values(id_compra, id_producto, cantidad, id_tienda);
+insert into carrito_compras values (id_compra, id_producto, cantidad, id_tienda);
 
 END
 
 CREATE OR REPLACE FUNCTION
 
-insertar_compra(id int, id_usuario int, direccion varchar)
+insertar_compra (id int, id_usuario int, direccion varchar)
 
 RETURNS void AS $$
 
 BEGIN 
 
-insert into compras values(id, id_usuario, direccion);
+insert into compras values (id, id_usuario, direccion);
 
 END
 
 CREATE OR REPLACE FUNCTION
 
-chequear_disponibilidad(id_tienda int, id_producto int)
+chequear_disponibilidad (id_tienda int, id_producto int)
 
 RETURNS void AS $$
 
