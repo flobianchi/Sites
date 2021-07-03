@@ -3,6 +3,51 @@
 <?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   ?>
 
+<style>
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #c29f29;
+    width: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+th {
+    background-color: #f3c733;
+    padding: 4px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    padding: 8px;
+}
+
+tr:hover {
+    background-color: #9bf6ff;
+    padding: 8px;
+}
+
+#botonID {
+  background-color: #f3c733; 
+  color: black; 
+  height:30px; 
+  width:38px;
+  text-decoration: none; 
+  border-radius: 8px; 
+  font-size: 15px; 
+  margin: 3px; 
+  cursor: pointer;
+}
+
+#botonID:hover {
+    border: none;
+    background:#c29f29;
+    color: #444444; 
+    box-shadow: 0px 0px 1px #777;
+    content: "ir";
+}
+</style>
 
 TOP 3 aqui
 
