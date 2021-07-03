@@ -127,7 +127,27 @@ echo(
 }
 else{
 #---------caso clave incorrecta--------------
-echo("<p>clave incorrecta</p>");
+echo("
+
+<h3>clave y/o usuario incorrecto</h3>
+
+Para volver a intentarlo debes ir al inicio
+<br>
+<form id = 'caja' action='index.php' method='post'>
+    <input type='submit' value='Ir al Inicio' id = 'botonB'>
+</form>
+
+
+<br>
+<br>
+<h2>¿No tienes cuenta?</h2>
+<h3>Crea una cuenta</h3>
+<form id = 'caja' action='nueva_cuenta.php' method='post'>
+    <input type='submit' value='Crear' id = 'botonB'>
+</form>
+<br>
+
+");
 }
 ?>
 

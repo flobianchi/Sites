@@ -26,7 +26,6 @@ $_SESSION['ingresado'] = false;
 <br>
 <h2>¿No tienes cuenta?</h2>
 <h3>Crea una cuenta</h3>
-<br>
 <form id = 'caja' action="nueva_cuenta.php" method="post">
     <input type="submit" value="Crear" id = "botonB">
 </form>
