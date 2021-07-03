@@ -80,12 +80,18 @@ Consultar productos aqui
       <th>ID</th>
       <th>Nombre</th>
       <th>Precio</th>
+      <th>Tipo</th>
     </tr>
   <?php
 	foreach ($unidades as $unidad) {
-  		echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
+    tipo = 'Comestible'
+    if (unidad[8] == NULL){
+      tipo = 'No comestible';
+    }
+  	
+      echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
       <input name = 't' type='submit' value='$unidad[0]' id = 'botonID'>
-      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td></tr>";
+      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td><td> tipo </td></tr>";
 	}
   ?>
 	</table>
