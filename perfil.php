@@ -97,7 +97,7 @@ tr:hover {
 </form>
 <br>
 <br>
-<p style="font-size:10px;">Para volver al menú de elección de tienda, debes hacer click en volver</p>
+<h3>Para volver al menú de elección de tienda, debes hacer click en volver</h3>
 <form id = 'caja' action="tienda.php" method="post">
       <input type="submit" value="Volver" id = "botonB">
 </form>
