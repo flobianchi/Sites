@@ -36,7 +36,7 @@ tr:hover {
   require("config/conexion.php");
 
       $rut_user = $_SESSION['rut_user'];
-      $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo FROM usuarios AS u WHERE u.rut = '$rut_user';";
+      $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo, u.calificacion FROM usuarios AS u WHERE u.rut = '$rut_user';";
 
       $result = $db -> prepare($query);
       $result -> execute();
@@ -66,12 +66,21 @@ tr:hover {
 
       $id_current_user = $dataCollected[0]['id'];
       $_SESSION['id_user'] = $id_current_user;
-        
+
+
+      echo("<br>");
+
+      $calificacion = $dataCollected[0]['calificacion'];
+      if($calificacion == 'administracion'){
+        echo("El usuario es del tipo administracion, mostrar datos aqui");
+      }else{
+        echo("El usuario no es del tipo administracion, no es necesario mostrar datos aqui");
+      }
+
       ?>
 
 
 <br>
-Si es admin mostrar mas info aqui
 
 <form id = 'caja' action="historial.php" method="post">
       <input type="submit" value="Historial" id = "botonB">
