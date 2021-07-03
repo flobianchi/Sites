@@ -98,18 +98,18 @@ tr:hover {
         $result -> execute();
         $historial = $result -> fetchAll();
 
-        //foreach ($historial as $historia){
-        //    echo("<tr> <td> $fecha_compra[0] </td> <td> $historia[0] </td> <td> $historia[1] </td> <td> $historia[2] </td> <td> $historia[3] </td>
-        //   <td> $historia[4] </td> <td> $historia[5] </td> <td> $historia[6] </td> </tr>");
+        foreach ($historial as $historia){
+            echo("<tr> <td> $fecha_compra[0] </td> <td> $historia[0] </td> <td> $historia[1] </td> <td> $historia[2] </td> <td> $historia[3] </td>
+           <td> $historia[4] </td> <td> $historia[5] </td> <td> $historia[6] </td> </tr>");
 
-        echo("<tr> <td> $fecha_compra[0] </td>")
-        foreach ($historial as $h) {
-            echo "<tr>";
-            for ($i = 0; $i < 7; $i++) {
-                echo "<td>$h[$i]</td> ";
-            }
-            echo "</tr>";
-        }
+        //echo("<tr> <td> $fecha_compra[0] </td>")
+        //foreach ($historial as $h) {
+        //    echo "<tr>";
+        //    for ($i = 0; $i < 7; $i++) {
+        //        echo "<td>$h[$i]</td> ";
+        //    }
+        //    echo "</tr>";
+        // }
         }
     }
 
