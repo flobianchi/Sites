@@ -3,7 +3,7 @@ CREATE OR REPLACE FUNCTION
 -- declaramos la función y sus argumentos
 -- nombre, rut,, edad, sexo, calificación, id_direccion
 
-agreagar_usuario (nombre varchar, rut_input varchar, edad int, sexo varchar, calificacion_input varchar, id_direccion int)
+agregar_usuario (nombre varchar, rut_input varchar, edad int, sexo varchar, calificacion_input varchar, id_direccion int)
 
 -- declaramos lo que retorna, en este caso un booleano
 RETURNS VARCHAR AS $$
