@@ -17,6 +17,9 @@ $_SESSION['ingresado'] = false;
     <input type="submit" value="Ingresar" id = "botonB">
 </form></div>
 
+<div></div>
+</div>
+
 <br>
 <br>
 <br>
