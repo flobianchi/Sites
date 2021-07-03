@@ -80,6 +80,7 @@ Consultar productos aqui
       <th>ID</th>
       <th>Nombre</th>
       <th>Precio</th>
+      <th>Descripcion</th>
       <th>Tipo</th>
     </tr>
   <?php
@@ -91,7 +92,7 @@ Consultar productos aqui
   	
       echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
       <input name = 't' type='submit' value='$unidad[0]' id = 'botonID'>
-      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td><td> tipo </td></tr>";
+      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td><td>$unidad[3]</td><td> tipo </td></tr>";
 	}
   ?>
 	</table>
