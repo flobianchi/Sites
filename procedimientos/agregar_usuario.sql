@@ -9,7 +9,7 @@ agregar_usuario (nombre varchar, rut_input varchar, edad int, sexo varchar, cali
 RETURNS VARCHAR AS $$
 
 DECLARE 
-idmax VARCHAR;
+idmax INT;
 id_usuario INT;
 
 
