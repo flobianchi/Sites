@@ -6,7 +6,7 @@ RETURNS void AS $$
 
 BEGIN 
 
-insert into carrito_compras values(id_compra, id_producto, cantidad, id_tienda)
+insert into carrito_compras values(id_compra, id_producto, cantidad, id_tienda);
 
 END
 
@@ -18,7 +18,7 @@ RETURNS void AS $$
 
 BEGIN 
 
-insert into compras values()
+insert into compras values(id, id_usuario, direccion);
 
 END
 
@@ -30,7 +30,7 @@ RETURNS void AS $$
 
 BEGIN 
 
-productos = (SELECT productos.nombre FROM productos, disponibilidad_tienda WHERE productos.id = disponibilidad_tienda.id_producto)
+productos = (SELECT productos.nombre FROM productos, disponibilidad_tienda WHERE productos.id = disponibilidad_tienda.id_producto);
 PRINT(productos)
 END
 
