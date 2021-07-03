@@ -78,7 +78,7 @@ tr:hover {
 
         echo("El usuario es del tipo administracion, mostrar datos aqui");
         //id_personal;id_unidad;nombre;rut;sexo;edad;clasificacion
-        $query = "SELECT a.id_unidad, a.nombre, a.rut, a.sexo, a.edad, a.clasificacion FROM administrativos AS a JOIN unidades AS u ON a.id_unidad = u.id WHERE u.id_jefe = $id_current_user;";
+        $query = "SELECT a.id_unidad, a.nombre, a.rut, a.sexo, a.edad, a.clasificacion FROM administrativos AS a JOIN unidades AS u ON a.id_unidad = u.id_unidad WHERE u.id_personal_jefe = $id_current_user;";
 
         $result = $db2 -> prepare($query);
         $result -> execute();
