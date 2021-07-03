@@ -77,7 +77,31 @@ tr:hover {
 
 
         echo("El usuario es del tipo administracion, mostrar datos aqui");
+        //id_personal;id_unidad;nombre;rut;sexo;edad;clasificacion
+        $query = "SELECT a.id_unidad, a.nombre, a.rut, a.sexo, a.edad, a.clasificacion FROM administrativos AS a JOIN unidades AS u ON a.id_unidad = u.id WHERE u.id_jefe = $id_current_user;";
 
+        $result = $db2 -> prepare($query);
+        $result -> execute();
+        $info_admins = $result -> fetchAll(); 
+
+
+        echo("
+
+        <table class='center'>
+        <tr>
+        <th>ID Unidad</th>
+        <th>Nombre Personal</th>
+        <th>RUT</th>
+        <th>Sexo</th>
+        <th>Edad</th>
+        <th>Clasificación</th>
+        </tr>");
+        
+        foreach ($info_admins as $p) {
+        echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> <td>$p[5]</td> </tr>";
+        }
+        
+        echo("<table>");
 
       }
       ?>
