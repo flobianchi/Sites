@@ -66,7 +66,7 @@ Consultar productos aqui
   #Llama a conexión, crea el objeto PDO y obtiene la variable $db
   require("config/conexion.php");
 
- $query = "SELECT productos.id, productos.nombre, productos.precio FROM productos JOIN disponibilidad_tienda ON productos.id = disponibilidad_tienda.id_producto WHERE disponibilidad_tienda.id_tienda = $id AND productos.nombre LIKE ('%$f2$%');";
+ $query = "SELECT productos.id, productos.nombre, productos.precio FROM productos JOIN disponibilidad_tienda ON productos.id = disponibilidad_tienda.id_producto WHERE disponibilidad_tienda.id_tienda = $id AND productos.nombre LIKE ('%$f2%');";
  $result = $db -> prepare($query);
 	$result -> execute();
 	$unidades = $result -> fetchAll();
