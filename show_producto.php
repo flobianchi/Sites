@@ -69,11 +69,11 @@ echo('<table>
 <tr>');
 $fila = '<tr>'
 
-$id = $unidades[0]['id'];
-if($id != ''){
-  echo( '<th>ID</th>');
- $fila = $fila + '<td>' + $id + '</td>';
-}
+#$id = $unidades[0]['id'];
+#if($id != ''){
+ # echo( '<th>ID</th>');
+ #$fila = $fila + '<td>' + $id + '</td>';
+#}
 
 $Precio = $unidades[0]['precio'];
 if($Precio != ''){
