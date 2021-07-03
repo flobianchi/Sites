@@ -43,7 +43,6 @@ BEGIN
         RETURN 'uasuario ya existe';
         -- y false si no se agregó
         
-        
 
     END IF;
 
