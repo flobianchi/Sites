@@ -14,6 +14,16 @@
 
     print_r($respuesta);
 
+    echo("<br>Ejecutando procedimiento agregar_columna_calificacion()<br>");
+
+    $query = "SELECT agregar_columna_calificacion(1);";
+
+    $result = $db -> prepare($query);
+    $result -> execute();
+    $respuesta = $result -> fetchAll();
+
+    print_r($respuesta);
+
 ?>
 
     <body>  
