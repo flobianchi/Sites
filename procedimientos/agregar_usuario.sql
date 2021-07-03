@@ -41,7 +41,7 @@ BEGIN
 
     ELSE
         -- y false si no se agregó
-        RETURN 'uasuario ya existe';
+        RETURN 'uasuario ya existe';;
 
     END IF;
 
