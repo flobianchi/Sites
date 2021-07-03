@@ -94,6 +94,42 @@ if($Largo != ''){
  $fila = $fila + '<td>' + $Largo + '</td>';
 }
 
+$Alto = $unidades[0]['alto'];
+if($Alto != ''){
+  echo( '<th>Alto</th>');
+ $fila = $fila + '<td>' + $Alto + '</td>';
+}
+
+$Ancho = $unidades[0]['ancho'];
+if($Ancho != ''){
+  echo( '<th>Ancho</th>');
+ $fila = $fila + '<td>' + $Ancho + '</td>';
+}
+
+$Peso = $unidades[0]['peso'];
+if($Peso != ''){
+  echo( '<th>Peso</th>');
+ $fila = $fila + '<td>' + $Peso + '</td>';
+}
+
+$Fecha_de_caducidad = $unidades[0]['fecha_de_caducidad'];
+if($Fecha_de_caducidad != ''){
+  echo( '<th>Fecha de caducidad</th>');
+ $fila = $fila + '<td>' + $Fecha_de_caducidad + '</td>';
+}
+
+$Duracion_sin_refrigerar = $unidades[0]['duracion_sin_refrigerar'];
+if($Duracion_sin_refrigerar != ''){
+  echo( '<th>Duracion sin refrigerar</th>');
+ $fila = $fila + '<td>' + $Duracion_sin_refrigerar + '</td>';
+}
+
+$Tipo_de_conserva = $unidades[0]['tipo_de_conserva'];
+if($Tipo_de_conserva != ''){
+  echo( '<th>Tipo de conserva</th>');
+ $fila = $fila + '<td>' + $Tipo_de_conserva + '</td>';
+}
+
 echo('</tr>');
 $fila = $fila + '</tr>';
 echo($fila);
