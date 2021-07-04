@@ -85,8 +85,8 @@ De acuerdo al texto que ingresaste estos son los resultados que encontramos:
     </tr>
   <?php
 	foreach ($unidades as $unidad) {
-    $tipo = 'Comestible'
-    if ($unidad[4] == ''){
+    $tipo = 'Comestible';
+    if($unidad[4] == ''){
       $tipo = 'No comestible';
     }
   	
