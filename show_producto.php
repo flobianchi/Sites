@@ -31,7 +31,7 @@ tr:hover {
   background-color: #f3c733; 
   color: black; 
   height:30px; 
-  width:38px;
+  width:210px;
   text-decoration: none; 
   border-radius: 8px; 
   font-size: 15px; 
@@ -50,6 +50,7 @@ tr:hover {
 
 Mostrar aqui atributos del producto
 
+  <br>
   <br>
 
   <?php
@@ -136,8 +137,10 @@ echo($fila);
 
 	</table>
 
+  <br>
+
   <form id = 'caja' action="consultas_tienda.php" method="post">
-      <input type="submit" value="Volver a las consultas" id = "botonB">
+      <input type="submit" value="Volver a las consultas" id = "botonID">
       </form>
 
 <br>

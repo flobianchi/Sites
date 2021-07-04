@@ -2,9 +2,14 @@
 <?php include('templates/header.html');   ?>
 <?php include('templates/header_botones.html');   ?>
 
-Esta es la pagina con cunsultas de la tienda elegida
+Desde esta pagina podras realizar consultas a la tienda que elegiste
 <br>
-Nombre de la tienda elegida aqui
+ya sea el top 3 de los productos mas baratos (cualquiera sea su tipo)
+<br>
+Buscar algun producto por su nombre para consultar disponibilidad e informacion basica
+<br>
+o bien realizar alguna compra!
+<br>
 <?php 
 #echo("Click en id tienda ");
 #echo($_POST['t']);
