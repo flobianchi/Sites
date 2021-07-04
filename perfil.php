@@ -18,8 +18,6 @@ th {
     padding: 4px;
 }
 
-
-
 tr:nth-child(even) {
     background-color: #f2f2f2;
     padding: 8px;
@@ -94,7 +92,6 @@ tr:hover {
 
 
         echo("
-
         <table class='center'>
         <tr>
         <th>ID Unidad</th>
