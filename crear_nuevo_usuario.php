@@ -45,14 +45,15 @@ if($nombre == ''){
 
     #agregar usuario
 
-    #$query = "SELECT agregar_usuario('$nombre'::varchar,'$rut'::varchar,$edad,'$sexo'::varchar,'usuario'::varchar, $id_direccion);";
+    $query = "SELECT agregar_usuario('$nombre'::varchar,'$rut'::varchar,$edad,'$sexo'::varchar,'usuario'::varchar, $id_direccion);";
 
-    #$result = $db -> prepare($query);
-    #$result -> execute();
-    #$retorno = $result -> fetchAll();
+    $result = $db -> prepare($query);
+    $result -> execute();
+    $retorno = $result -> fetchAll();
 
     #si se pudo agregar
-    #print_r($retorno)
+    print_r($retorno);
+    echo("<br>");
 
     #APLICAR EL UPDATE DEL PROCEDIMIENTO agregar_ususario (ahora intrega un int que corresponde al id)
 
