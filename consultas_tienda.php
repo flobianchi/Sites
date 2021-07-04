@@ -5,11 +5,6 @@
 
 Desde esta pagina podras realizar consultas a la tienda que elegiste
 <br>
-ya sea el top 3 de los productos mas baratos (cualquiera sea su tipo)
-<br>
-Buscar algun producto por su nombre para consultar disponibilidad e informacion basica
-<br>
-o bien realizar alguna compra!
 <br>
 <?php 
 #echo("Click en id tienda ");
@@ -23,12 +18,13 @@ if($id != ''){
 ?>
 <br>
 <br>
+<h2> Consulta top 3 de los productos mas baratos (cualquiera sea su tipo) </h2>
 <form id = 'caja' action="funcionalidad_1.php" method="post">
       <input type="submit" value="Top 3" id = "botonB">
       </form>
   <br>
   <br>
-
+  <h2> Consulta algun producto por su nombre para ver informacion basica y disponibilidad </h2>
 <form id = 'caja' action="funcionalidad_2.php" method="post">
 <input type="text" class="form-control" placeholder="texto" style="font-size:19px;" size = 15 name = 'f2'>
       <input type="submit" value="Buscar" id = "botonB">
@@ -36,7 +32,7 @@ if($id != ''){
 
 <br>
 <br>
-
+<h2> Realiza una compra de algun producto ingresando su ID y cantidad </h2>
 <form id = 'caja' action="funcionalidad_3.php" method="post">
 <input type="text" class="form-control" placeholder="id item" style="font-size:19px;" size = 15 name = 'f3_id'>
 <input type="text" class="form-control" placeholder="cantidad" style="font-size:19px;" size = 15 name = 'f3_cant'>
