@@ -74,16 +74,13 @@ tambien debe crear una clave, para esto debe complir las condiciones.
     <input type="text" class="form-control" placeholder="RUT sin puntos con guion" style="font-size:15px;" size = 20 name = 'rut'>
     <p style="font-size:15px;"></p>
     <input type="number" class="form-control" placeholder="Edad" style="font-size:15px;" size = 20 name = 'edad'>
-    <p style="font-size:15px;"></p>
-    Sexo   
+    <p style="font-size:15px;"></p> 
     <select name="sexo" style="font-size:15px;">
     <option value="n/a">Prefiero no decir</option>
     <option value="mujer">Mujer</option>
     <option value="hombre">Hombre</option>
 </select>
 
-<br>
-Direccion   
 <select name="direccion" style="font-size:15px;">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
