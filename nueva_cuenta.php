@@ -38,7 +38,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
     <p style="font-size:12px;"></p>
     <input type="text" class="form-control" placeholder="RUT sin puntos con guion" style="font-size:12px;" size = 20 name = 'rut'>
     <p style="font-size:12px;"></p>
-    <input type="int" class="form-control" placeholder="Edad" style="font-size:12px;" size = 20 name = 'edad'>
+    <input type="number" class="form-control" placeholder="Edad" style="font-size:12px;" size = 20 name = 'edad'>
     <p style="font-size:12px;"></p>
     <h6> Selecciona tu sexo </h6>
     <select name="sexo">

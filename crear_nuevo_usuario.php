@@ -16,6 +16,16 @@ $sexo = $_POST['sexo'];
 $direccion = $_POST['direccion'];
 $clave = $_POST['clave'];
 
+if($nombre == ''){
+    echo("debe ingresar un nombre");
+}elseif($rut == ''){
+    echo("debe ingresar un rut");
+}elseif('' $edad == ''){
+    echo("debe ingresar un nombre");
+}elseif($clave == ''){
+    echo("debe ingresar una clave");
+}
+
 echo("$nombre 
 $rut 
 $edad 
