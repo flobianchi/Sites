@@ -54,7 +54,7 @@ TOP 3 aqui!
 <br>
 <br>
 <br>
-<h3>NO COMESTIBLES</h3>
+<h3>COMESTIBLES</h3>
 
   <?php
 
@@ -89,7 +89,7 @@ TOP 3 aqui!
   ?>
 	</table>
 
-<h3>COMESTIBLES</h3>
+<h3>NO COMESTIBLES</h3>
 
   <?php
 
