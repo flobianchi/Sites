@@ -62,7 +62,6 @@ se agrego exitosamente (funcion para grabar en BDD)
   #$id es id de tienda
   $idproducto = $_SESSION['f3_id'];
   $cantidad = $_SESSION['f3_cant'];
-  $idcompra = ("SELECT MAX id FROM compras;") + 1;
   $id_current_user = $_SESSION['id_user'];
   # direcciones de usuario
 
@@ -87,12 +86,12 @@ se agrego exitosamente (funcion para grabar en BDD)
       $check_diponibilidad = $result1 -> fetchAll();
     }
         if ($check_despacho == TRUE){
-        $query = "SELECT insertar_compra($idcompra, $id_current_user, $$direccion_despacho);";
+        $query = "SELECT insertar_compra($id_current_user, $$direccion_despacho);";
         $result = $db -> prepare($query);
         $result -> execute();
         $retorno = $result -> fetchAll();;
 
-        $query2 = "SELECT insertar_carrito_compra($idcompra, $idproducto, $cantidad, $id);";
+        $query2 = "SELECT insertar_carrito_compra($idproducto, $cantidad, $id);";
         $result2 = $db -> prepare($query2);
         $result2-> execute();
         $retorno2 = $result2 -> fetchAll();;
