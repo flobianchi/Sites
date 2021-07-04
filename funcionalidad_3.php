@@ -71,7 +71,7 @@ se agrego exitosamente (funcion para grabar en BDD)
   $consulta_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto);";
   $result4 = $db -> prepare($consulta_diponibilidad);
   $result4 -> execute();
-  $check_diponibilidad = $result1 -> fetchAll();
+  $check_diponibilidad = $result4 -> fetchAll();
 
   $query1 = "SELECT direcciones.nombre FROM direcciones, direcciones_usuarios WHERE direcciones.id = direcciones_usuarios.direccion_usuario AND direcciones_usuarios.direccion_usuario = $id_current_user;";
   $result1 = $db -> prepare($query1);
@@ -81,9 +81,9 @@ se agrego exitosamente (funcion para grabar en BDD)
   if ($check_diponibilidad == TRUE){
     foreach ($respuesta as $d) {
       $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
-      $result5 = $db -> prepare($consulta_diponibilidad);
+      $result5 = $db -> prepare($consulta_despacho);
       $result5 -> execute();
-      $check_diponibilidad = $result1 -> fetchAll();
+      $check_diponibilidad = $result5 -> fetchAll();
     }
         if ($check_despacho == TRUE){
         $query = "SELECT insertar_compra($id_current_user, $$direccion_despacho);";
