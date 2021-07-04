@@ -50,19 +50,26 @@ $_SESSION['f3_cant'] = $_POST['f3_cant'];
 #$id es id de tienda
 $idproducto = $_SESSION['f3_id']
 $cantidad = $_SESSION['f3_cant']
-
+$idcompra = ("SELECT MAX id FROM compras;") + 1;
 # direcciones de usuario
 
 
-$check_despacho = "SELECT chequear_despacho()"
-$check_diponibilidad = "SELECT chequear_disponibilidad($id, )"
+$direccion_despacho =  "SELECT chequear_despacho($id, $id_current_user)"
+$check_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto)"
 
-if($nombre == ''){
-      echo("debe ingresar un nombre");
-  }elseif($rut == ''){
-      echo("debe ingresar un rut");
-  }elseif($clave == ''){
-      echo("debe ingresar una clave");
+if($$direccion_despacho != '') and ($check_diponibilidad == TRUE){
+      $query = "SELECT insertar_compra($idcompra, $id_current_user, $$direccion_despacho);";
+      $result = $db -> prepare($query);
+      $result -> execute();
+      $retorno = $result -> fetchAll();;
+
+      $query2 = "SELECT insertar_carrito_compra($idcompra, $idproducto, $cantidad, $id);";
+      $result2 = $db -> prepare($query);
+      $result2-> execute();
+      $retorno2 = $result2 -> fetchAll();;
+
+  }else{
+      echo("No se puede realizar la compra");
   }
 
 ?>

@@ -2,25 +2,25 @@ CREATE OR REPLACE FUNCTION
 
 chequear_despacho (idtienda int, idcomprador int)
 
-RETURNS BOOLEAN AS $$
+RETURNS VARCHAR AS $$
 
 
 DECLARE
 
-despacho BOOLEAN; --chequear como poner lista y como hacer un foreach para poder revisar direcciones
+direccion_despacho VARCHAR; --chequear como poner lista y como hacer un foreach para poder revisar direcciones
 
 BEGIN 
-
+    direccion_despacho = ''
     FOR direccion IN (SELECT direcion FROM direcion_usuarios WHERE id_usuario = idcomprador) LOOP
         IF direccion IN (SELECT comuna_despacho FROM despacho_tiendas WHERE id_tienda = idtienda) THEN
-            despacho = TRUE
+            direccion_despacho = direccion
         END IF;
     END LOOP
     
-    IF despacho = TRUE THEN
-        RETURN TRUE;
+    IF despacho != '' THEN
+        RETURN direccion_despacho;
     ELSE
-        RETURN FALSE;
+        RETURN direccion_despacho;
     END IF;
 
 END
