@@ -42,6 +42,31 @@ if($id != ''){
       <input type="submit" value="Comprar" id = "botonB">
 </form>
 
+<?php
+$id_current_user = $_SESSION['id_user'];
+$_SESSION['f3_id'] = $_POST['f3_id']; 
+$_SESSION['f3_cant'] = $_POST['f3_cant']; 
+
+#$id es id de tienda
+$idproducto = $_SESSION['f3_id']
+$cantidad = $_SESSION['f3_cant']
+
+# direcciones de usuario
+
+
+$check_despacho = "SELECT chequear_despacho()"
+$check_diponibilidad = "SELECT chequear_disponibilidad($id, )"
+
+if($nombre == ''){
+      echo("debe ingresar un nombre");
+  }elseif($rut == ''){
+      echo("debe ingresar un rut");
+  }elseif($clave == ''){
+      echo("debe ingresar una clave");
+  }
+
+?>
+
 <br>
 <br>
 
