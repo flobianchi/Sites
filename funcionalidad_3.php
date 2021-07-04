@@ -60,8 +60,8 @@ se agrego exitosamente (funcion para grabar en BDD)
 
 <?php
 #$id es id de tienda
-$idproducto = $_SESSION['f3_id']
-$cantidad = $_SESSION['f3_cant']
+$idproducto = $_SESSION['f3_id'];
+$cantidad = $_SESSION['f3_cant'];
 $idcompra = ("SELECT MAX id FROM compras;") + 1;
 $id_current_user = $_SESSION['id_user'];
 # direcciones de usuario
