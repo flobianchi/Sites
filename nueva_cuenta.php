@@ -38,6 +38,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
   $dataCollected = $result -> fetchAll();
   ?>
 
+<h2> Crear cuenta</h2>
 <div class = "grid-crear">
 <div></div>
 <div></div>
@@ -65,7 +66,8 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 
 <div></div>
 
-<div>
+<div style = "background-color: #fff444;">
+<p style="font-size:5px;"></p>
 <form id = 'caja' action="crear_nuevo_usuario.php" method="post">
 <input type="text" class="form-control" placeholder="Nombre y apellido" style="font-size:15px;" size = 20 name = 'nombre'>
     <p style="font-size:15px;"></p>
