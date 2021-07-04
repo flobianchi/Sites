@@ -85,8 +85,8 @@ se agrego exitosamente (funcion para grabar en BDD)
       $result5 = $db -> prepare($consulta_diponibilidad);
       $result5 -> execute();
       $check_diponibilidad = $result1 -> fetchAll();
-      
-        if $check_despacho == TRUE
+    }
+        if ($check_despacho == TRUE){
         $query = "SELECT insertar_compra($idcompra, $id_current_user, $$direccion_despacho);";
         $result = $db -> prepare($query);
         $result -> execute();
@@ -110,7 +110,6 @@ En caso de ser exitoso mostramos las ultimas 10 compras
   <form id = 'caja' action="consultas_tienda.php" method="post">
   <input type="submit" value="Volver" id = "botonB">
   </form>
-
 
 
 <?php include('templates/footer.html');
