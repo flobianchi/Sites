@@ -7,17 +7,35 @@
 <?php
 
 $clave_final = $_POST["nueva_clave"];
+$clave_vieja = $_POST["clave_vieja"];
 $id_current_user = $_SESSION['id_user'];
+$clave_chequear = $_SESSION['pass_user'];
 
-$query = "SELECT cambiar_clave($id_current_user, '$clave_final');";
 
-$result = $db -> prepare($query);
-$result -> execute();
-$respuesta = $result -> fetchAll();
+if($clave_chequear == $clave_vieja){
+    if($clave_final == ''){
+        echo("Hola $nombre, debes ingresar una nueva clave para cambiar tu clave");
+    }
+    else{
 
-$nombre = $_SESSION['name_user'];
+        $query = "SELECT cambiar_clave($id_current_user, '$clave_final');";
 
-echo("Hola $nombre, tu nueva clave es: $clave_final");
+        $result = $db -> prepare($query);
+        $result -> execute();
+        $respuesta = $result -> fetchAll();
+
+        $nombre = $_SESSION['name_user'];
+
+
+        echo("Hola $nombre, tu nueva clave es: $clave_final");
+
+    }
+
+}else{
+    echo("Hola $nombre, la clave anterior que ingresaste es incorrecta, vuelve a intentarlo");
+}
+
+
 
 ?>
 

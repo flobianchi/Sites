@@ -119,8 +119,9 @@ tr:hover {
 </form>
 <br>
 <br>
-<h3>Para cambiar tu clave debes ingrear una nueva clave</h3>
+<h3>Para cambiar tu clave o contraseña debes ingrear una nueva clave</h3>
 <form id = 'caja' action="clave.php" method="post">
+<input type="text" class="form-control" placeholder="clave anterior" style="font-size:19px;" size = 15 name = 'clave_vieja'>
 <input type="text" class="form-control" placeholder="nueva clave" style="font-size:19px;" size = 15 name = 'nueva_clave'>
       <input type="submit" value="Cambiar" id = "botonB">
 </form>
