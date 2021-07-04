@@ -1,6 +1,9 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');
 $_SESSION['ingresado'] = false;
+
+require("../config/conexion.php");
+
 ?>
 
 <h2>Aqui se crea un uevo usuario con los datos ingresados</h2>
@@ -22,8 +25,15 @@ if($nombre == ''){
     echo("debe ingresar un rut");
 }elseif($rut == ''){
     echo("debe ingresar un rut");
-}elseif($clave == ''){
-    echo("debe ingresar una clave");
+}elseif($clave <= 0){
+    echo("debe ingresar una clave valida");
+}else{
+
+    #$query = "SELECT agregar_usuario('$admin[0]'::varchar,'$admin[1]'::varchar,$admin[2],'$admin[3]'::varchar,'$admin[4]'::varchar, $admin[5]);";
+
+    #$result = $db -> prepare($query);
+    #$result -> execute();
+    #$retorno = $result -> fetchAll();
 }
 
 echo("$nombre 
