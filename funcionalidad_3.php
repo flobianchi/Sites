@@ -65,11 +65,14 @@ se agrego exitosamente (funcion para grabar en BDD)
   $idcompra = ("SELECT MAX id FROM compras;") + 1;
   $id_current_user = $_SESSION['id_user'];
   # direcciones de usuario
-  
+
   require("config/conexion.php");
 
   // $direccion_despacho =  "SELECT chequear_despacho($id, $id_current_user)"
-  $check_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto)"
+  $consulta_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto);";
+  $result4 = $db -> prepare($consulta_diponibilidad);
+  $result4 -> execute();
+  $check_diponibilidad = $result1 -> fetchAll();
 
   $query1 = "SELECT direcciones.nombre FROM direcciones, direcciones_usuarios WHERE direcciones.id = direcciones_usuarios.direccion_usuario AND direcciones_usuarios.direccion_usuario = $id_current_user;";
   $result1 = $db -> prepare($query1);
@@ -78,7 +81,11 @@ se agrego exitosamente (funcion para grabar en BDD)
 
   if ($check_diponibilidad == TRUE){
     foreach ($respuesta as $d) {
-      $check_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d)"
+      $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
+      $result5 = $db -> prepare($consulta_diponibilidad);
+      $result5 -> execute();
+      $check_diponibilidad = $result1 -> fetchAll();
+      
         if $check_despacho == TRUE
         $query = "SELECT insertar_compra($idcompra, $id_current_user, $$direccion_despacho);";
         $result = $db -> prepare($query);
