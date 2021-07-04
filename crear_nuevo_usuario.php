@@ -53,18 +53,26 @@ if($nombre == ''){
 
     #si se pudo agregar
     print_r($retorno);
-    echo("<br>");
 
-    #APLICAR EL UPDATE DEL PROCEDIMIENTO agregar_ususario (ahora intrega un int que corresponde al id)
+    $se_pudo_agregar = $retorno[0]['agregar_usuario']
 
-    #if(ok){
+    if($se_pudo_agregar >= 0){
         
         #ejecutar esta query y estamos
         #"SELECT cambiar_clave($id_retorno_de_agragar_usuario,'$clave');"
 
-    #}else{
-    #    echo("usuario ya existe");
-    #}
+    }else{
+        echo("ya existe un usuario con este rut, para volver a intentarlo haga click en crear cuenta
+        <br>
+        <br>
+        <form id = 'caja' action='nueva_cuenta.php' method='post'>
+        <input type='submit' value='Crear cuenta' id = 'botonL'>
+        </form>
+        
+        
+        
+        ");
+    }
 
     #LUEGO LOS BOTONES!
 }
