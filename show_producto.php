@@ -137,11 +137,12 @@ echo($fila);
   ?>
 
 	</table>
-
+  <br>
+<h3>Para volver al menú de consultas, debes hacer click aqui</h3>
   <br>
 
   <form id = 'caja' action="consultas_tienda.php" method="post">
-      <input type="submit" value="Volver a las consultas" id = "botonID">
+      <input type="submit" value="Volver a consultas" id = "botonL">
       </form>
 
 
