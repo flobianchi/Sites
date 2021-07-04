@@ -79,7 +79,8 @@ tr:hover {
 
         $result = $db2 -> prepare($query);
         $result -> execute();
-        $id_unidad_consultada = $result -> fetchAll(); 
+        $dataCollected= $result -> fetchAll(); 
+        $id_unidad_consultada = $dataCollected[0]['id_unidad'];
 
         echo("El usuario es del tipo administracion de la unidad $id_unidad_consultada, mostrar datos aqui:");
         //id_personal;id_unidad;nombre;rut;sexo;edad;clasificacion
