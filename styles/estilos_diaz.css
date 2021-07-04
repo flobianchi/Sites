@@ -18,11 +18,19 @@ html {  font-family: Helvetica;
   cursor: pointer;
 }
 
+
+#botonC {
+  background-color: #f3c733; 
+  color: black; 
+  height:40px; 
+  width:210px;
+
 #botonL {
   background-color: #f3c733; 
   color: black; 
   height:40px; 
   width:200px;
+
   text-decoration: none; 
   border-radius: 12px; 
   font-size: 20px; 
@@ -104,4 +112,12 @@ html {  font-family: Helvetica;
     text-align: center;
     font-size: 10px;
     background-color: #77878A; 
+  }
+
+  .grid-crear {
+    display: grid;
+    grid-template-columns: auto 320px auto;
+    grid-template-rows: 360px;
+    grid-gap: 1px;
+    text-align: center;
   }
