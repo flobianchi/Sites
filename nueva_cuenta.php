@@ -7,8 +7,8 @@ $_SESSION['ingresado'] = false;
 <style>
   .grid-crear {
     display: grid;
-    grid-template-columns: auto 100px 10px 320px auto;
-    grid-template-rows: 40px 360px;
+    grid-template-columns: auto 70px 1px 320px auto;
+    grid-template-rows: 200px;
     text-align: center;
   }
 </style>
@@ -17,18 +17,6 @@ $_SESSION['ingresado'] = false;
 <form id = 'caja' action="index.php" method="post">
     <input type="submit" value="Ir a Inicio" id = "botonB">
 </form>
-<br>
-
-Aqui muchos datos y todo lo que se necesita para crear un nuveo usuario:
-
-<br>
-
-se necesita: nombre, rut, edad, sexo y direccion (un id entre los que ya existen) 
-(calificacion es 'usuario')
-(para agregar esto ejecutar la funcion agragar_usuario)
-<br>
-tambien debe crear una clave, para esto debe complir las condiciones.
-(para agregar esto ejecutar la funcion cambiar_clave)
 
 <?php
   #Primero obtenemos todos los tipos de pokemones
@@ -37,17 +25,12 @@ tambien debe crear una clave, para esto debe complir las condiciones.
   $result -> execute();
   $dataCollected = $result -> fetchAll();
   ?>
-
+<br>
+<br>
 <h2> Crear cuenta</h2>
 <div class = "grid-crear">
 <div></div>
-<div></div>
-<div style = "background-color: #fdf4bf;"> <h2> Crear cuenta</h2></div>
-
-<div></div>
-<div></div>
-<div></div>
-<div style = "background-color: #fff4bf;">
+<div style = "background-color: #fdf4bf;">
 
 <p style="font-size:15px;"> Nombre </p>
 <p style="font-size:15px;"></p>
@@ -64,24 +47,24 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 
 </div>
 
-<div></div>
+<div style = "background-color: #fdf4bf;"></div>
 
-<div style = "background-color: #fff444;">
+<div style = "background-color: #fdf4bf;">
 
 <form id = 'caja' action="crear_nuevo_usuario.php" method="post">
-<p style="font-size:5px;"></p>
-<input type="text" class="form-control" placeholder="Nombre y apellido" style="font-size:15px;" size = 20 name = 'nombre'>
-    <p style="font-size:15px;"></p>
-    <input type="text" class="form-control" placeholder="RUT sin puntos con guion" style="font-size:15px;" size = 20 name = 'rut'>
-    <p style="font-size:15px;"></p>
+<p style="font-size:10px;"></p>
+<input type="text" class="form-control" placeholder="Nombre y apellido" style="font-size:15px;" size = 33 name = 'nombre'>
+    <p style="font-size:8px;"></p>
+    <input type="text" class="form-control" placeholder="RUT sin puntos con guion" style="font-size:15px;" size = 33 name = 'rut'>
+    <p style="font-size:8px;"></p>
     <input type="number" class="form-control" placeholder="Edad" style="font-size:15px;" size = 20 name = 'edad'>
-    <p style="font-size:15px;"></p> 
+    <p style="font-size:8px;"></p> 
     <select name="sexo" style="font-size:15px;">
     <option value="n/a">Prefiero no decir</option>
     <option value="mujer">Mujer</option>
     <option value="hombre">Hombre</option>
 </select>
-<p style="font-size:15px;"></p>
+<p style="font-size:8px;"></p>
 <select name="direccion" style="font-size:15px;">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
@@ -90,9 +73,8 @@ tambien debe crear una clave, para esto debe complir las condiciones.
       }
       ?>
     </select>
-    <br>
-    <br>
-    <input type="text" class="form-control" placeholder="Clave" style="font-size:15px;" size = 20 name = 'clave'>
+    <p style="font-size:9px;"></p>
+    <input type="text" class="form-control" placeholder="Clave" style="font-size:15px;" size = 33 name = 'clave'>
     <p style="font-size:15px;"></p>
     <input type="submit" value="Crear cuenta" id = "botonL">
 </form></div>
@@ -100,6 +82,8 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 <div></div>
 </div>
 
+<br>
+<br>
 <br>
 
 
