@@ -1,12 +1,17 @@
 CREATE OR REPLACE FUNCTION
 
-insertar_carrito_compra (idcompra int, id_producto int, cantidad int, id_tienda int)
+insertar_carrito_compra (id_producto int, cantidad int, id_tienda int)
 
 RETURNS void AS $$
 
+DECLARE 
+idmax INT;
+
 BEGIN 
 
-insert into carrito_compras values (id_compra, id_producto, cantidad, id_tienda);
+SELECT INTO idmax MAX(id) FROM compras;
+
+insert into carrito_compras values (idmax + 1, id_producto, cantidad, id_tienda);
 
 END 
 
