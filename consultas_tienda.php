@@ -42,6 +42,23 @@ if($id != ''){
       <input type="submit" value="Comprar" id = "botonB">
 </form>
 
+<?php
+$_SESSION['f3_id'] = $_POST['f3_id']; 
+$_SESSION['f3_cant'] = $_POST['f3_cant']; 
+
+$idproducto = $_SESSION['f3_id']
+$cantidad = $_SESSION['f3_cant']
+
+if($nombre == ''){
+      echo("debe ingresar un nombre");
+  }elseif($rut == ''){
+      echo("debe ingresar un rut");
+  }elseif($clave == ''){
+      echo("debe ingresar una clave");
+  }
+
+?>
+
 <br>
 <br>
 
