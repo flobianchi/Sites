@@ -58,6 +58,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
       ?>
     </select>
     <br>
+    <br>
     <input type="text" class="form-control" placeholder="Clave" style="font-size:12px;" size = 20 name = 'clave'>
     <p style="font-size:12px;"></p>
     <input type="submit" value="Crear cuenta" id = "botonL">
