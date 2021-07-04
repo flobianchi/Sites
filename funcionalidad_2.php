@@ -97,6 +97,8 @@ De acuerdo al texto que ingresaste estos son los resultados que encontramos:
   ?>
 	</table>
 
+<br>
+
   <form id = 'caja' action="consultas_tienda.php" method="post">
   <input type="submit" value="Volver" id = "botonB">
   </form>

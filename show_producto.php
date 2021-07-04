@@ -49,7 +49,7 @@ tr:hover {
 }
 </style>
 
-Mostrar aqui atributos del producto
+A continuacion el detalle del producto:
 
   <br>
   <br>
