@@ -57,12 +57,6 @@ tr:hover {
 $usuario_ingresado = $_POST['usuario'];
 $clave_ingresada = $_POST['clave'];
 
-#usuario defaul por ahora
-if($usuario_ingresado == ''){
-    $usuario_ingresado = '66954467-7';
-    $clave_ingresada = 'viki';
-}
-
 #Llama a conexión de la bdd
 require("config/conexion.php");
 
