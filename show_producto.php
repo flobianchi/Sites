@@ -66,7 +66,7 @@ Mostrar aqui atributos del producto
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$unidades = $result -> fetchAll();
-echo('<table>
+echo('<table class="center">
 <tr>');
 $fila = '<tr>';
 
