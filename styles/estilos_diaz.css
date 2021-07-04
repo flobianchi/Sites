@@ -18,6 +18,18 @@ html {  font-family: Helvetica;
   cursor: pointer;
 }
 
+#botonC {
+  background-color: #f3c733; 
+  color: black; 
+  height:40px; 
+  width:210px;
+  text-decoration: none; 
+  border-radius: 12px; 
+  font-size: 20px; 
+  margin: 3px; 
+  cursor: pointer;
+}
+
 #caja{
   font-size: 20px;
 }
@@ -106,7 +118,7 @@ html {  font-family: Helvetica;
   .grid-crear {
     display: grid;
     grid-template-columns: auto 320px auto;
-    grid-template-rows: 480px;
+    grid-template-rows: 360px;
     grid-gap: 1px;
     text-align: center;
   }

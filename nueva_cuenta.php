@@ -9,9 +9,6 @@ $_SESSION['ingresado'] = false;
 </form>
 <br>
 
-<br>
-<h2>Esta pagina es para crear una cuenta nueva</h2>
-
 Aqui muchos datos y todo lo que se necesita para crear un nuveo usuario:
 
 <br>
@@ -39,11 +36,11 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 <form id = 'caja' action="crear_nuevo_usuario.php" method="post">
 <input type="text" class="form-control" placeholder="Nombre" style="font-size:12px;" size = 15 name = 'nombre'>
     <p style="font-size:12px;"></p>
-    <input type="text" class="form-control" placeholder="RUT" style="font-size:12px;" size = 15 name = 'rut'>
+    <input type="text" class="form-control" placeholder="RUT sin puntos con guion" style="font-size:12px;" size = 15 name = 'rut'>
     <p style="font-size:12px;"></p>
     <input type="int" class="form-control" placeholder="Edad" style="font-size:12px;" size = 15 name = 'edad'>
     <p style="font-size:12px;"></p>
-    Selecciona tu sexo
+    <p> Selecciona tu sexo </p>
     <select name="sexo">
     <option value="n/a">Prefiero no decir</option>
     <option value="mujer">Mujer</option>
@@ -62,7 +59,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
     <br>
     <input type="text" class="form-control" placeholder="Clave" style="font-size:12px;" size = 15 name = 'clave'>
     <p style="font-size:12px;"></p>
-    <input type="submit" value="Crear cuenta" id = "botonB">
+    <input type="submit" value="Crear cuenta" id = "botonC">
 </form></div>
 
 <div></div>
