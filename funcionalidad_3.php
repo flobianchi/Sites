@@ -65,7 +65,9 @@ se agrego exitosamente (funcion para grabar en BDD)
   $idcompra = ("SELECT MAX id FROM compras;") + 1;
   $id_current_user = $_SESSION['id_user'];
   # direcciones de usuario
+  
   require("config/conexion.php");
+
   // $direccion_despacho =  "SELECT chequear_despacho($id, $id_current_user)"
   $check_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto)"
 
