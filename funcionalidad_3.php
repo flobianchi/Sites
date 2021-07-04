@@ -59,32 +59,40 @@ se agrego exitosamente (funcion para grabar en BDD)
 <br>
 
 <?php
-#$id es id de tienda
-$idproducto = $_SESSION['f3_id'];
-$cantidad = $_SESSION['f3_cant'];
-$idcompra = ("SELECT MAX id FROM compras;") + 1;
-$id_current_user = $_SESSION['id_user'];
-# direcciones de usuario
+  #$id es id de tienda
+  $idproducto = $_SESSION['f3_id'];
+  $cantidad = $_SESSION['f3_cant'];
+  $idcompra = ("SELECT MAX id FROM compras;") + 1;
+  $id_current_user = $_SESSION['id_user'];
+  # direcciones de usuario
 
+  // $direccion_despacho =  "SELECT chequear_despacho($id, $id_current_user)"
+  $check_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto)"
 
+  $query = "SELECT direcciones.nombre FROM direcciones, direcciones_usuarios WHERE direcciones.id = direcciones_usuarios.direccion_usuario AND direcciones_usuarios.direccion_usuario = $id_current_user;";
+  $result = $db -> prepare($query);
+  $result -> execute();
+  $respuesta = $result -> fetchAll();
 
-// $direccion_despacho =  "SELECT chequear_despacho($id, $id_current_user)"
-$check_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto)"
+  if ($check_diponibilidad == TRUE){
+    foreach ($respuesta as $d) {
+      $check_despacho =  "SELECT chequear_despacho($id, $id_current_user, $d)"
+        if $check_despacho == TRUE
+        $query = "SELECT insertar_compra($idcompra, $id_current_user, $$direccion_despacho);";
+        $result = $db -> prepare($query);
+        $result -> execute();
+        $retorno = $result -> fetchAll();;
 
-// if($$direccion_despacho != '') and ($check_diponibilidad == TRUE){
-//       $query = "SELECT insertar_compra($idcompra, $id_current_user, $$direccion_despacho);";
-//       $result = $db -> prepare($query);
-//       $result -> execute();
-//       $retorno = $result -> fetchAll();;
-
-//       $query2 = "SELECT insertar_carrito_compra($idcompra, $idproducto, $cantidad, $id);";
-//       $result2 = $db -> prepare($query);
-//       $result2-> execute();
-//       $retorno2 = $result2 -> fetchAll();;
-
-//   }else{
-//       echo("No se puede realizar la compra");
-//   }
+        $query2 = "SELECT insertar_carrito_compra($idcompra, $idproducto, $cantidad, $id);";
+        $result2 = $db -> prepare($query);
+        $result2-> execute();
+        $retorno2 = $result2 -> fetchAll();;
+      }else{
+        echo("No hay cobertura para tu zona");
+  }
+  }else{
+      echo("No hay stock de este producto en esta tienda");
+  }
 ?>
 
 En caso de ser exitoso mostramos las ultimas 10 compras
