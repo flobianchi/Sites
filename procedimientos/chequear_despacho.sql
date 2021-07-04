@@ -8,7 +8,7 @@ RETURNS VARCHAR AS $$
 DECLARE
 
 direccion_despacho VARCHAR; --chequear como poner lista y como hacer un foreach para poder revisar direcciones
-direccion VARCHAR;
+direccion Record;
 
 BEGIN 
     direccion_despacho = ''
