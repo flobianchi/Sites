@@ -91,8 +91,6 @@ $id_current_user = $_SESSION['id_user'];
         $result -> execute();
         $historial = $result -> fetchAll();
 
-
-        echo("<tr> <td> $fecha_compra[0] </td>")
         foreach ($historial as $h) {
            echo "<tr>";
            for ($i = 0; $i < 7; $i++) {
