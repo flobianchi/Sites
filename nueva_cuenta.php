@@ -31,26 +31,22 @@ tambien debe crear una clave, para esto debe complir las condiciones.
   $dataCollected = $result -> fetchAll();
   ?>
 
-<div class = "grid-ingresar">
+<div class = "grid-crear">
 <div></div>
 
 <div style = "background-color: #fdf4bf;">
-<h1>Iniciar sesión</h1>
+<h1>Crear cuenta</h1>
 <form id = 'caja' action="crear_nuevo_usuario.php" method="post">
 <input type="text" class="form-control" placeholder="Nombre" style="font-size:12px;" size = 15 name = 'nombre'>
     <p style="font-size:12px;"></p>
-    <br>
     <input type="text" class="form-control" placeholder="RUT" style="font-size:12px;" size = 15 name = 'rut'>
     <p style="font-size:12px;"></p>
-    <br>
     <input type="int" class="form-control" placeholder="Edad" style="font-size:12px;" size = 15 name = 'edad'>
     <p style="font-size:12px;"></p>
-<br>
     <select name="sexo">
     <option value="hombre">Hombre</option>
     <option value="mujer">Mujer</option>
 </select>
-<br>
 <select name="direccion">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
@@ -59,10 +55,8 @@ tambien debe crear una clave, para esto debe complir las condiciones.
       }
       ?>
     </select>
-    <br>
     <input type="text" class="form-control" placeholder="Clave" style="font-size:12px;" size = 15 name = 'clave'>
     <p style="font-size:12px;"></p>
-    <br>
     <input type="submit" value="Crear cuenta" id = "botonB">
 </form></div>
 

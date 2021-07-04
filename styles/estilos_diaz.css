@@ -114,3 +114,11 @@ html {  font-family: Helvetica;
     font-size: 10px;
     background-color: #77878A; 
   }
+
+  .grid-crear {
+    display: grid;
+    grid-template-columns: auto 640px auto;
+    grid-template-rows: 480px;
+    grid-gap: 1px;
+    text-align: center;
+  }
