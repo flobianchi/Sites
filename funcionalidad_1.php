@@ -55,7 +55,7 @@ TOP 3 aqui
 consultar top 3 de la tienda aqui!!!
 <br>
 <br>
-NO COMESTIBLES
+<h3>NO COMESTIBLES</h3>
 
   <?php
 
@@ -90,7 +90,7 @@ NO COMESTIBLES
   ?>
 	</table>
 
-COMESTIBLES
+<h3>COMESTIBLES</h3>
 
   <?php
 
