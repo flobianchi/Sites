@@ -100,13 +100,6 @@ if($no_entro){
         ");
 }
 
-echo("$nombre 
-$rut 
-$edad 
-$sexo 
-$direccion 
-$clave");
-
 ?>
 
 <br>
