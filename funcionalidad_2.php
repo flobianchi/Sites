@@ -49,9 +49,8 @@ tr:hover {
 }
 </style>
 
-Esta es la pagina de buscar productos con nombre texto (o que contengan texto)
+De acuerdo al texto que ingresaste estos son los resultados que encontramos:
 <br>
-Consultar productos aqui
 
 
   <br>
@@ -76,7 +75,7 @@ Consultar productos aqui
 
   ?>
 
-	<table>
+	<table class="center">
     <tr>
       <th>ID</th>
       <th>Nombre</th>
