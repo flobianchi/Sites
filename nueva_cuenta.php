@@ -3,6 +3,16 @@
 $_SESSION['ingresado'] = false;
 ?>
 
+
+<style>
+  .grid-crear {
+    display: grid;
+    grid-template-columns: auto 100px 10px 320px auto;
+    grid-template-rows: 40px 360px;
+    text-align: center;
+  }
+</style>
+
 <h3>Si no quieres crear una cuenta debes volver al incicio</h3>
 <form id = 'caja' action="index.php" method="post">
     <input type="submit" value="Ir a Inicio" id = "botonB">
@@ -35,6 +45,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 
 <div></div>
 <div>
+
 texto aqui
 
 </div>
