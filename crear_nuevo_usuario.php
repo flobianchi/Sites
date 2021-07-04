@@ -58,6 +58,7 @@ if($nombre == ''){
 
     if($se_pudo_agregar >= 0){
         
+        echo("cambiarle la clave al usuario aqui");
         #ejecutar esta query y estamos
         #"SELECT cambiar_clave($id_retorno_de_agragar_usuario,'$clave');"
 
