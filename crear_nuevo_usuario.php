@@ -2,7 +2,7 @@
 <?php include('templates/header.html');
 $_SESSION['ingresado'] = false;
 
-require("../config/conexion.php");
+require("config/conexion.php");
 
 ?>
 
