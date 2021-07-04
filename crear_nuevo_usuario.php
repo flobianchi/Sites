@@ -31,13 +31,17 @@ if($nombre == ''){
 
     #buscar direccion
 
-    $query = "SELECT id FROM direcciones WHERE nombre_direccion = $direccion;";
+    $query = "SELECT id FROM direcciones WHERE nombre_direccion = '$direccion';";
 
     $result = $db -> prepare($query);
     $result -> execute();
     $retorno = $result -> fetchAll();
 
+    echo("<br>");
+    echo("<br>");
     print_r($retorno);
+    echo("<br>");
+    echo("<br>");
     #$id_direccion = $retorno[0]['id'];
 
     #echo("id direccion es" $id_direccion);
