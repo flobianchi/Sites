@@ -18,6 +18,18 @@ html {  font-family: Helvetica;
   cursor: pointer;
 }
 
+#botonL {
+  background-color: #f3c733; 
+  color: black; 
+  height:40px; 
+  width:200px;
+  text-decoration: none; 
+  border-radius: 12px; 
+  font-size: 20px; 
+  margin: 3px; 
+  cursor: pointer;
+}
+
 #caja{
   font-size: 20px;
 }
