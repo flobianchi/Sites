@@ -40,9 +40,11 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 
 <div class = "grid-crear">
 <div></div>
-
+<div></div>
 <div style = "background-color: #fdf4bf;"> <h2> Crear cuenta</h2></div>
 
+<div></div>
+<div></div>
 <div></div>
 <div>
 
