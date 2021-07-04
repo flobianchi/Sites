@@ -76,7 +76,7 @@ se agrego exitosamente (funcion para grabar en BDD)
 
   if ($check_diponibilidad == TRUE){
     foreach ($respuesta as $d) {
-      $check_despacho =  "SELECT chequear_despacho($id, $id_current_user, $d)"
+      $check_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d)"
         if $check_despacho == TRUE
         $query = "SELECT insertar_compra($idcompra, $id_current_user, $$direccion_despacho);";
         $result = $db -> prepare($query);
