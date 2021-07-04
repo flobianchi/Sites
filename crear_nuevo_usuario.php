@@ -25,8 +25,10 @@ if($nombre == ''){
     echo("debe ingresar un rut");
 }elseif($rut == ''){
     echo("debe ingresar un rut");
-}elseif($clave <= 0){
+}elseif($clave == ''){
     echo("debe ingresar una clave valida");
+}elseif($edad <= 0){
+    echo("debe ingresar una edad valida");
 }else{
 
     #buscar direccion
@@ -37,14 +39,9 @@ if($nombre == ''){
     $result -> execute();
     $retorno = $result -> fetchAll();
 
-    echo("<br>");
-    echo("<br>");
-    print_r($retorno);
-    echo("<br>");
-    echo("<br>");
-    #$id_direccion = $retorno[0]['id'];
+    $id_direccion = $retorno[0]['id'];
 
-    #echo("id direccion es" $id_direccion);
+    echo("id direccion es $id_direccion");
 
     #agregar usuario
 
