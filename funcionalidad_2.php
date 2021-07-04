@@ -49,9 +49,8 @@ tr:hover {
 }
 </style>
 
-Esta es la pagina de buscar productos con nombre texto (o que contengan texto)
+De acuerdo al texto que ingresaste estos son los resultados que encontramos:
 <br>
-Consultar productos aqui
 
 
   <br>
@@ -76,7 +75,7 @@ Consultar productos aqui
 
   ?>
 
-	<table>
+	<table class="center">
     <tr>
       <th>ID</th>
       <th>Nombre</th>
@@ -86,17 +85,19 @@ Consultar productos aqui
     </tr>
   <?php
 	foreach ($unidades as $unidad) {
-    #tipo = 'Comestible'
-    #if ($unidad[4] == ''){
-      #tipo = 'No comestible';
-    #}
+    $tipo = 'Comestible';
+    if($unidad[4] == ''){
+      $tipo = 'No comestible';
+    }
   	
       echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
       <input name = 't' type='submit' value='$unidad[0]' id = 'botonID'>
-      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td><td>$unidad[3]</td><td> tipo </td></tr>";
+      </form></td><td>$unidad[1]</td> <td>$unidad[2]</td><td>$unidad[3]</td><td> $tipo </td></tr>";
 	}
   ?>
 	</table>
+
+<br>
 
   <form id = 'caja' action="consultas_tienda.php" method="post">
   <input type="submit" value="Volver" id = "botonB">
