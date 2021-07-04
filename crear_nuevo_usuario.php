@@ -19,6 +19,9 @@ $sexo = $_POST['sexo'];
 $direccion = $_POST['direccion'];
 $clave = $_POST['clave'];
 
+$no_entro = true;
+
+
 if($nombre == ''){
     echo("debe ingresar un nombre");
 }elseif($rut == ''){
@@ -44,7 +47,6 @@ if($nombre == ''){
     echo("id direccion es $id_direccion");
 
     #agregar usuario
-
     $query = "SELECT agregar_usuario('$nombre'::varchar,'$rut'::varchar,$edad,'$sexo'::varchar,'usuario'::varchar, $id_direccion);";
 
     $result = $db -> prepare($query);
@@ -57,25 +59,50 @@ if($nombre == ''){
     $se_pudo_agregar = $retorno[0]['agregar_usuario']
 
     if($se_pudo_agregar >= 0){
-        
-        echo("cambiarle la clave al usuario aqui");
-        #ejecutar esta query y estamos
-        #"SELECT cambiar_clave($id_retorno_de_agragar_usuario,'$clave');"
+        $no_entro = false;
 
-    }else{
-        echo("ya existe un usuario con este rut, para volver a intentarlo haga click en crear cuenta
+        #agregar la clave
+        $query = "SELECT cambiar_clave($se_pudo_agregar,'$clave');";
+
+        $result = $db -> prepare($query);
+        $result -> execute();
+        $retorno = $result -> fetchAll();
+        
+        echo("Bienvenido $nombre, debes hacer click en ir al incio para poder iniciar sesión con tu nueva cuenta.
         <br>
         <br>
-        <form id = 'caja' action='nueva_cuenta.php' method='post'>
-        <input type='submit' value='Crear cuenta' id = 'botonL'>
+        <form id = 'caja' action='index.php' method='post'>
+        <input type='submit' value='Ir al Inicio' id = 'botonB'>
         </form>
         
         
         
         ");
+
+    }else{
+        echo("ya existe un usuario con este rut");
     }
 
     #LUEGO LOS BOTONES!
+}
+
+if($no_entro){
+    echo("
+        <br>
+        <br>
+        Para volver a intentarlo haga click en crear una cuenta
+        <br>
+        <form id = 'caja' action='nueva_cuenta.php' method='post'>
+        <input type='submit' value='Crear una cuenta' id = 'botonL'>
+        </form>
+        <br>
+        <br>
+        Si quiere volver al inicio debe hacer click en Ir al inicio
+        <form id = 'caja' action='index.php' method='post'>
+        <input type='submit' value='Ir al Inicio' id = 'botonB'>
+        </form>
+        
+        ");
 }
 
 echo("$nombre 
@@ -86,29 +113,6 @@ $direccion
 $clave");
 
 ?>
-
-1) chequear que la direccion exista y las reglas de la clave. Ademas de que los inputs no esten vacios.
-<br>
-2) si cumple lo anterior ejecutar la funcion agragar_usuario
-<br>
-3) si el usuario no existe (ver retorno funcion agragar_usuario),
-entonces se llama a la funcion cambiar_clave para crearle una clave
-<br>
-* si (1) no se cumple, entonces (2) y (3) no se ejecutan. (mostrar mensaje 'datos mal ingresados')
-<br>
-** si (2) no se cumple, entonces no se ejecuta (3). (mostrar mensaje 'usuario ya existe')
-<br>
-En los casos * y ** se muestran los dos botones ("crear" e "ir al inicio"), en cualqueir otro caso solo el boton "ir al inicio"
-<br>
-<form id = 'caja' action="nueva_cuenta.php" method="post">
-    <input type="submit" value="Crear" id = "botonB">
-</form>
-<br>
-<form id = 'caja' action="index.php" method="post">
-    <input type="submit" value="Ir al Inicio" id = "botonB">
-</form>
-<br>
-
 
 
 <?php include('templates/footer.html');
