@@ -49,7 +49,7 @@ tr:hover {
 }
 </style>
 
-A continuacion el detalle del producto:
+<h2>A continuacion el detalle del producto:</h2>
 
   <br>
   <br>

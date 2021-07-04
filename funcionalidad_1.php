@@ -49,9 +49,8 @@ tr:hover {
 }
 </style>
 
-TOP 3 aqui!
+<h2>TOP 3 de los productos mas baratos aqui!</h2>
 
-<br>
 <br>
 <br>
 <h3>COMESTIBLES</h3>
