@@ -127,9 +127,9 @@ tr:hover {
 </form>
 <br>
 <br>
-<h3>Para volver al menú de elección de tienda, debes hacer click en volver</h3>
+<h3>Para volver al menú de elección de tienda, debes hacer click aqui</h3>
 <form id = 'caja' action="tienda.php" method="post">
-      <input type="submit" value="Volver al menu de tiendas" id = "botonL">
+      <input type="submit" value="Volver a tiendas" id = "botonL">
 </form>
 
 <?php include('templates/footer.html');
