@@ -82,7 +82,7 @@ tr:hover {
         $dataCollected= $result -> fetchAll(); 
         $id_unidad_consultada = $dataCollected[0]['id_unidad'];
 
-        echo("<h3>Eres jefe de la unidad <h2>$id_unidad_consultada </h2> a continuación se mostrarán los trabajadores pertenecientes a tu unidad <\h3>");
+        echo("<h3>Eres jefe de la unidad $id_unidad_consultada a continuación se mostrarán los trabajadores pertenecientes a tu unidad <\h3>");
         //id_personal;id_unidad;nombre;rut;sexo;edad;clasificacion
         $query = "SELECT a.id_unidad, a.nombre, a.rut, a.sexo, a.edad, a.calificacion FROM administrativos AS a JOIN unidades AS u ON a.id_unidad = u.id_unidad WHERE a.id_unidad = '$id_unidad_consultada';";
 
