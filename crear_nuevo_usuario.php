@@ -25,8 +25,10 @@ if($nombre == ''){
     echo("debe ingresar un rut");
 }elseif($rut == ''){
     echo("debe ingresar un rut");
-}elseif($clave <= 0){
+}elseif($clave == ''){
     echo("debe ingresar una clave valida");
+}elseif($edad <= 0){
+    echo("debe ingresar una edad valida");
 }else{
 
     #buscar direccion
