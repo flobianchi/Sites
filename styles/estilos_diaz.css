@@ -56,7 +56,7 @@ html {  font-family: Helvetica;
 
   .grid-titulo {
     display: grid;
-    grid-template-columns: auto 250px 450px 250px auto;
+    grid-template-columns: auto 250px 300px 250px auto;
     grid-template-rows: 180px;
     grid-gap: 1px;
     padding: 1px;
