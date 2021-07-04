@@ -67,6 +67,7 @@ $id_current_user = $_SESSION['id_user'];
 # direcciones de usuario
 
 
+
 // $direccion_despacho =  "SELECT chequear_despacho($id, $id_current_user)"
 $check_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto)"
 
