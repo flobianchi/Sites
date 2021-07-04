@@ -66,15 +66,6 @@ html {  font-family: Helvetica;
             height:100px; 
             width:450px; }
 
-  .grid-titulo {
-    display: grid;
-    grid-template-columns: auto 250px 300px 250px auto;
-    grid-template-rows: 180px;
-    grid-gap: 1px;
-    padding: 1px;
-    font-size: 20px;
-  }
-
   .grid-consultas {
     display: grid;
     grid-template-columns: auto 340px 40px 340px auto;
