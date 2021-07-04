@@ -14,7 +14,7 @@ $rut = $_POST['rut'];
 $edad = $_POST['edad'];
 $sexo = $_POST['sexo'];
 $direccion = $_POST['direccion'];
-$clave = $ = $_POST['clave'];
+$clave = $_POST['clave'];
 
 echo("$nombre 
 $rut 
