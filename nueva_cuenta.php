@@ -46,9 +46,20 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 <div></div>
 <div></div>
 <div></div>
-<div>
+<div style = "background-color: #fff4bf;">
 
-texto aqui
+<p style="font-size:15px;"> Nombre </p>
+<p style="font-size:15px;"></p>
+<p style="font-size:15px;"> Rut </p>
+<p style="font-size:15px;"></p>
+<p style="font-size:15px;"> Edad </p>
+<p style="font-size:15px;"></p>
+<p style="font-size:15px;"> Sexo </p>
+<p style="font-size:15px;"></p>
+<p style="font-size:15px;"> Direccion </p>
+<p style="font-size:15px;"></p>
+<p style="font-size:15px;"> Clave </p>
+<p style="font-size:15px;"></p>
 
 </div>
 
