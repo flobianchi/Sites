@@ -6,6 +6,7 @@ RETURNS BOOLEAN AS $$
 
 BEGIN 
 
+
     IF comuna_comprador IN (SELECT comuna_despacho FROM despacho_tiendas WHERE id_tienda = idtienda) THEN
 
         RETURN TRUE;
