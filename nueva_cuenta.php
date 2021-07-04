@@ -63,16 +63,18 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 
 </div>
 
+<div></div>
+
 <div>
 <form id = 'caja' action="crear_nuevo_usuario.php" method="post">
-<input type="text" class="form-control" placeholder="Nombre y apellido" style="font-size:12px;" size = 20 name = 'nombre'>
-    <p style="font-size:12px;"></p>
-    <input type="text" class="form-control" placeholder="RUT sin puntos con guion" style="font-size:12px;" size = 20 name = 'rut'>
-    <p style="font-size:12px;"></p>
-    <input type="number" class="form-control" placeholder="Edad" style="font-size:12px;" size = 20 name = 'edad'>
-    <p style="font-size:12px;"></p>
+<input type="text" class="form-control" placeholder="Nombre y apellido" style="font-size:15px;" size = 20 name = 'nombre'>
+    <p style="font-size:15px;"></p>
+    <input type="text" class="form-control" placeholder="RUT sin puntos con guion" style="font-size:15px;" size = 20 name = 'rut'>
+    <p style="font-size:15px;"></p>
+    <input type="number" class="form-control" placeholder="Edad" style="font-size:15px;" size = 20 name = 'edad'>
+    <p style="font-size:15px;"></p>
     Sexo   
-    <select name="sexo">
+    <select name="sexo" style="font-size:15px;">
     <option value="n/a">Prefiero no decir</option>
     <option value="mujer">Mujer</option>
     <option value="hombre">Hombre</option>
@@ -80,7 +82,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 
 <br>
 Direccion   
-<select name="direccion">
+<select name="direccion" style="font-size:15px;">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
       foreach ($dataCollected as $d) {
@@ -90,8 +92,8 @@ Direccion
     </select>
     <br>
     <br>
-    <input type="text" class="form-control" placeholder="Clave" style="font-size:12px;" size = 20 name = 'clave'>
-    <p style="font-size:12px;"></p>
+    <input type="text" class="form-control" placeholder="Clave" style="font-size:15px;" size = 20 name = 'clave'>
+    <p style="font-size:15px;"></p>
     <input type="submit" value="Crear cuenta" id = "botonL">
 </form></div>
 
