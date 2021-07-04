@@ -3,7 +3,7 @@
 <?php include('login.php');   ?>
 <?php include('templates/header_botones.html');   
  require("config/conexion.php");?>
-
+<br>
 <?php
 
 $clave_final = $_POST["nueva_clave"];
@@ -38,7 +38,7 @@ if($clave_chequear == $clave_vieja){
 
 ?>
 
-
+<br>
 <br>
 <form id = 'caja' action="perfil.php" method="post">
 <input type="submit" value="Volver" id = "botonB">
