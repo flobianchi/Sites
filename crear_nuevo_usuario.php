@@ -31,7 +31,7 @@ if($nombre == ''){
 
     #buscar direccion
 
-    $query = "SELECT id FROM direcciones WHERE direccion = $direccion;";
+    $query = "SELECT id FROM direcciones WHERE nombre_direccion = $direccion;";
 
     $result = $db -> prepare($query);
     $result -> execute();
