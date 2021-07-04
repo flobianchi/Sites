@@ -35,14 +35,18 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 <form id = 'caja' action="crear_nuevo_usuario.php" method="post">
 <input type="text" class="form-control" placeholder="Nombre" style="font-size:24px;" size = 15 name = 'nombre'>
     <p style="font-size:6px;"></p>
+    <br>
     <input type="text" class="form-control" placeholder="RUT" style="font-size:24px;" size = 15 name = 'rut'>
     <p style="font-size:6px;"></p>
+    <br>
     <input type="int" class="form-control" placeholder="Edad" style="font-size:24px;" size = 15 name = 'edad'>
     <p style="font-size:6px;"></p>
+<br>
     <select name="sexo">
-    <option value="hombre">Small</option>
-    <option value="mujer">Medium</option>
+    <option value="hombre">Hombre</option>
+    <option value="mujer">Mujer</option>
 </select>
+<br>
 <select name="direccion">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
@@ -51,6 +55,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
       }
       ?>
     </select>
+    <br>
     <input type="submit" value="Crear cuenta" id = "botonB">
 </form>
 <br>
