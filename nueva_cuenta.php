@@ -38,6 +38,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
   $dataCollected = $result -> fetchAll();
   ?>
 
+<h2> Crear cuenta</h2>
 <div class = "grid-crear">
 <div></div>
 <div></div>

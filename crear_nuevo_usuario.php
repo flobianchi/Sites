@@ -29,11 +29,27 @@ if($nombre == ''){
     echo("debe ingresar una clave valida");
 }else{
 
-    #$query = "SELECT agregar_usuario('$admin[0]'::varchar,'$admin[1]'::varchar,$admin[2],'$admin[3]'::varchar,'$admin[4]'::varchar, $admin[5]);";
+    #buscar direccion
+
+    $query = "SELECT id FROM direcciones WHERE direccion = $direccion;";
+
+    $result = $db -> prepare($query);
+    $result -> execute();
+    $retorno = $result -> fetchAll();
+
+    $id_direccion = $retorno[0]['id'];
+
+    echo("id direccion es" $id_direccion);
+
+    #agregar usuario
+
+    #$query = "SELECT agregar_usuario('$nombre'::varchar,'$rut'::varchar,$edad,'$sexo'::varchar,'usuario'::varchar, $id_direccion);";
 
     #$result = $db -> prepare($query);
     #$result -> execute();
     #$retorno = $result -> fetchAll();
+
+    #si se pudo agregar
 }
 
 echo("$nombre 
