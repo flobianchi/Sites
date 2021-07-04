@@ -31,8 +31,15 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 <div class = "grid-crear">
 <div></div>
 
-<div style = "background-color: #fdf4bf;">
-<h1>Crear cuenta</h1>
+<div style = "background-color: #fdf4bf;"> <h2> Crear cuenta</h2></div>
+
+<div></div>
+<div>
+texto aqui
+
+</div>
+
+<div>
 <form id = 'caja' action="crear_nuevo_usuario.php" method="post">
 <input type="text" class="form-control" placeholder="Nombre y apellido" style="font-size:12px;" size = 20 name = 'nombre'>
     <p style="font-size:12px;"></p>
