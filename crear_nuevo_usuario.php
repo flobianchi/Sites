@@ -44,17 +44,12 @@ if($nombre == ''){
 
     $id_direccion = $retorno[0]['id'];
 
-    echo("id direccion es $id_direccion");
-
     #agregar usuario
     $query = "SELECT agregar_usuario('$nombre'::varchar,'$rut'::varchar,$edad,'$sexo'::varchar,'usuario'::varchar, $id_direccion);";
 
     $result = $db -> prepare($query);
     $result -> execute();
     $retorno = $result -> fetchAll();
-
-    #si se pudo agregar
-    print_r($retorno);
 
     $se_pudo_agregar = $retorno[0]['agregar_usuario'];
 
@@ -114,5 +109,7 @@ $clave");
 
 ?>
 
+<br>
+<br>
 
 <?php include('templates/footer.html');
