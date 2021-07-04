@@ -56,7 +56,7 @@ if($nombre == ''){
     #si se pudo agregar
     print_r($retorno);
 
-    $se_pudo_agregar = $retorno[0]['agregar_usuario']
+    $se_pudo_agregar = $retorno[0]['agregar_usuario'];
 
     if($se_pudo_agregar >= 0){
         $no_entro = false;
