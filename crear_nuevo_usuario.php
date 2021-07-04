@@ -37,7 +37,7 @@ if($nombre == ''){
     $result -> execute();
     $retorno = $result -> fetchAll();
 
-    print_r($retorno)
+    print_r($retorno);
     #$id_direccion = $retorno[0]['id'];
 
     #echo("id direccion es" $id_direccion);
