@@ -67,8 +67,9 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 <div></div>
 
 <div style = "background-color: #fff444;">
-<p style="font-size:5px;"></p>
+
 <form id = 'caja' action="crear_nuevo_usuario.php" method="post">
+<p style="font-size:5px;"></p>
 <input type="text" class="form-control" placeholder="Nombre y apellido" style="font-size:15px;" size = 20 name = 'nombre'>
     <p style="font-size:15px;"></p>
     <input type="text" class="form-control" placeholder="RUT sin puntos con guion" style="font-size:15px;" size = 20 name = 'rut'>
@@ -80,7 +81,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
     <option value="mujer">Mujer</option>
     <option value="hombre">Hombre</option>
 </select>
-
+<p style="font-size:15px;"></p>
 <select name="direccion" style="font-size:15px;">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
