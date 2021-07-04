@@ -26,6 +26,7 @@ if($clave_chequear == $clave_vieja){
         $respuesta = $result -> fetchAll();
 
         echo("Hola $nombre, tu nueva clave es: $clave_final");
+        $_SESSION['pass_user'] = $clave_final;
 
     }
 
