@@ -43,10 +43,8 @@ if($id != ''){
 </form>
 
 <?php
-
 $_SESSION['f3_id'] = $_POST['f3_id']; 
 $_SESSION['f3_cant'] = $_POST['f3_cant']; 
-
 ?>
 
 <br>
