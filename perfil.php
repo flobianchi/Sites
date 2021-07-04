@@ -81,7 +81,7 @@ tr:hover {
         $result -> execute();
         $id_unidad_consultada = $result -> fetchAll(); 
 
-        echo("El usuario es del tipo administracion, mostrar datos aqui");
+        echo("El usuario es del tipo administracion de la unidad $id_unidad_consultada, mostrar datos aqui:");
         //id_personal;id_unidad;nombre;rut;sexo;edad;clasificacion
         $query = "SELECT a.id_unidad, a.nombre, a.rut, a.sexo, a.edad, a.calificacion FROM administrativos AS a JOIN unidades AS u ON a.id_unidad = u.id_unidad WHERE a.id_unidad = '$id_unidad_consultada';";
 
