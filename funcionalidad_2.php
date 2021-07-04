@@ -49,7 +49,7 @@ tr:hover {
 }
 </style>
 
-De acuerdo al texto que ingresaste estos son los resultados que encontramos:
+<h3>De acuerdo al texto que ingresaste estos son los resultados que encontramos:</h3>
 <br>
 
 
