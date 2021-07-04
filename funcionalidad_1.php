@@ -86,7 +86,7 @@ COMESTIBLES:
 	}
   ?>
 	</table>
-
+<br>
 NO COMESTIBLES:
 
   <?php
@@ -105,7 +105,7 @@ NO COMESTIBLES:
 
   ?>
 
-	<table>
+	<table class="center">
     <tr>
       <th>ID</th>
       <th>Nombre</th>
