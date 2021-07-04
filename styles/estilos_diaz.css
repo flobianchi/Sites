@@ -18,11 +18,19 @@ html {  font-family: Helvetica;
   cursor: pointer;
 }
 
+
 #botonC {
   background-color: #f3c733; 
   color: black; 
   height:40px; 
   width:210px;
+
+#botonL {
+  background-color: #f3c733; 
+  color: black; 
+  height:40px; 
+  width:200px;
+
   text-decoration: none; 
   border-radius: 12px; 
   font-size: 20px; 
@@ -65,15 +73,6 @@ html {  font-family: Helvetica;
 .button3 {  background-color: #195B6A; 
             height:100px; 
             width:450px; }
-
-  .grid-titulo {
-    display: grid;
-    grid-template-columns: auto 250px 300px 250px auto;
-    grid-template-rows: 180px;
-    grid-gap: 1px;
-    padding: 1px;
-    font-size: 20px;
-  }
 
   .grid-consultas {
     display: grid;
