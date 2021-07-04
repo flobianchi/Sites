@@ -112,5 +112,4 @@ En caso de ser exitoso mostramos las ultimas 10 compras
   </form>
 
 
-
 <?php include('templates/footer.html');
