@@ -1,7 +1,7 @@
-html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}
+html { font-family: @import url(//fonts.googleapis.com/css?family=Ubuntu); display: inline-block; margin: 0px auto; text-align: center;}
 @import url(//fonts.googleapis.com/css?family=Ubuntu);
 
-html {  font-family: Helvetica; 
+html {  font-family: Ubuntu; 
         display: inline-block; 
         margin: 0px auto; 
         text-align: center;}
