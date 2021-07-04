@@ -65,14 +65,14 @@ se agrego exitosamente (funcion para grabar en BDD)
   $idcompra = ("SELECT MAX id FROM compras;") + 1;
   $id_current_user = $_SESSION['id_user'];
   # direcciones de usuario
-
+  require("config/conexion.php");
   // $direccion_despacho =  "SELECT chequear_despacho($id, $id_current_user)"
   $check_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto)"
 
-  $query = "SELECT direcciones.nombre FROM direcciones, direcciones_usuarios WHERE direcciones.id = direcciones_usuarios.direccion_usuario AND direcciones_usuarios.direccion_usuario = $id_current_user;";
-  $result = $db -> prepare($query);
-  $result -> execute();
-  $respuesta = $result -> fetchAll();
+  $query1 = "SELECT direcciones.nombre FROM direcciones, direcciones_usuarios WHERE direcciones.id = direcciones_usuarios.direccion_usuario AND direcciones_usuarios.direccion_usuario = $id_current_user;";
+  $result1 = $db -> prepare($query1);
+  $result1 -> execute();
+  $respuesta = $result1 -> fetchAll();
 
   if ($check_diponibilidad == TRUE){
     foreach ($respuesta as $d) {
@@ -84,7 +84,7 @@ se agrego exitosamente (funcion para grabar en BDD)
         $retorno = $result -> fetchAll();;
 
         $query2 = "SELECT insertar_carrito_compra($idcompra, $idproducto, $cantidad, $id);";
-        $result2 = $db -> prepare($query);
+        $result2 = $db -> prepare($query2);
         $result2-> execute();
         $retorno2 = $result2 -> fetchAll();;
       }else{
