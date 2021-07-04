@@ -20,8 +20,6 @@ if($nombre == ''){
     echo("debe ingresar un nombre");
 }elseif($rut == ''){
     echo("debe ingresar un rut");
-}elseif('' $edad == ''){
-    echo("debe ingresar un nombre");
 }elseif($clave == ''){
     echo("debe ingresar una clave");
 }
