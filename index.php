@@ -10,9 +10,9 @@ $_SESSION['ingresado'] = false;
 <div style = "background-color: #fdf4bf;">
 <h1>Iniciar sesión</h1>
 <form id = 'caja' action="tienda.php" method="post">
-    <input type="text" class="form-control" placeholder="Usuario" style="font-size:24px;" size = 15 name = 'usuario'>
+    <input type="text" class="form-control" placeholder="rut" style="font-size:24px;" size = 15 name = 'usuario'>
     <p style="font-size:6px;"></p>
-    <input type="text" class="form-control" placeholder="Clave" style="font-size:24px;" size = 15 name = 'clave'>
+    <input type="text" class="form-control" placeholder="clave" style="font-size:24px;" size = 15 name = 'clave'>
     <p style="font-size:15px;"></p>
     <input type="submit" value="Ingresar" id = "botonB">
 </form></div>
@@ -25,9 +25,8 @@ $_SESSION['ingresado'] = false;
 <br>
 <br>
 <h2>¿No tienes cuenta?</h2>
-<h3>Crea una cuenta</h3>
 <form id = 'caja' action="nueva_cuenta.php" method="post">
-    <input type="submit" value="Crear" id = "botonB">
+    <input type="submit" value="Crea una cuenta" id = "botonL">
 </form>
 <br>
 

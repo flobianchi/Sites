@@ -4,13 +4,35 @@ html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-ali
 html {  font-family: Helvetica; 
         display: inline-block; 
         margin: 0px auto; 
-        text-align: center;}
+        text-align: center;
+      }
 
 #botonB {
   background-color: #f3c733; 
   color: black; 
   height:40px; 
   width:110px;
+  text-decoration: none; 
+  border-radius: 12px; 
+  font-size: 20px; 
+  margin: 3px; 
+  cursor: pointer;
+}
+
+
+#botonC {
+  background-color: #f3c733; 
+  color: black; 
+  height:40px; 
+  width:210px;
+}
+
+#botonL {
+  background-color: #f3c733; 
+  color: black; 
+  height:40px; 
+  width:200px;
+
   text-decoration: none; 
   border-radius: 12px; 
   font-size: 20px; 
@@ -54,15 +76,6 @@ html {  font-family: Helvetica;
             height:100px; 
             width:450px; }
 
-  .grid-titulo {
-    display: grid;
-    grid-template-columns: auto 250px 450px 250px auto;
-    grid-template-rows: 80px 160px;
-    grid-gap: 1px;
-    padding: 1px;
-    font-size: 25px;
-  }
-
   .grid-consultas {
     display: grid;
     grid-template-columns: auto 340px 40px 340px auto;
@@ -101,4 +114,12 @@ html {  font-family: Helvetica;
     text-align: center;
     font-size: 10px;
     background-color: #77878A; 
+  }
+
+  .grid-crear {
+    display: grid;
+    grid-template-columns: auto 320px auto;
+    grid-template-rows: 460px;
+    grid-gap: 1px;
+    text-align: center;
   }

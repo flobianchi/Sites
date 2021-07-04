@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
+<?php include('templates/header_botones.html'); ?>
 
 
 <style>
@@ -56,12 +57,6 @@ tr:hover {
 $usuario_ingresado = $_POST['usuario'];
 $clave_ingresada = $_POST['clave'];
 
-#usuario defaul por ahora
-if($usuario_ingresado == ''){
-    $usuario_ingresado = '66954467-7';
-    $clave_ingresada = 'viki';
-}
-
 #Llama a conexión de la bdd
 require("config/conexion.php");
 
@@ -85,8 +80,6 @@ $_SESSION['pass_user'] = $clave_ingresada;
 }
 
 $_SESSION['ingresado'] = true;
-
-include('templates/header_botones.html');
 
 echo("<h2>Porfavor elija una tienda haciendo click en su id</h2>");
 

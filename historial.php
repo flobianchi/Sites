@@ -55,25 +55,16 @@ tr:hover {
 
 <?php   
 
-    $nombre = $_SESSION['name_user'];
+    
+$nombre = $_SESSION['name_user'];
 
-    echo("<h2>Hola $nombre, este es tu historial de compras</h2>");
+echo("<h2>Hola $nombre, este es tu historial de compras</h2>");
 
-    $id_current_user = $_SESSION['id_user'];
-
-    // Nos conectamos a las bdds
-    require("config/conexion.php");
-
-    // Primero obtenemos las fechas de las compras de la tabla DESPACHOS de bd2
-    $query = "SELECT fecha, id_compra FROM Despachos;";
-    $result = $db2 -> prepare($query);
-    $result -> execute();
-    $fechas = $result -> fetchAll();
+$id_current_user = $_SESSION['id_user'];
 
     #id_compra | id_producto | cantidad | id_tienda | id  | id_usuario | direccion
     echo("<table class='center'>
     <tr>
-    <th>Fecha Despacho</th>
     <th>ID Compra</th>
     <th>ID Producto</th>
     <th>Nombre Producto</th>
@@ -83,7 +74,9 @@ tr:hover {
     <th>Nombre Tienda</th>
     </tr>");
 
-    foreach ($fechas as $fecha_despacho){
+
+    // Nos conectamos a las bdds
+    require("config/conexion.php");
 
         // Super JOIN
         // fecha_despacho[1] = id_compra
@@ -91,27 +84,22 @@ tr:hover {
         // cc.id_compra, cc.id_producto, p.nombre, cc.cantidad, p.precio, cc.id_tienda, t.nombre
         $query = "SELECT cc.id_compra, cc.id_producto, p.nombre, cc.cantidad, p.precio, cc.id_tienda, t.nombre 
         FROM ((carrito_compras AS cc JOIN compras AS c ON cc.id_compra = c.id) JOIN productos AS p ON p.id = cc.id_producto)
-        JOIN tiendas AS t ON cc.id_tienda = t.id WHERE c.id = $fecha_despacho[1] AND c.id_usuario = $id_current_user ORDER BY cc.id_compra;";
+        JOIN tiendas AS t ON cc.id_tienda = t.id WHERE c.id_usuario = $id_current_user ORDER BY cc.id_compra DESC;";
 
         // Ejecutamos las querys 
         $result = $db -> prepare($query);
         $result -> execute();
         $historial = $result -> fetchAll();
 
-        foreach ($historial as $historia){
-            echo("<tr> <td> $fecha_compra[0] </td> <td> $historia[0] </td> <td> $historia[1] </td> <td> $historia[2] </td> <td> $historia[3] </td>
-           <td> $historia[4] </td> <td> $historia[5] </td> <td> $historia[6] </td> </tr>");
+        foreach ($historial as $h) {
+           echo "<tr>";
+           for ($i = 0; $i < 7; $i++) {
+                echo "<td>$h[$i]</td> ";
+            }
+            echo "</tr>";
+         }
 
-        //echo("<tr> <td> $fecha_compra[0] </td>")
-        //foreach ($historial as $h) {
-        //    echo "<tr>";
-        //    for ($i = 0; $i < 7; $i++) {
-        //        echo "<td>$h[$i]</td> ";
-        //    }
-        //    echo "</tr>";
-        // }
-        }
-    }
+
 
     echo("<table>");
 

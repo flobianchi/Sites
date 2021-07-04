@@ -8,9 +8,9 @@ BEGIN
 
     IF idproducto IN (SELECT id_producto FROM disponibilidad_tienda WHERE disponibilidad_tienda.id_tienda = idtienda) THEN
 
-        RETURN TRUE
+        RETURN TRUE;
     ELSE
-        RETURN FALSE
+        RETURN FALSE;
 
     END IF;
 

@@ -5,8 +5,6 @@
     include('../templates/header_procedimientos.html');
 
     echo("<br>Ejecutando procedimiento agregar filas tabla administradores a usuarios<br>");
-
-
     // Primero obtenemos todos los pokemons de la tabla que queremos agregar
     $query = "SELECT a.nombre, a.rut, a.edad, a.sexo, a.calificacion, u.id_direccion FROM administrativos AS a JOIN unidades AS u ON a.id_unidad = u.id_unidad;";
     $result = $db2 -> prepare($query);
@@ -25,7 +23,7 @@
     }
 
     // Mostramos los cambios en una nueva tabla
-    $query = "SELECT * FROM usuarios;";
+    $query = "SELECT * FROM usuarios ORDER BY id, calificacion;";
     $result = $db -> prepare($query);
     $result -> execute();
     $usuarios = $result -> fetchAll();
