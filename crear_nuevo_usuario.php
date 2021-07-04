@@ -37,9 +37,10 @@ if($nombre == ''){
     $result -> execute();
     $retorno = $result -> fetchAll();
 
-    $id_direccion = $retorno[0]['id'];
+    print_r($retorno)
+    #$id_direccion = $retorno[0]['id'];
 
-    echo("id direccion es" $id_direccion);
+    #echo("id direccion es" $id_direccion);
 
     #agregar usuario
 
@@ -50,6 +51,20 @@ if($nombre == ''){
     #$retorno = $result -> fetchAll();
 
     #si se pudo agregar
+    #print_r($retorno)
+
+    #APLICAR EL UPDATE DEL PROCEDIMIENTO agregar_ususario (ahora intrega un int que corresponde al id)
+
+    #if(ok){
+        
+        #ejecutar esta query y estamos
+        #"SELECT cambiar_clave($id_retorno_de_agragar_usuario,'$clave');"
+
+    #}else{
+    #    echo("usuario ya existe");
+    #}
+
+    #LUEGO LOS BOTONES!
 }
 
 echo("$nombre 
