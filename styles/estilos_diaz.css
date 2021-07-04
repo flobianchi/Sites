@@ -119,7 +119,7 @@ html {  font-family: Helvetica;
   .grid-crear {
     display: grid;
     grid-template-columns: auto 320px auto;
-    grid-template-rows: 360px;
+    grid-template-rows: 460px;
     grid-gap: 1px;
     text-align: center;
   }
