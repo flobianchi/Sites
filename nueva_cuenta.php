@@ -40,7 +40,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
     <p style="font-size:12px;"></p>
     <input type="number" class="form-control" placeholder="Edad" style="font-size:12px;" size = 20 name = 'edad'>
     <p style="font-size:12px;"></p>
-    <h6> Selecciona tu sexo </h6>
+    Sexo   
     <select name="sexo">
     <option value="n/a">Prefiero no decir</option>
     <option value="mujer">Mujer</option>
@@ -48,7 +48,7 @@ tambien debe crear una clave, para esto debe complir las condiciones.
 </select>
 
 <br>
-<h6> Selecciona tu direccion </h6>
+Direccion   
 <select name="direccion">
       <?php
       #Para cada tipo agregamos el tag <option value=value_of_param> visible_value </option>
