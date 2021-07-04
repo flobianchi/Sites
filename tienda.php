@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
+<?php include('templates/header_botones.html'); ?>
 
 
 <style>
@@ -85,8 +86,6 @@ $_SESSION['pass_user'] = $clave_ingresada;
 }
 
 $_SESSION['ingresado'] = true;
-
-include('templates/header_botones.html');
 
 echo("<h2>Porfavor elija una tienda haciendo click en su id</h2>");
 
