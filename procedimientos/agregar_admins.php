@@ -34,7 +34,7 @@
         $result -> fetchAll();
 
         #tomar respuesta de la consulta agregar_usuario, si el usuario fue agregado (es decir tiene un id >= 0), entonces le creamos una clave random
-        $id_nuevo = $result[0]['agregar_usuario']
+        $id_nuevo = $result[0]['agregar_usuario'];
         echo("nuevo_id es $id_nuevo");
         #$clave = generateRandomString(8);
         #$query2 = "SELECT cambiar_clave($p[0],'$clave');";
