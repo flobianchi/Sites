@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php include('templates/header.html');   ?>
-<?php include('templates/header_botones.html'); ?>
 
 
 <style>
@@ -72,6 +71,8 @@ $ingresado = $_SESSION['ingresado'];
 
 #si el resultado es correcto implimimospagina de siempre ok, sino no
 if($resultado or $ingresado){
+
+include('templates/header_botones.html');
 
 #-------------------caso clave correcta------------------------
 if($usuario_ingresado != ''){
