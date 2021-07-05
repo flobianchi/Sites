@@ -66,7 +66,7 @@ tr:hover {
     foreach ($admins as $admin){
 
         #consulta para agregar usuarios admin
-        $query = "SELECT agregar_usuario('$admin[0]'::varchar,'$admin[1]'::varchar,$admin[2],'$admin[3]'::varchar,'$admin[4]'::varchar, $admin[5]);";
+        $query = "SELECT agregar_usuario('$admin[0]'::varchar,'$admin[1]'::varchar,$admin[2],'$admin[3]'::varchar, $admin[5]);";
 
         $result = $db -> prepare($query);
         $result -> execute();
