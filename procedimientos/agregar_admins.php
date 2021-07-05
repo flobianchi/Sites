@@ -4,6 +4,18 @@
     require("../config/conexion.php");
     include('../templates/header_procedimientos.html');
 
+    #funcion para generar claves aleatoreas
+    #https://stackoverflow.com/questions/4356289/php-random-string-generator
+    function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
     echo("<br>Ejecutando procedimiento agregar filas tabla administradores a usuarios<br>");
     // Primero obtenemos todos los pokemons de la tabla que queremos agregar
     $query = "SELECT a.nombre, a.rut, a.edad, a.sexo, a.calificacion, u.id_direccion FROM administrativos AS a JOIN unidades AS u ON a.id_unidad = u.id_unidad;";
@@ -14,12 +26,20 @@
 
     foreach ($admins as $admin){
 
+        #consulta para agregar usuarios admin
         $query = "SELECT agregar_usuario('$admin[0]'::varchar,'$admin[1]'::varchar,$admin[2],'$admin[3]'::varchar,'$admin[4]'::varchar, $admin[5]);";
 
-        // Ejecutamos las querys para efectivamente insertar los datos
         $result = $db -> prepare($query);
         $result -> execute();
         $result -> fetchAll();
+
+        #tomar respuesta de la consulta agregar_usuario, si el usuario fue agregado (es decir tiene un id >= 0), entonces le creamos una clave random
+        $id_nuevo = $result[0]['agregar_usuario']
+        echo("nuevo_id es $id_nuevo");
+        #$clave = generateRandomString(8);
+        #$query2 = "SELECT cambiar_clave($p[0],'$clave');";
+        #$result2 = $db -> prepare($query2);
+        #$result2 -> execute();
     }
 
     // Mostramos los cambios en una nueva tabla
