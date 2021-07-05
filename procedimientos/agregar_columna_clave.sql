@@ -1,6 +1,6 @@
 CREATE OR REPLACE FUNCTION
 
-agregar_columna_clave ()
+agregar_columna_clave (entrada int)
 
 -- declaramos lo que retorna, en este caso un booleano
 RETURNS BOOLEAN AS $$
