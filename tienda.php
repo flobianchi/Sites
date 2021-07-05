@@ -83,7 +83,7 @@ $_SESSION['ingresado'] = true;
 
 echo("<h2>Porfavor elija una tienda haciendo click en su id</h2>");
 
-$query = "SELECT tiendas.id, tiendas.nombre, direcciones.nombre FROM tiendas JOIN direcciones ON tiendas.id_direccion = direcciones.id ORDER BY tiendas.id;";
+$query = "SELECT tiendas.id, tiendas.nombre, direcciones.nombre FROM tiendas JOIN direcciones ON tiendas.direccion = direcciones.id ORDER BY tiendas.id;";
 
 $result = $db -> prepare($query);
 $result -> execute();
