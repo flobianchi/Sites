@@ -69,6 +69,22 @@ tr:hover {
 
       echo("<br>");
 
+      $es_admin = false;
+      #---------------------------revisar si es administrador---------------------------------------
+                    $query = "SELECT rut FROM administrativos WHERE CALIFICACION = 'administacion';";
+                    $result = $db2 -> prepare($query);
+                    $result -> execute();
+                    $admins = $result -> fetchAll();
+
+
+                    foreach ($admins as $rut_consulta_administrativos){
+                        if($rut_user == $rut_consulta_administrativos){
+                            $es_admin = true;
+                        }
+                    }
+
+     echo("es admin (sin columna calificacion)? -> $es_admin");
+
       $calificacion = $dataCollected[0]['calificacion'];
       if($calificacion == 'administracion'){
 
