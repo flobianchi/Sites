@@ -93,11 +93,10 @@ tr:hover {
 
       $es_admin = false;
       #---------------------------revisar si es administrador---------------------------------------
-                    $query = "SELECT rut FROM administrativos WHERE CALIFICACION = 'administacion';";
+                    $query = "SELECT rut FROM administrativos WHERE CALIFICACION = 'administracion';";
                     $result = $db2 -> prepare($query);
                     $result -> execute();
                     $admins = $result -> fetchAll();
-
 
                     foreach ($admins as $rut_consulta_administrativos){
                         if($rut_user == $rut_consulta_administrativos){
