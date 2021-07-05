@@ -115,7 +115,7 @@ tr:hover {
   </form>
   
   <h3>Puedes ver tu historial de compras aquí</h3>
-  <form id = 'caja' action="historial.php" method="post">
+  <form id = 'caja' action="historial_desde_tiendas.php" method="post">
   <input type="submit" value="Historial" id = "botonB">
   </form>
 
