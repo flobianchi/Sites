@@ -1,6 +1,6 @@
 CREATE OR REPLACE FUNCTION
 
-chequear_despacho2 (idtienda int, idcomprador int, direccion)
+chequear_despacho2 (idtienda int, idcomprador int, direccion VARCHAR)
 
 RETURNS VARCHAR AS $$
 
