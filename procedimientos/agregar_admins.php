@@ -35,7 +35,6 @@
 
         #tomar respuesta de la consulta agregar_usuario, si el usuario fue agregado (es decir tiene un id >= 0), entonces le creamos una clave random
         $id_nuevo = $result[0]['agregar_usuario'];
-        echo("nuevo_id es $id_nuevo");
 
         if($id >= 0){
             $clave = generateRandomString(8);
@@ -81,6 +80,7 @@
         </table>
     </body>
 
+<br>
     <body>  
         <table class='table'>
             <thead>
