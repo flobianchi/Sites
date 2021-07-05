@@ -49,7 +49,7 @@ tr:hover {
 }
 </style>
 
-A continuacion el detalle del producto:
+<h2>A continuacion el detalle del producto:</h2>
 
   <br>
   <br>
@@ -137,11 +137,11 @@ echo($fila);
   ?>
 
 	</table>
-
   <br>
+<h3>Para volver al menú de consultas, debes hacer click aqui</h3>
 
   <form id = 'caja' action="consultas_tienda.php" method="post">
-      <input type="submit" value="Volver a las consultas" id = "botonID">
+      <input type="submit" value="Volver a consultas" id = "botonL">
       </form>
 
 

@@ -34,7 +34,7 @@ tr:hover {
   require("config/conexion.php");
 
       $rut_user = $_SESSION['rut_user'];
-      $query = "SELECT u.id, u.nombre, u.rut, u.edad, u.sexo, u.calificacion FROM usuarios AS u WHERE u.rut = '$rut_user';";
+      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo, usuarios.calificacion, direcciones.nombre_direccion FROM usuarios, direcciones_usuarios, direcciones WHERE usuarios.id =direcciones_usuarios.id_usuario AND direcciones_usuarios.direccion_usuario = direcciones.id AND usuarios.rut = '$rut_user';";
 
       $result = $db -> prepare($query);
       $result -> execute();
@@ -54,10 +54,11 @@ tr:hover {
       <th>RUT</th>
       <th>Edad</th>
       <th>Sexo</th>
+      <th>Direccion</th>
       </tr>");
       
       foreach ($dataCollected as $p) {
-      echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> </tr>";
+      echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> <td>$p[6]</td></tr>";
       }
       
       echo("<table>");
@@ -127,9 +128,9 @@ tr:hover {
 </form>
 <br>
 <br>
-<h3>Para volver al menú de elección de tienda, debes hacer click en volver</h3>
+<h3>Para volver al menú de elección de tienda, debes hacer click aqui</h3>
 <form id = 'caja' action="tienda.php" method="post">
-      <input type="submit" value="Volver" id = "botonB">
+      <input type="submit" value="Volver a tiendas" id = "botonL">
 </form>
 
 <?php include('templates/footer.html');
