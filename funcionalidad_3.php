@@ -83,7 +83,6 @@ tr:hover {
   $direccion = $result1 -> fetchAll();
 
   if ($check_diponibilidad == TRUE){
-    echo("SI HAY DE ESTE PRODUCTO");
     foreach ($direccion as $d){
       $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
       $result5 = $db -> prepare($consulta_despacho);
@@ -102,7 +101,7 @@ tr:hover {
         $result2-> execute();
         $retorno2 = $result2 -> fetchAll();;
       }else{
-        echo("No hay cobertura para tu zona");
+        echo("Si tenemos este producto, pero lamentablemente no hay cobertura para tu zona");
   }
   }
   else{
