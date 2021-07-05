@@ -124,7 +124,6 @@ tr:hover {
       }
       ?>
 
-
 <br>
 <h3>Puedes ver tu historial de compras aquí</h3>
 <form id = 'caja' action="historial.php" method="post">
