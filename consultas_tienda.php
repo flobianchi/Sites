@@ -43,8 +43,14 @@ if($id != ''){
 </form>
 
 <?php
-$_SESSION['id_f3'] = $_POST['f3_id']; 
-$_SESSION['cant_f3'] = $_POST['f3_cant']; 
+$id_producto = $_POST['f3_id']; 
+$cantidad = $_POST['f3_cant']; 
+
+if($id_producto != ''){
+      $_SESSION['id_f3'] = $id_producto;
+      $id = $_POST['t'];
+if($cantidad != ''){
+      $_SESSION['cant_f3'] = $cantidad;      
 ?>
 
 <br>
