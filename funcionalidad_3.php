@@ -93,8 +93,9 @@ tr:hover {
         $result6 -> execute();
         $direccion = $result6 -> fetchAll();
 
-        echo($direccion[0]);
- 
+        echo($check_despacho);
+        echo($direccion);
+        echo($d[0]);
       
         if ($check_despacho == TRUE){
           $query = "SELECT insertar_compra($id_current_user, $direccion);";
