@@ -70,6 +70,7 @@ tr:hover {
   $respuesta = $result1 -> fetchAll();
 
   if ($check_diponibilidad == TRUE){
+    echo("SI HAY DE ESTE PRODUCTO")
     foreach ($respuesta as $d) {
       $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
       $result5 = $db -> prepare($consulta_despacho);
@@ -89,7 +90,8 @@ tr:hover {
       }else{
         echo("No hay cobertura para tu zona");
   }
-  }else{
+  }
+  else{
       echo("No hay stock de este producto en esta tienda");
   }
   $query6 = "SELECT carrito_compras.id_compra, carrito_compras.id_producto, carrito_compras.cantidad, carrito_compras.id_tienda FROM carrito_compras, compras WHERE carrito_compras.id_compra = compras.id AND compras.id_usuario = $id_current_user;";
@@ -115,12 +117,6 @@ tr:hover {
 	}
   ?>
 	</table>
-
-
-En caso de ser exitoso mostramos las ultimas 10 compras
-
-
-
 
   <br>
   <form id = 'caja' action="consultas_tienda.php" method="post">
