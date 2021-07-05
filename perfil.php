@@ -77,7 +77,7 @@ tr:hover {
                     $admins = $result -> fetchAll();
 
                     foreach ($admins as $rut_consulta_administrativos){
-                        if($rut_user == $rut_consulta_administrativos){
+                        if($rut_user == $rut_consulta_administrativos[0]){
                             $es_admin = true;
                         }
                     }
