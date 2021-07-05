@@ -82,6 +82,7 @@ tr:hover {
     $compras = 0;
     foreach ($comuna as $c){
       if ($compras == 0){
+        echo('si entra al if compras');
         $consulta_despacho = "SELECT chequear_despacho2($id, $id_current_user, $c[0]);";
         $result5 = $db -> prepare($consulta_despacho);
         $result5 -> execute();
@@ -93,12 +94,9 @@ tr:hover {
         $result6 = $db -> prepare($query6);
         $result6 -> execute();
         $direccion_mala = $result6 -> fetchAll();
-        foreach ($direccion_mala as $d){
-          $direccion = $d[0];}
-
-        echo($direccion);
       
         if ($check_despacho == TRUE){
+          echo('si entra al if despacho');
           $query = "SELECT insertar_compra($id_current_user, $direccion);";
           $result = $db -> prepare($query);
           $result -> execute();
