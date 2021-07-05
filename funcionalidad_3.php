@@ -79,7 +79,7 @@ tr:hover {
   $comuna = $result1 -> fetchAll();
 
   if ($check_diponibilidad == TRUE) {
-    $compras = 0
+    $compras = 0;
     foreach ($comuna as $d){
       if ($compras == 0){
         $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d[0]);";
