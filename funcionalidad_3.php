@@ -50,10 +50,13 @@ tr:hover {
 </style>
 
 <?php
+  session_start(); 
   #$id es id de tienda
-  $idproducto = $_SESSION['f3_id'];
-  $cantidad = $_SESSION['f3_cant'];
+  $idproducto = $_SESSION['id_f3'];
+  $cantidad = $_SESSION['cant_f3'];
   $id_current_user = $_SESSION['id_user'];
+  $id = $_SESSION['id_tienda'];
+
   print_r($idproducto);
   print_r($id);
   # direcciones de usuario
