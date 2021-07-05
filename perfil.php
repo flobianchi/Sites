@@ -34,7 +34,7 @@ tr:hover {
   require("config/conexion.php");
 
       $rut_user = $_SESSION['rut_user'];
-      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo, usuarios.calificacion, direcciones.nombre_direccion FROM usuarios, direcciones_usuarios, direcciones WHERE usuarios.id =direcciones_usuarios.id_usuario AND direcciones_usuarios.direccion_usuario = direcciones.id AND usuarios.rut = '$rut_user';";
+      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo, usuarios.calificacion, direcciones.nombre_direccion, direcciones.comuna FROM usuarios, direcciones_usuarios, direcciones WHERE usuarios.id =direcciones_usuarios.id_usuario AND direcciones_usuarios.direccion_usuario = direcciones.id AND usuarios.rut = '$rut_user';";
 
       $result = $db -> prepare($query);
       $result -> execute();
@@ -55,10 +55,11 @@ tr:hover {
       <th>Edad</th>
       <th>Sexo</th>
       <th>Direccion</th>
+      <th>Comuna</th>
       </tr>");
       
       foreach ($dataCollected as $p) {
-      echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> <td>$p[6]</td></tr>";
+      echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> <td>$p[6]</td><td>$p[7]</td></tr>";
       }
       
       echo("<table>");
