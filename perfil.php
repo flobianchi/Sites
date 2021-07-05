@@ -34,7 +34,7 @@ tr:hover {
   require("config/conexion.php");
 
       $rut_user = $_SESSION['rut_user'];
-      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo, usuarios.calificacion, direcciones.nombre_direccion, direcciones.comuna FROM usuarios, direcciones_usuarios, direcciones WHERE usuarios.id =direcciones_usuarios.id_usuario AND direcciones_usuarios.direccion_usuario = direcciones.id AND usuarios.rut = '$rut_user';";
+      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo, usuarios.calificacion FROM usuarios, direcciones_usuarios, direcciones WHERE usuarios.id =direcciones_usuarios.id_usuario AND direcciones_usuarios.direccion_usuario = direcciones.id AND usuarios.rut = '$rut_user';";
 
       $result = $db -> prepare($query);
       $result -> execute();
@@ -62,6 +62,13 @@ tr:hover {
       
       echo("<table>");
 
+      $query = "SELECT direcciones.nombre_direccion, direcciones.comuna FROM usuarios, direcciones_usuarios, direcciones WHERE usuarios.id =direcciones_usuarios.id_usuario AND direcciones_usuarios.direccion_usuario = direcciones.id AND usuarios.rut = '$rut_user';";
+
+      $result = $db -> prepare($query);
+      $result -> execute();
+      $dataCollected2 = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
+      
+
       echo("<h3>Estas son tus direcciones</h3>");
 
       echo("
@@ -72,7 +79,7 @@ tr:hover {
       <th>Comuna</th>
       </tr>");
       
-      foreach ($dataCollected as $p) {
+      foreach ($dataCollected2 as $p) {
       echo "<tr>  <td>$p[6]</td><td>$p[7]</td></tr>";
       }
       
