@@ -81,7 +81,7 @@ tr:hover {
                             $es_admin = true;
                         }
                     }
-                    
+
       if($es_admin){
 
         #----------------------------caso administracion-----------------------------------------------
@@ -124,7 +124,7 @@ tr:hover {
       }
       ?>
 
-
+ALTER TABLE usuarios DROP COLUMN calificacion;
 <br>
 <h3>Puedes ver tu historial de compras aquí</h3>
 <form id = 'caja' action="historial.php" method="post">
