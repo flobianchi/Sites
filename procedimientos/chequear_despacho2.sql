@@ -8,10 +8,10 @@ BEGIN
 
 IF direccion IN (SELECT comuna_despacho FROM despacho_tiendas WHERE id_tienda = idtienda) THEN
 
-    RETURN TRUE
+    RETURN TRUE;
 ELSE
 
-    RETURN FALSE
-END
+    RETURN FALSE;
+END IF;
 
 $$ language plpgsql
