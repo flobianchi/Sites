@@ -36,10 +36,14 @@
         #tomar respuesta de la consulta agregar_usuario, si el usuario fue agregado (es decir tiene un id >= 0), entonces le creamos una clave random
         $id_nuevo = $result[0]['agregar_usuario'];
         echo("nuevo_id es $id_nuevo");
-        #$clave = generateRandomString(8);
-        #$query2 = "SELECT cambiar_clave($p[0],'$clave');";
-        #$result2 = $db -> prepare($query2);
-        #$result2 -> execute();
+
+        if($id >= 0){
+            $clave = generateRandomString(8);
+            $query2 = "SELECT cambiar_clave($p[0],'$clave');";
+            $result2 = $db -> prepare($query2);
+            $result2 -> execute();
+        }
+        
     }
 
     // Mostramos los cambios en una nueva tabla
@@ -76,4 +80,25 @@
             </tbody>
         </table>
     </body>
+
+    <body>  
+        <table class='table'>
+            <thead>
+                <tr>
+                <th>Rut</th>
+                <th>Clave</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($usuarios as $usuario) {
+                    echo "<tr>";
+                    echo "<td>$usuario[2]</td> <td>$usuario[5]</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </body>
+
 </html>
