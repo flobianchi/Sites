@@ -70,8 +70,8 @@ tr:hover {
   $respuesta = $result1 -> fetchAll();
 
   if ($check_diponibilidad == TRUE){
-    echo("SI HAY DE ESTE PRODUCTO")
-    foreach ($respuesta as $d) {
+    echo("SI HAY DE ESTE PRODUCTO");
+    foreach ($respuesta as $d){
       $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
       $result5 = $db -> prepare($consulta_despacho);
       $result5 -> execute();
