@@ -107,7 +107,7 @@ $id_current_user = $_SESSION['id_user'];
 ?>
 <br>
 <br>
-<form id = 'caja' action="consultas_tienda.php" method="post">
+<form id = 'caja' action="funcionalidad_3.php" method="post">
       <input type="submit" value="Volver" id = "botonB">
       </form>
 

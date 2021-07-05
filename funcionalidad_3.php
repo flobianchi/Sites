@@ -73,8 +73,6 @@ tr:hover {
   $dataCollected = $result4 -> fetchAll();
   $check_diponibilidad = $dataCollected[0]['chequear_disponibilidad'];
 
-  print_r($check_diponibilidad);
-
   $query1 = "SELECT direcciones.nombre FROM direcciones, direcciones_usuarios WHERE direcciones.id = direcciones_usuarios.direccion_usuario AND direcciones_usuarios.direccion_usuario = $id_current_user;";
   $result1 = $db -> prepare($query1);
   $result1 -> execute();
