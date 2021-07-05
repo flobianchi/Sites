@@ -108,15 +108,16 @@ tr:hover {
           $retorno2 = $result2 -> fetchAll();
           echo("Tu compra se ha realizado con exito!");
           $compras = 1
-          
-      }else{
-        echo("Si tenemos este producto, pero lamentablemente no hay cobertura para tu zona");
-      }    
-  }
-  }
-  }
+        
+
+        }else{
+          echo("Si tenemos este producto, pero lamentablemente no hay cobertura para tu zona");
+        }    
   
-  else{
+      }
+    }
+  
+  }else{
       echo("No hay stock de este producto en esta tienda");
   }
    
