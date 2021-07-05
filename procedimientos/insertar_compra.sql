@@ -12,7 +12,7 @@ BEGIN
 
 SELECT INTO direccion direcciones.id FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = idusuario AND direcciones.comuna = nombre_comuna LIMIT 1;
 
-SELECT INTO idmax MAX(id) FROM carrito_compras;
+SELECT INTO idmax MAX(id) FROM compras;
 
 insert into compras values (idmax + 1, idusuario, direccion);
 insert into carrito_compras values (idmax + 1, idproducto, cantidad, idtienda);
