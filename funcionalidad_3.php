@@ -51,6 +51,11 @@ tr:hover {
 
 <?php
   session_start(); 
+  $post_roducto = $_POST['f3_id']; 
+  $post_cantidad = $_POST['f3_cant']; 
+
+  $_SESSION['id_f3'] = $post_roducto;
+  $_SESSION['cant_f3'] = $post_cantidad;   
   #$id es id de tienda
   $idproducto = $_SESSION['id_f3'];
   $cantidad = $_SESSION['cant_f3'];
