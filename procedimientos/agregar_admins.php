@@ -33,6 +33,11 @@ tr:hover {
     padding: 8px;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 }
 </style>
 
