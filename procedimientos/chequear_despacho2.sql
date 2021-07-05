@@ -6,12 +6,14 @@ RETURNS VARCHAR AS $$
 
 BEGIN 
 
-IF direccion IN (SELECT comuna_despacho FROM despacho_tiendas WHERE id_tienda = idtienda) THEN
+    IF direccion IN (SELECT comuna_despacho FROM despacho_tiendas WHERE id_tienda = idtienda) THEN
 
-    RETURN TRUE;
-ELSE
+        RETURN TRUE;
+    ELSE
 
-    RETURN FALSE;
-END IF;
+        RETURN FALSE;
+    END IF;
+
+END
 
 $$ language plpgsql
