@@ -62,8 +62,6 @@ tr:hover {
   $id_current_user = $_SESSION['id_user'];
   $id = $_SESSION['id_tienda'];
 
-  print_r($idproducto);
-  print_r($id);
   # direcciones de usuario
 
   require("config/conexion.php");
@@ -107,34 +105,18 @@ tr:hover {
   else{
       echo("No hay stock de este producto en esta tienda");
   }
-  $query6 = "SELECT carrito_compras.id_compra, carrito_compras.id_producto, carrito_compras.cantidad, carrito_compras.id_tienda FROM carrito_compras, compras WHERE carrito_compras.id_compra = compras.id AND compras.id_usuario = $id_current_user;";
-  $result6 = $db -> prepare($query6);
-  $result6 -> execute();
-  $ultimas_compras = $result6 -> fetchAll();
- 
+   
 ?>
 
-<table class="center">
-    <tr>
-      <th>ID Compra</th>
-      <th>ID Producto</th>
-      <th>Cantidad</th>
-      <th>ID Tienda</th>
-    </tr>
-    <?php
-	foreach ($ultimas_compras as $compra) {
-	
-    echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
-    <input name = 't' type='submit' value='$compra[1]' id = 'botonID'>
-    </form></td><td>$compra[0]</td> <td>$compra[2]</td><td>$compra[3]</td><td>";
-	}
-  ?>
-	</table>
 
   <br>
   <form id = 'caja' action="consultas_tienda.php" method="post">
   <input type="submit" value="Volver" id = "botonB">
   </form>
-
+  
+  <h3>Puedes ver tu historial de compras aquí</h3>
+  <form id = 'caja' action="historial.php" method="post">
+  <input type="submit" value="Historial" id = "botonB">
+  </form>
 
 <?php include('templates/footer.html');
