@@ -72,14 +72,15 @@ tr:hover {
   $result4 -> execute();
   $dataCollected = $result4 -> fetchAll();
   $check_diponibilidad = $dataCollected[0]['chequear_disponibilidad'];
-  echo($check_diponibilidad)
+  echo($check_diponibilidad);
+
   $query1 = "SELECT direcciones.comuna FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user;";
   $result1 = $db -> prepare($query1);
   $result1 -> execute();
   $comuna = $result1 -> fetchAll();
+  echo($check_diponibilidad);
 
   if ($check_diponibilidad == TRUE){
-    $cantidad_de_compras = 0;
     foreach ($comuna as $d){
       $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
       $result5 = $db -> prepare($consulta_despacho);
@@ -88,21 +89,19 @@ tr:hover {
       $check_despacho = $dataCollected2[0]['chequear_despacho2'];
       echo($check_despacho);
     }
-        if ($check_despacho == TRUE){
-          if ($cantidad_de_compras == 0){
-            $query = "SELECT insertar_compra($id_current_user, $d);";
-            $result = $db -> prepare($query);
-            $result -> execute();
-            $retorno = $result -> fetchAll();
+      if ($check_despacho == TRUE){
+        
+        $query = "SELECT insertar_compra($id_current_user, $d);";
+        $result = $db -> prepare($query);
+        $result -> execute();
+        $retorno = $result -> fetchAll();
 
-            $query2 = "SELECT insertar_carrito_compra($idproducto, $cantidad, $id);";
-            $result2 = $db -> prepare($query2);
-            $result2-> execute();
-            $retorno2 = $result2 -> fetchAll();
-
-            $cantidad_de_compras = 1;
-            echo("Tu compra se ha realizado con exito!");
-          }
+        $query2 = "SELECT insertar_carrito_compra($idproducto, $cantidad, $id);";
+        $result2 = $db -> prepare($query2);
+        $result2-> execute();
+        $retorno2 = $result2 -> fetchAll();
+        echo("Tu compra se ha realizado con exito!");
+          
       }else{
         echo("Si tenemos este producto, pero lamentablemente no hay cobertura para tu zona");
   }
