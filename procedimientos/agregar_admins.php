@@ -4,6 +4,40 @@
     require("../config/conexion.php");
     include('../templates/header_procedimientos.html');
 
+?>
+
+<style>
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #c29f29;
+    width: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+th {
+    background-color: #f3c733;
+    padding: 4px;
+}
+
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    padding: 8px;
+}
+
+tr:hover {
+    background-color: #9bf6ff;
+    padding: 8px;
+}
+
+}
+</style>
+
+<?php
+
     #funcion para generar claves aleatoreas
     #https://stackoverflow.com/questions/4356289/php-random-string-generator
     function generateRandomString($length = 10) {
