@@ -79,6 +79,7 @@ tr:hover {
   $direccion = $result1 -> fetchAll();
 
   if ($check_diponibilidad == TRUE){
+    $cantidad_de_compras = 0;
     foreach ($direccion as $d){
       $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
       $result5 = $db -> prepare($consulta_despacho);
@@ -87,15 +88,19 @@ tr:hover {
       $check_despacho = $dataCollected2[0]['chequear_despacho2'];
     }
         if ($check_despacho == TRUE){
-        $query = "SELECT insertar_compra($id_current_user, $$direccion_despacho);";
-        $result = $db -> prepare($query);
-        $result -> execute();
-        $retorno = $result -> fetchAll();;
+          if ($cantidad_de_compras == 0){
+            $query = "SELECT insertar_compra($id_current_user, $$direccion_despacho);";
+            $result = $db -> prepare($query);
+            $result -> execute();
+            $retorno = $result -> fetchAll();
 
-        $query2 = "SELECT insertar_carrito_compra($idproducto, $cantidad, $id);";
-        $result2 = $db -> prepare($query2);
-        $result2-> execute();
-        $retorno2 = $result2 -> fetchAll();;
+            $query2 = "SELECT insertar_carrito_compra($idproducto, $cantidad, $id);";
+            $result2 = $db -> prepare($query2);
+            $result2-> execute();
+            $retorno2 = $result2 -> fetchAll();
+
+            $cantidad_de_compras = 1;
+          }
       }else{
         echo("Si tenemos este producto, pero lamentablemente no hay cobertura para tu zona");
   }
