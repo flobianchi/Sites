@@ -113,7 +113,7 @@ echo(
     </form>
     
     
-    </td> <td>$p[1]</td> <th>$p[2]</th></tr>";
+    </td> <td>$p[1]</td> <td>$p[2]</td></tr>";
     }
     
     echo("<table>");
