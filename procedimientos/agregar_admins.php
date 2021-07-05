@@ -16,7 +16,7 @@
         return $randomString;
     }
 
-    echo("<br>Ejecutando procedimiento agregar filas tabla administradores a usuarios<br>");
+    echo("<br>Ejecutando procedimiento para agregar informacion de personas de la tabla administradores a tabla usuarios,<br>si es que todavia no estan inscritos en la tabla usuarios<br>");
     // Primero obtenemos todos los pokemons de la tabla que queremos agregar
     $query = "SELECT a.nombre, a.rut, a.edad, a.sexo, a.calificacion, u.id_direccion FROM administrativos AS a JOIN unidades AS u ON a.id_unidad = u.id_unidad;";
     $result = $db2 -> prepare($query);
