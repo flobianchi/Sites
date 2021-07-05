@@ -85,7 +85,7 @@ tr:hover {
     }
 
     // Mostramos los cambios en una nueva tabla
-    $query = "SELECT * FROM usuarios ORDER BY id, calificacion;";
+    $query = "SELECT * FROM usuarios ORDER BY id";
     $result = $db -> prepare($query);
     $result -> execute();
     $usuarios = $result -> fetchAll();
