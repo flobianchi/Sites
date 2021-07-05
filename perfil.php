@@ -103,8 +103,12 @@ tr:hover {
                             $es_admin = true;
                         }
                     }
-
-     echo("es admin (sin columna calificacion)? -> $es_admin");
+    if($es_admin){
+        echo("es admin (sin columna calificacion)!!!");
+    }else{
+        echo("no es admin (sin columna calificacion)!!!");
+    }
+     
 
       $calificacion = $dataCollected[0]['calificacion'];
       if($calificacion == 'administracion'){
