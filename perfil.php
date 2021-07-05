@@ -54,12 +54,26 @@ tr:hover {
       <th>RUT</th>
       <th>Edad</th>
       <th>Sexo</th>
+      </tr>");
+      
+      foreach ($dataCollected as $p) {
+      echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> </tr>";
+      }
+      
+      echo("<table>");
+
+      echo("<h3>Estas son tus direcciones</h3>");
+
+      echo("
+
+      <table class='center'>
+      <tr>
       <th>Direccion</th>
       <th>Comuna</th>
       </tr>");
       
       foreach ($dataCollected as $p) {
-      echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> <td>$p[6]</td><td>$p[7]</td></tr>";
+      echo "<tr>  <td>$p[6]</td><td>$p[7]</td></tr>";
       }
       
       echo("<table>");
