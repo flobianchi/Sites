@@ -45,7 +45,7 @@ if($nombre == ''){
     $id_direccion = $retorno[0]['id'];
 
     #agregar usuario
-    $query = "SELECT agregar_usuario('$nombre'::varchar,'$rut'::varchar,$edad,'$sexo'::varchar,'usuario'::varchar, $id_direccion);";
+    $query = "SELECT agregar_usuario('$nombre'::varchar,'$rut'::varchar,$edad,'$sexo'::varchar, $id_direccion);";
 
     $result = $db -> prepare($query);
     $result -> execute();
