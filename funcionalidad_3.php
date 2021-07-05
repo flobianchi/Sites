@@ -94,7 +94,7 @@ tr:hover {
         $direccion = $result6 -> fetchAll();
 
         echo($check_despacho);
-        echo($direccion);
+        echo($direccion[0]);
         echo($d[0]);
       
         if ($check_despacho == TRUE){
