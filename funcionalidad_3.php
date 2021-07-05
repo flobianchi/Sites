@@ -78,9 +78,8 @@ tr:hover {
   $result1 = $db -> prepare($query1);
   $result1 -> execute();
   $comuna = $result1 -> fetchAll();
-  echo($check_diponibilidad);
 
-  if ($check_diponibilidad == TRUE){
+  if ($check_diponibilidad == TRUE) {
     foreach ($comuna as $d){
       $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
       $result5 = $db -> prepare($consulta_despacho);
@@ -88,6 +87,7 @@ tr:hover {
       $dataCollected2 = $result5 -> fetchAll();
       $check_despacho = $dataCollected2[0]['chequear_despacho2'];
       echo($check_despacho);
+      echo($d);
     }
       if ($check_despacho == TRUE){
         
