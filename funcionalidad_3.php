@@ -107,7 +107,7 @@ tr:hover {
           $result2-> execute();
           $retorno2 = $result2 -> fetchAll();
           echo("Tu compra se ha realizado con exito!");
-          $compras = 1
+          $compras = 1;
         
 
         }else{
