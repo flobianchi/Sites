@@ -72,7 +72,7 @@ tr:hover {
   $result4 -> execute();
   $dataCollected = $result4 -> fetchAll();
   $check_diponibilidad = $dataCollected[0]['chequear_disponibilidad'];
-
+  echo($check_diponibilidad)
   $query1 = "SELECT direcciones.comuna FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user;";
   $result1 = $db -> prepare($query1);
   $result1 -> execute();
