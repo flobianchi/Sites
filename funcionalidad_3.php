@@ -54,6 +54,8 @@ tr:hover {
   $idproducto = $_SESSION['f3_id'];
   $cantidad = $_SESSION['f3_cant'];
   $id_current_user = $_SESSION['id_user'];
+  print_r($idproducto);
+  print_r($id);
   # direcciones de usuario
 
   require("config/conexion.php");
