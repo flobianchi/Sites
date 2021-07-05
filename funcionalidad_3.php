@@ -81,13 +81,13 @@ tr:hover {
 
   if ($check_diponibilidad == TRUE) {
     foreach ($comuna as $d){
-      $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
+      $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d[0]);";
       $result5 = $db -> prepare($consulta_despacho);
       $result5 -> execute();
       $dataCollected2 = $result5 -> fetchAll();
       $check_despacho = $dataCollected2[0]['chequear_despacho2'];
       echo($check_despacho);
-      echo($d);
+      echo($d[0]);
     }
       if ($check_despacho == TRUE){
         
