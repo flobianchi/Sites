@@ -82,7 +82,7 @@ tr:hover {
     $compras = 0;
     foreach ($comuna as $c){
       if ($compras == 0){
-        $consulta_despacho = "SELECT chequear_despacho2($id, $id_current_user, '$c[0]'::varchar);";
+        $consulta_despacho = "SELECT chequear_despacho2($id, '$c[0]'::varchar);";
         $result5 = $db -> prepare($consulta_despacho);
         $result5 -> execute();
         $dataCollected = $result5 -> fetchAll();
