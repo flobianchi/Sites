@@ -66,13 +66,12 @@ tr:hover {
 
   require("config/conexion.php");
 
-  // $direccion_despacho =  "SELECT chequear_despacho($id, $id_current_user)"
+
   $consulta_diponibilidad = "SELECT chequear_disponibilidad($id, $idproducto);";
   $result4 = $db -> prepare($consulta_diponibilidad);
   $result4 -> execute();
   $dataCollected = $result4 -> fetchAll();
   $check_diponibilidad = $dataCollected[0]['chequear_disponibilidad'];
-  echo($check_diponibilidad);
 
   $query1 = "SELECT direcciones.comuna FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user;";
   $result1 = $db -> prepare($query1);
@@ -80,38 +79,48 @@ tr:hover {
   $comuna = $result1 -> fetchAll();
 
   if ($check_diponibilidad == TRUE) {
+    $compras = 0
     foreach ($comuna as $d){
-      $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d[0]);";
-      $result5 = $db -> prepare($consulta_despacho);
-      $result5 -> execute();
-      $dataCollected2 = $result5 -> fetchAll();
-      $check_despacho = $dataCollected2[0]['chequear_despacho2'];
-      echo($check_despacho);
-      echo($d[0]);
-    }
-      if ($check_despacho == TRUE){
-        
-        $query = "SELECT insertar_compra($id_current_user, $d);";
-        $result = $db -> prepare($query);
-        $result -> execute();
-        $retorno = $result -> fetchAll();
+      if ($compras == 0){
+        $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d[0]);";
+        $result5 = $db -> prepare($consulta_despacho);
+        $result5 -> execute();
+        $dataCollected2 = $result5 -> fetchAll();
+        $check_despacho = $dataCollected2[0]['chequear_despacho2'];
 
-        $query2 = "SELECT insertar_carrito_compra($idproducto, $cantidad, $id);";
-        $result2 = $db -> prepare($query2);
-        $result2-> execute();
-        $retorno2 = $result2 -> fetchAll();
-        echo("Tu compra se ha realizado con exito!");
+        $query6 = "SELECT direcciones.id FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user AND direcciones.comuna = $d[0] LIMIT 1;";
+        $result6 = $db -> prepare($query6);
+        $result6 -> execute();
+        $direccion = $result6 -> fetchAll();
+
+        echo($direccion[0]);
+ 
+      
+        if ($check_despacho == TRUE){
+          $query = "SELECT insertar_compra($id_current_user, $direccion);";
+          $result = $db -> prepare($query);
+          $result -> execute();
+          $retorno = $result -> fetchAll();
+
+          $query2 = "SELECT insertar_carrito_compra($idproducto, $cantidad, $id);";
+          $result2 = $db -> prepare($query2);
+          $result2-> execute();
+          $retorno2 = $result2 -> fetchAll();
+          echo("Tu compra se ha realizado con exito!");
+          $compras = 1
           
       }else{
         echo("Si tenemos este producto, pero lamentablemente no hay cobertura para tu zona");
+      }    
   }
   }
+  }
+  
   else{
       echo("No hay stock de este producto en esta tienda");
   }
    
 ?>
-
 
   <br>
   <form id = 'caja' action="consultas_tienda.php" method="post">
