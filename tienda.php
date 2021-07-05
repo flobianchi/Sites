@@ -83,7 +83,7 @@ $_SESSION['ingresado'] = true;
 
 echo("<h2>Porfavor elija una tienda haciendo click en su id</h2>");
 
-$query = "SELECT t.id, t.nombre FROM tiendas AS t ORDER BY t.id;";
+$query = "SELECT tiendas.id, tiendas.nombre, direcciones.nombre FROM tiendas JOIN direcciones ON tiendas.id_direccion = direcciones.id ORDER BY tiendas.id;";
 
 $result = $db -> prepare($query);
 $result -> execute();
@@ -99,8 +99,9 @@ echo(
     <p style='font-size:50px;'></p>
     <table class='center'>
     <tr>
-    <th>id tienda</th>
+    <th>ID Tienda</th>
     <th>Tienda</th>
+    <th>Direccion</th>
     </tr>");
     
     
@@ -112,7 +113,7 @@ echo(
     </form>
     
     
-    </td> <td>$p[1]</td> </tr>";
+    </td> <td>$p[1]</td> <th>$p[2]</th></tr>";
     }
     
     echo("<table>");
