@@ -85,8 +85,8 @@ tr:hover {
         $consulta_despacho = "SELECT chequear_despacho2($id, $id_current_user, $c[0]);";
         $result5 = $db -> prepare($consulta_despacho);
         $result5 -> execute();
-        $dataCollected2 = $result5 -> fetchAll();
-        $check_despacho = $dataCollected2[0]['chequear_despacho2'];
+        $dataCollected = $result5 -> fetchAll();
+        $check_despacho = $dataCollected[0]['chequear_despacho2'];
         echo($check_despacho);
         
         $query6 = "SELECT direcciones.id FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user AND direcciones.comuna = $c[0] LIMIT 1;";
@@ -95,7 +95,7 @@ tr:hover {
         $direccion_mala = $result6 -> fetchAll();
         foreach ($direccion_mala as $d){
           $direccion = $d[0];}
-          
+
         echo($direccion);
       
         if ($check_despacho == TRUE){
