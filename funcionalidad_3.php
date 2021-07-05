@@ -82,31 +82,18 @@ tr:hover {
     $compras = 0;
     foreach ($comuna as $c){
       if ($compras == 0){
-        echo('si entra al if compras');
-
         $consulta_despacho = "SELECT chequear_despacho2($id, $id_current_user, '$c[0]'::varchar);";
         $result5 = $db -> prepare($consulta_despacho);
         $result5 -> execute();
         $dataCollected = $result5 -> fetchAll();
         $check_despacho = $dataCollected[0]['chequear_despacho2'];
         
-        
-        $query6 = "SELECT direcciones.id FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user AND direcciones.comuna = $c[0] LIMIT 1;";
-        $result6 = $db -> prepare($query6);
-        $result6 -> execute();
-        $direccion_mala = $result6 -> fetchAll();
-      
         if ($check_despacho == TRUE){
-          echo('si entra al if despacho');
-          $query = "SELECT insertar_compra($id_current_user, $direccion);";
+          $query = "SELECT insertar_compra($id_current_user, '$c[0]'::varchar, $idproducto, $cantidad, $id);";
           $result = $db -> prepare($query);
           $result -> execute();
           $retorno = $result -> fetchAll();
 
-          $query2 = "SELECT insertar_carrito_compra($idproducto, $cantidad, $id);";
-          $result2 = $db -> prepare($query2);
-          $result2-> execute();
-          $retorno2 = $result2 -> fetchAll();
           echo("Tu compra se ha realizado con exito!");
           $compras = 1;
         
