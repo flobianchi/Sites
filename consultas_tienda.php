@@ -43,6 +43,8 @@ if($id != ''){
 </form>
 
 <?php
+session_start()
+
 $id_producto = $_POST['f3_id']; 
 $cantidad = $_POST['f3_cant']; 
 
