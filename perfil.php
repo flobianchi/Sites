@@ -34,7 +34,7 @@ tr:hover {
   require("config/conexion.php");
 
       $rut_user = $_SESSION['rut_user'];
-      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo, usuarios.calificacion FROM usuarios WHERE usuarios.rut = '$rut_user';";
+      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo FROM usuarios WHERE usuarios.rut = '$rut_user';";
 
       $result = $db -> prepare($query);
       $result -> execute();
