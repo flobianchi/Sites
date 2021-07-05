@@ -34,7 +34,7 @@ tr:hover {
   require("config/conexion.php");
 
       $rut_user = $_SESSION['rut_user'];
-      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo, direcciones.nombre_direccion FROM usuarios, direcciones_usuarios, direcciones WHERE usuarios.id =direcciones_usuarios.id_usuario AND direcciones_usuarios.direccion_usuario = direcciones.id AND usuarios.rut = '$rut_user';";
+      $query = "SELECT usuarios.id, usuarios.nombre, usuarios.rut, usuarios.edad, usuarios.sexo, usuarios.calificacion FROM usuarios WHERE usuarios.rut = '$rut_user';";
 
       $result = $db -> prepare($query);
       $result -> execute();
@@ -54,11 +54,33 @@ tr:hover {
       <th>RUT</th>
       <th>Edad</th>
       <th>Sexo</th>
-      <th>Direccion</th>
       </tr>");
       
       foreach ($dataCollected as $p) {
-      echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> <td>$p[6]</td></tr>";
+      echo "<tr> <td>$p[0]</td> <td>$p[1]</td> <td>$p[2]</td> <td>$p[3]</td> <td>$p[4]</td> </tr>";
+      }
+      
+      echo("<table>");
+
+      $query = "SELECT direcciones.nombre_direccion, direcciones.comuna FROM usuarios, direcciones_usuarios, direcciones WHERE usuarios.id =direcciones_usuarios.id_usuario AND direcciones_usuarios.direccion_usuario = direcciones.id AND usuarios.rut = '$rut_user';";
+
+      $result = $db -> prepare($query);
+      $result -> execute();
+      $dataCollected2 = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
+      
+
+      echo("<h3>Estas son tus direcciones</h3>");
+
+      echo("
+
+      <table class='center'>
+      <tr>
+      <th>Direccion</th>
+      <th>Comuna</th>
+      </tr>");
+      
+      foreach ($dataCollected2 as $p) {
+      echo "<tr>  <td>$p[0]</td><td>$p[1]</td></tr>";
       }
       
       echo("<table>");
