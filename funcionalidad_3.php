@@ -86,6 +86,7 @@ tr:hover {
       $result5 -> execute();
       $dataCollected2 = $result5 -> fetchAll();
       $check_despacho = $dataCollected2[0]['chequear_despacho2'];
+      echo($check_despacho);
     }
         if ($check_despacho == TRUE){
           if ($cantidad_de_compras == 0){
