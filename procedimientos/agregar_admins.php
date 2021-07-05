@@ -102,7 +102,6 @@ tr:hover {
                 <th>Edad</th>
                 <th>Sexo</th>
                 <th>Clave</th>
-                <th>Calificacion</th>
                 </tr>
             </thead>
             <tbody>
