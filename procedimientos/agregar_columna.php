@@ -4,7 +4,7 @@
     require("../config/conexion.php");
     include('../templates/header_procedimientos.html');
 
-    echo("<br>Ejecutando procedimiento agregar_columna_clave()<br>Este procedimiento agrega el atributo clave en la realacion usuarios solo si no existe <br>");
+    echo("<br>Ejecutando procedimiento agregar_columna_clave()<br>Este procedimiento agrega el atributo clave en la realacion usuarios <br> solo si es que el atributo se encuentra en la relacion <br>");
 
     $query = "SELECT agregar_columna_clave();";
 
@@ -12,6 +12,7 @@
     $result -> execute();
     $respuesta = $result -> fetchAll();
 
+    print_r($respuesta);
     $se_agrego = $respuesta[0]['agregar_columna_clave'];
     echo("se agrego una columna? -> $se_agrego");
 
