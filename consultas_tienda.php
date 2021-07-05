@@ -42,20 +42,6 @@ if($id != ''){
       <input type="submit" value="Comprar" id = "botonB">
 </form>
 
-<?php
-session_start();
-
-$id_producto = $_POST['f3_id']; 
-$cantidad = $_POST['f3_cant']; 
-
-if($id_producto != ''){
-      $_SESSION['id_f3'] = $id_producto;
-}
-if($cantidad != ''){
-      $_SESSION['cant_f3'] = $cantidad;   
-}         
-?>
-
 <br>
 <br>
 
