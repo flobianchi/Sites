@@ -82,14 +82,14 @@ tr:hover {
     $compras = 0;
     foreach ($comuna as $c){
       if ($compras == 0){
-        $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $c[0]);";
+        $consulta_despacho = "SELECT chequear_despacho2($id, $id_current_user, $c[0]);";
         $result5 = $db -> prepare($consulta_despacho);
         $result5 -> execute();
         $dataCollected2 = $result5 -> fetchAll();
         $check_despacho = $dataCollected2[0]['chequear_despacho2'];
         echo($check_despacho);
         
-        $query6 = "SELECT direcciones.id FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user AND direcciones.comuna = $d[0] LIMIT 1;";
+        $query6 = "SELECT direcciones.id FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user AND direcciones.comuna = $c[0] LIMIT 1;";
         $result6 = $db -> prepare($query6);
         $result6 -> execute();
         $direccion_mala = $result6 -> fetchAll();
@@ -97,7 +97,6 @@ tr:hover {
           $direccion = $d[0];}
           
         echo($direccion);
-        echo($c[0]);
       
         if ($check_despacho == TRUE){
           $query = "SELECT insertar_compra($id_current_user, $direccion);";
