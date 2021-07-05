@@ -49,15 +49,6 @@ tr:hover {
 }
 </style>
 
-Esta es la pagina que intenta realizar la compra
-<br>
-No esta disponible, o (consulta)
-<br>
-No tiene cobertura, o (consulta)
-<br>
-se agrego exitosamente (funcion para grabar en BDD)
-<br>
-
 <?php
   #$id es id de tienda
   $idproducto = $_SESSION['f3_id'];
@@ -101,9 +92,35 @@ se agrego exitosamente (funcion para grabar en BDD)
   }else{
       echo("No hay stock de este producto en esta tienda");
   }
+  $query6 = "SELECT carrito_compras.id_compra, carrito_compras.id_producto, carrito_compras.cantidad, carrito_compras.id_tienda FROM carrito_compras, compras WHERE carrito_compras.id_compra = compras.id AND compras.id_usuario = $id_current_user;";
+  $result6 = $db -> prepare($query6);
+  $result6 -> execute();
+  $ultimas_compras = $result6 -> fetchAll();
+ 
 ?>
 
+<table class="center">
+    <tr>
+      <th>ID Compra</th>
+      <th>ID Producto</th>
+      <th>Cantidad</th>
+      <th>ID Tienda</th>
+    </tr>
+    <?php
+	foreach ($ultimas_compras as $compra) {
+	
+    echo "<tr><td>  <form id = 'caja' action='show_producto.php' method='post'>
+    <input name = 't' type='submit' value='$compra[1]' id = 'botonID'>
+    </form></td><td>$compra[0]</td> <td>$compra[2]</td><td>$compra[3]</td><td>";
+	}
+  ?>
+	</table>
+
+
 En caso de ser exitoso mostramos las ultimas 10 compras
+
+
+
 
   <br>
   <form id = 'caja' action="consultas_tienda.php" method="post">
