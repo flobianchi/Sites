@@ -50,9 +50,10 @@ $cantidad = $_POST['f3_cant'];
 
 if($id_producto != ''){
       $_SESSION['id_f3'] = $id_producto;
-      $id = $_POST['t'];
+}
 if($cantidad != ''){
-      $_SESSION['cant_f3'] = $cantidad;      
+      $_SESSION['cant_f3'] = $cantidad;   
+}         
 ?>
 
 <br>
