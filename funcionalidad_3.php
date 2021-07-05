@@ -83,12 +83,13 @@ tr:hover {
     foreach ($comuna as $c){
       if ($compras == 0){
         echo('si entra al if compras');
-        $consulta_despacho = "SELECT chequear_despacho2($id, $id_current_user, $c[0]);";
+
+        $consulta_despacho = "SELECT chequear_despacho2($id, $id_current_user, '$c[0]'::varchar);";
         $result5 = $db -> prepare($consulta_despacho);
         $result5 -> execute();
         $dataCollected = $result5 -> fetchAll();
         $check_despacho = $dataCollected[0]['chequear_despacho2'];
-        echo($check_despacho);
+        
         
         $query6 = "SELECT direcciones.id FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user AND direcciones.comuna = $c[0] LIMIT 1;";
         $result6 = $db -> prepare($query6);
