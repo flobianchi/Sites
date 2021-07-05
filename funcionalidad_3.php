@@ -73,14 +73,14 @@ tr:hover {
   $dataCollected = $result4 -> fetchAll();
   $check_diponibilidad = $dataCollected[0]['chequear_disponibilidad'];
 
-  $query1 = "SELECT direcciones.nombre FROM direcciones, direcciones_usuarios WHERE direcciones.id = direcciones_usuarios.direccion_usuario AND direcciones_usuarios.direccion_usuario = $id_current_user;";
+  $query1 = "SELECT direcciones.comuna FROM direcciones JOIN direcciones_usuarios ON direcciones.id = direcciones_usuarios.direccion_usuario WHERE direcciones_usuarios.id_usuario = $id_current_user;";
   $result1 = $db -> prepare($query1);
   $result1 -> execute();
-  $direccion = $result1 -> fetchAll();
+  $comuna = $result1 -> fetchAll();
 
   if ($check_diponibilidad == TRUE){
     $cantidad_de_compras = 0;
-    foreach ($direccion as $d){
+    foreach ($comuna as $d){
       $consulta_despacho =  "SELECT chequear_despacho2($id, $id_current_user, $d);";
       $result5 = $db -> prepare($consulta_despacho);
       $result5 -> execute();
@@ -89,7 +89,7 @@ tr:hover {
     }
         if ($check_despacho == TRUE){
           if ($cantidad_de_compras == 0){
-            $query = "SELECT insertar_compra($id_current_user, $$direccion_despacho);";
+            $query = "SELECT insertar_compra($id_current_user, $d);";
             $result = $db -> prepare($query);
             $result -> execute();
             $retorno = $result -> fetchAll();
