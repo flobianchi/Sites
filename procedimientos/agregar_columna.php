@@ -12,10 +12,9 @@
     $result -> execute();
     $respuesta = $result -> fetchAll();
 
-    print_r($respuesta);
     $se_agrego = $respuesta[0]['agregar_columna_clave'];
     if($se_agrego){
-        echo("se agrego la columna clave y se generaron claves random para en cada valor");
+        echo("se agrego la columna clave y se generaron claves random para en cada usuario");
 
         $query = "SELECT id FROM usuarios;";
 
@@ -25,14 +24,13 @@
 
         foreach ($respuesta as $p) {
             $clave = generateRandomString(8);
-            echo("<br> $p[0] -> $clave");
             $query2 = "SELECT cambiar_clave($p[0],'$clave');";
             $result2 = $db -> prepare($query2);
             $result2 -> execute();
       }
 
     }else{
-        echo("la columna clave ya existe, por lo tanto no se agrego");
+        echo("la columna clave ya existe, por lo tanto no fue necesario agregarla");
     }
 
 
